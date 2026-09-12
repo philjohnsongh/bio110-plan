@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BIO 110 Catch-Up Plan</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+:root{
+  --bg:#F6F8F4; --surface:#FFFFFF; --ink:#1A2523; --muted:#5E6B68; --line:#D5DDD7;
+  --accent:#23705F; --accent-soft:#E2F0EA; --flag:#B0521C; --flag-soft:#F7E9DF;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#131917; --surface:#1B2320; --ink:#E4ECE7; --muted:#9BAAA4; --line:#2E3A35;
+    --accent:#63C2A9; --accent-soft:#1E3A32; --flag:#E39463; --flag-soft:#3A2A1E;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#131917; --surface:#1B2320; --ink:#E4ECE7; --muted:#9BAAA4; --line:#2E3A35;
+  --accent:#63C2A9; --accent-soft:#1E3A32; --flag:#E39463; --flag-soft:#3A2A1E;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:46rem;margin:0 auto;padding:2.5rem 1.25rem 5rem}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:2.4rem;font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.5rem;font-weight:700;margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;font-weight:700;margin-top:1.5rem}
+p{margin:.8rem 0}
+.eyebrow{font-family:var(--display);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.lede{font-size:1.15rem;color:var(--muted);margin-top:.6rem}
+.meta{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-top:1.25rem;font-family:var(--display);font-size:.9rem;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:500}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin:1.5rem 0 0}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.9rem 1rem}
+.fact .eyebrow{color:var(--accent)}
+.fact p{margin:.3rem 0 0;font-size:.95rem}
+@media (max-width:560px){.facts{grid-template-columns:1fr}}
+.block{background:var(--accent-soft);border-radius:6px;padding:1rem 1.25rem;margin:1rem 0}
+.block ol{margin:.4rem 0 0;padding-left:1.2rem}
+.block li{margin:.35rem 0}
+.block .min{font-family:var(--mono);font-size:.82rem;color:var(--accent);margin-right:.4rem}
+.flag{background:var(--flag-soft);border-left:3px solid var(--flag);padding:.7rem 1rem;border-radius:0 6px 6px 0;margin:1rem 0;font-size:.95rem}
+.flag b{color:var(--flag)}
+.day{display:grid;grid-template-columns:1.6rem 1fr;gap:.75rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+.day:last-of-type{border-bottom:0}
+.day input{width:1.15rem;height:1.15rem;margin-top:.3rem;accent-color:var(--accent);cursor:pointer}
+.day h3{margin:0;font-size:1.05rem}
+.day .date{font-family:var(--mono);font-size:.8rem;color:var(--accent);display:block;margin-bottom:.2rem;letter-spacing:.02em}
+.day .ch{font-family:var(--display);font-weight:500;font-size:.85rem;color:var(--muted);margin-left:.4rem}
+.day.done h3{color:var(--muted);text-decoration:line-through;text-decoration-thickness:1px}
+.day ul{margin:.4rem 0 0;padding-left:1.1rem;font-size:.95rem}
+.day li{margin:.25rem 0}
+.day .why{font-size:.95rem;color:var(--muted);margin:.3rem 0 0;font-style:italic}
+.day.event h3{color:var(--flag)}
+.tag{font-family:var(--display);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-right:.35rem}
+.dur{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.progress{font-family:var(--display);font-size:.9rem;color:var(--muted);margin:.5rem 0 0}
+.rhythm{display:grid;grid-template-columns:8.5rem 1fr;gap:.6rem 1rem;margin-top:1rem}
+.rhythm .w{font-family:var(--display);font-weight:700;font-size:.9rem;padding-top:.15rem}
+.rhythm .w small{display:block;font-weight:500;color:var(--muted);font-family:var(--mono);font-size:.75rem;margin-top:.15rem}
+.rhythm .d{font-size:.97rem;padding-bottom:.6rem;border-bottom:1px solid var(--line)}
+@media (max-width:520px){.rhythm{grid-template-columns:1fr}.rhythm .w{padding-top:.5rem}}
+.tablewrap{overflow-x:auto;margin:1rem 0;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:48rem;font-size:.88rem;font-family:var(--display)}
+th,td{text-align:left;vertical-align:top;padding:.55rem .7rem;border-bottom:1px solid var(--line)}
+th{font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.dt{white-space:nowrap;font-family:var(--mono);font-size:.82rem;font-variant-numeric:tabular-nums}
+td.ch{white-space:nowrap;font-weight:700}
+td a{white-space:nowrap}
+tr.exam td{background:var(--flag-soft);font-weight:700}
+tr.exam td.dt{color:var(--flag)}
+tr.quiz td.due{color:var(--flag);font-weight:700}
+ul.tools{padding-left:1.1rem}
+ul.tools li{margin:.5rem 0}
+.script{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.9rem 1.1rem;font-style:italic;margin:.8rem 0}
+.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted);font-family:var(--display)}
+@media (prefers-reduced-motion: no-preference){.day{transition:opacity .2s}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="eyebrow">General Biology I · Dr. Krogan · Tue/Fri 11:20 · Fall 2026</div>
+  <h1>BIO 110 Catch-Up Plan</h1>
+  <p class="lede">Ten days to Exam 1, then a dated rhythm for the rest of the semester that keeps you a step ahead of lecture instead of a step behind.</p>
+  <div class="meta">
+    <span>Exam 1 <b>Tue 22 Sep · Ch 1–6</b></span>
+    <span>Quiz 2 <b>Tue 15 Sep · Ch 3–4</b></span>
+    <span>Office hours <b>Thu 12:30–2:30 · HoS 306</b></span>
+    <span>Textbook <b>Freeman 8th ed. (eText)</b></span>
+  </div>
+
+  <p style="margin-top:1.5rem">The course assumes a full year of high-school biology and a little chemistry, mostly as vocabulary and a mental map: what a macromolecule is, what a cell looks like from the inside, what DNA has to do with protein. That map is what's missing, not ability. Everyone who has it hears the lecture as a story; without it, the lecture is a list of words. The map is small, and short videos build it faster than reading does. Once you have it, the slides and homework get <em>faster</em>, which is where the time comes back.</p>
+
+  <h2>What the syllabus actually says</h2>
+  <p>Four things in the syllabus shape how to study. They are worth more than any resource below.</p>
+  <div class="facts">
+    <div class="fact"><span class="eyebrow">Slides beat the book</span><p>"Not all material presented will be taken from the textbook. Some exam content may relate directly to material discussed only in lecture." The textbook is recommended, not required. So the Canvas slides are the primary text; Freeman is the explainer you go to when a slide doesn't make sense.</p></div>
+    <div class="fact"><span class="eyebrow">Exam 1 is the low-stakes one</span><p>Four exams; your lowest counts 10% and the other three count 15% each. Exams are not cumulative. If Exam 1 goes badly, it becomes the 10% one and you still have 90% of the grade ahead of you. Study hard, but this exam cannot sink the course.</p></div>
+    <div class="fact"><span class="eyebrow">Quizzes come back as exam questions</span><p>Eight quizzes at the start of class, 2% each, lowest dropped. "Quiz questions may be used with modification as exam questions." Keep every quiz. Redo it from memory the week of the exam.</p></div>
+    <div class="fact"><span class="eyebrow">Lab is a quarter of the grade</span><p>Lab has its own Canvas site, its own TA, and its own director (Dr. Brenda Chow). It is 25%, more than any single exam. Treat lab handouts and lab practicals as a separate course with its own prep.</p></div>
+  </div>
+  <div class="flag"><b>No AI tools for coursework.</b> The syllabus prohibits generative AI "to build effective analytical and communication skills." Everything in this plan is videos, practice questions and the textbook. Don't use ChatGPT or similar for the two Current Events written assignments or anything else you submit.</div>
+
+  <h2>The 35-minute block</h2>
+  <p>Every sprint day, and most lecture days after that, is the same block. Same order every time so it needs no decisions.</p>
+  <div class="block">
+    <ol>
+      <li><span class="min">10 min</span><b>Watch</b> the day's video at 1.25× with the free recap handout open. Pause to fill it in. The handout is the point; the video is the delivery.</li>
+      <li><span class="min">5 min</span><b>Skim the slides</b> for that lecture on Canvas, then the Key Concepts box and chapter summary in Freeman. Not the chapter itself yet.</li>
+      <li><span class="min">15 min</span><b>Practice</b> the matching Khan Academy lesson until you get four questions right in a row. Wrong answers are the useful ones: read the explanation.</li>
+      <li><span class="min">5 min</span><b>Write from memory</b>, book closed: what this thing is, what it's made of, what it does. Then one question you still can't answer, for Thursday office hours or tutoring.</li>
+    </ol>
+  </div>
+  <p>Two rules that matter more than the resources. Watching is not studying: the video earns nothing until the practice questions. And the video comes <em>before</em> the slides and the lecture, never as a replacement for them. Its job is to hang hooks that the lecture can then attach to.</p>
+
+  <h2>Phase 1 · Ten days to Exam 1</h2>
+  <p>Lecture has already covered Chapters 1 through 4. Chapter 5 is Tuesday with Quiz 2, Chapter 6 is Friday, and Exam 1 covers all six on Tuesday 22 September. The sprint below is dated to that. Ticks are saved on this device.</p>
+  <p class="progress" id="progress"></p>
+
+  <div class="day" data-day="1">
+    <input type="checkbox" id="d1" aria-label="Day 1 done">
+    <div>
+      <span class="date">Sat 12 Sep</span>
+      <h3>Atoms, bonds, and water<span class="ch">Ch 2</span></h3>
+      <p class="why">The chemistry the professor assumed on 4 September: atoms and electron shells, covalent vs. ionic vs. hydrogen bonds, polar vs. nonpolar, pH. Water's oddness comes from hydrogen bonding, and half of cell biology follows from that.</p>
+      <ul>
+        <li><span class="tag">Watch</span><a href="https://www.youtube.com/watch?v=3jwAGWky98c">Amoeba Sisters · Properties of Water</a> <span class="dur">6:51</span>, then <a href="https://www.youtube.com/watch?v=zheKWEkW94o">Crash Course #21 · The Unexpected Truth About Water</a> if the first felt too easy.</li>
+        <li><span class="tag">Slides</span>The 4 Sep lecture slides on Canvas. Mark every term you can't define.</li>
+        <li><span class="tag">Practice</span><a href="https://www.khanacademy.org/science/ap-biology/chemistry-of-life">Khan · Unit 1 Chemistry of life</a>: "Structure of water and hydrogen bonding" and "Elements of life".</li>
+        <li><span class="tag">Read</span>Freeman's BioSkills section (between Ch 1 and Ch 2): the pages on reading chemical structures and reading graphs.</li>
+        <li><span class="tag">Self-test</span><a href="https://openstax.org/books/biology-2e/pages/2-review-questions">OpenStax Biology 2e · Ch 2 review questions</a> (answers in the book's Answer Key).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day" data-day="2">
+    <input type="checkbox" id="d2" aria-label="Day 2 done">
+    <div>
+      <span class="date">Sun 13 Sep</span>
+      <h3>Carbon, the four macromolecules, and proteins<span class="ch">Ch 2 (end) and Ch 3</span></h3>
+      <p class="why">Monomer, polymer, dehydration synthesis, hydrolysis; then proteins in depth: amino acids, four levels of structure, why shape is function, what an enzyme does. Quiz 2 on Tuesday covers this chapter.</p>
+      <ul>
+        <li><span class="tag">Watch</span><a href="https://www.youtube.com/watch?v=1Dx7LDwINLU">Amoeba Sisters · Biomolecules</a> <span class="dur">7:49</span>, then <a href="https://www.youtube.com/watch?v=hok2hyED9go">Protein Structure and Folding</a>. Optional: <a href="https://www.youtube.com/watch?v=qgVFkRn8f10">Enzymes</a> <span class="dur">5:47</span>.</li>
+        <li><span class="tag">Handout</span>Biomolecules recap, from the <a href="https://www.amoebasisters.com/handouts.html">Amoeba Sisters free handouts page</a>.</li>
+        <li><span class="tag">Slides</span>The 8 Sep slides (Protein).</li>
+        <li><span class="tag">Practice</span><a href="https://www.khanacademy.org/science/ap-biology/chemistry-of-life">Khan · Unit 1</a>: "Introduction to biological macromolecules", then the proteins part of "Properties, structure, and function of biological macromolecules".</li>
+        <li><span class="tag">Self-test</span><a href="https://openstax.org/books/biology-2e/pages/3-review-questions">OpenStax · Ch 3 review questions</a>, protein items.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day" data-day="3">
+    <input type="checkbox" id="d3" aria-label="Day 3 done">
+    <div>
+      <span class="date">Mon 14 Sep</span>
+      <h3>Nucleic acids, then quiz prep<span class="ch">Ch 4 · Quiz 2 tomorrow</span></h3>
+      <p class="why">Nucleotides, the double helix, DNA vs. RNA, and the one-line story the second half of the course hangs on: DNA is copied to RNA, RNA is read to make protein. Then a quiz rehearsal on Chapters 3 and 4.</p>
+      <ul>
+        <li><span class="tag">Watch</span><a href="https://www.youtube.com/watch?v=JQByjprj_mA">Amoeba Sisters · DNA vs RNA</a>, then <a href="https://www.youtube.com/watch?v=8m6hHRlKwxY">DNA, Chromosomes, Genes, and Traits</a> <span class="dur">8:18</span>.</li>
+        <li><span class="tag">Slides</span>The 11 Sep slides (Nucleic Acids).</li>
+        <li><span class="tag">Practice</span><a href="https://www.khanacademy.org/science/ap-biology/chemistry-of-life">Khan · Unit 1</a>: "Nucleic acids".</li>
+        <li><span class="tag">Quiz prep</span>Redo the Biomolecules handout blank. From memory, draw and label one amino acid and one nucleotide. Write the four levels of protein structure with one sentence each. Ten minutes, no notes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day event" data-day="4">
+    <input type="checkbox" id="d4" aria-label="Day 4 done">
+    <div>
+      <span class="date">Tue 15 Sep · Quiz 2 (Ch 3–4) at 11:20, then lecture</span>
+      <h3>Carbohydrates<span class="ch">Ch 5</span></h3>
+      <p class="why">A light day: the quiz is at the start of class, so the morning is a five-minute flashcard pass, not new material. The video before lecture is the priming step.</p>
+      <ul>
+        <li><span class="tag">Before class</span>Re-watch the carbohydrate minutes of the <a href="https://www.youtube.com/watch?v=1Dx7LDwINLU">Biomolecules</a> video. Write three questions you expect lecture to answer.</li>
+        <li><span class="tag">After class</span>20 minutes the same day: resolve every "?" in your notes from the 15 Sep slides or Freeman Ch 5. Save the quiz.</li>
+        <li><span class="tag">Practice</span><a href="https://www.khanacademy.org/science/ap-biology/chemistry-of-life">Khan · Unit 1</a>: carbohydrates.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day" data-day="5">
+    <input type="checkbox" id="d5" aria-label="Day 5 done">
+    <div>
+      <span class="date">Wed 16 Sep</span>
+      <h3>The tree of life and how biologists work<span class="ch">Ch 1</span></h3>
+      <p class="why">Chapter 1 is on the exam and was Quiz 1. Cell theory, evolution by natural selection, the three domains, and hypothesis testing. Easy points if you've seen it; a trap if you haven't.</p>
+      <ul>
+        <li><span class="tag">Watch</span><a href="https://www.youtube.com/watch?v=cQPVXrV0GNA">Amoeba Sisters · Characteristics of Life</a> <span class="dur">7:57</span>, then <a href="https://www.youtube.com/watch?v=3nAETHZTObk">Nature of Science</a> <span class="dur">9:52</span>. Optional: <a href="https://www.youtube.com/watch?v=cjR5zPrVjTc">Crash Course #4 · How Life is Organized</a>.</li>
+        <li><span class="tag">Slides</span>The 1 Sep slides. Redo Quiz 1 from memory.</li>
+        <li><span class="tag">Self-test</span><a href="https://openstax.org/books/biology-2e/pages/1-review-questions">OpenStax · Ch 1 review questions</a>.</li>
+        <li><span class="tag">Prep</span>Write the office-hours list for tomorrow: every "?" still open from Chapters 1 through 5.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day event" data-day="6">
+    <input type="checkbox" id="d6" aria-label="Day 6 done">
+    <div>
+      <span class="date">Thu 17 Sep · Office hours 12:30–2:30, Hall of Science 306 or Zoom</span>
+      <h3>Go to office hours, then prime for membranes<span class="ch">Ch 6 tomorrow</span></h3>
+      <p class="why">This is the only office-hours slot before Exam 1. Bring the list. Then the priming video for Friday's lecture on lipids and membranes.</p>
+      <ul>
+        <li><span class="tag">Office hours</span>Use the script at the bottom of this page. Also ask what the exam format is (the syllabus says multiple choice, matching, diagram labeling, short answer) and which diagrams you should be able to label.</li>
+        <li><span class="tag">Watch</span><a href="https://www.youtube.com/watch?v=qBCVVszQQNs">Amoeba Sisters · Inside the Cell Membrane</a> <span class="dur">9:09</span>.</li>
+        <li><span class="tag">Practice</span><a href="https://www.khanacademy.org/science/ap-biology/chemistry-of-life">Khan · Unit 1</a>: lipids; then <a href="https://www.khanacademy.org/science/ap-biology/cell-structure-and-function">Unit 2</a> "Plasma membranes".</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day event" data-day="7">
+    <input type="checkbox" id="d7" aria-label="Day 7 done">
+    <div>
+      <span class="date">Fri 18 Sep · Lecture</span>
+      <h3>Lipids, membranes, and transport<span class="ch">Ch 6</span></h3>
+      <p class="why">Freeman Ch 6 runs from fats and phospholipids through the bilayer to diffusion, osmosis and membrane proteins. It is the last chapter on Exam 1 and the one with the most diagram-labeling potential.</p>
+      <ul>
+        <li><span class="tag">After class</span>20 minutes resolving the "?" marks from the slides.</li>
+        <li><span class="tag">Watch</span><a href="https://www.youtube.com/watch?v=Ptmlvtei8hw">Amoeba Sisters · Cell Transport</a> <span class="dur">7:50</span>, then <a href="https://www.youtube.com/watch?v=L-osEc07vMs">Osmosis and Water Potential</a> <span class="dur">9:50</span>. Optional: <a href="https://www.youtube.com/watch?v=9Ia8zH-qMZw">Crash Course #24 · Cell Membranes</a>.</li>
+        <li><span class="tag">Handout</span>Cell Transport recap.</li>
+        <li><span class="tag">Practice</span><a href="https://www.khanacademy.org/science/ap-biology/cell-structure-and-function">Khan · Unit 2</a>: "Membrane permeability", "Membrane transport", "Tonicity and osmoregulation".</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day" data-day="8">
+    <input type="checkbox" id="d8" aria-label="Day 8 done">
+    <div>
+      <span class="date">Sat 19 Sep</span>
+      <h3>Checkpoint: the Khan unit test<span class="ch">Ch 1–6</span></h3>
+      <p class="why">Today finds out what stuck. Take the test cold, before any review, so the score is honest.</p>
+      <ul>
+        <li><span class="tag">Test</span><a href="https://www.khanacademy.org/science/ap-biology/chemistry-of-life">Khan · Unit 1 unit test</a>. Anything under about 70% in a lesson gets one more 15-minute practice pass today.</li>
+        <li><span class="tag">Self-test</span><a href="https://openstax.org/books/biology-2e/pages/3-review-questions">OpenStax · Ch 3</a> and <a href="https://openstax.org/books/biology-2e/pages/5-review-questions">Ch 5</a> review questions.</li>
+        <li><span class="tag">Flashcards</span>Every miss today becomes a card.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day" data-day="9">
+    <input type="checkbox" id="d9" aria-label="Day 9 done">
+    <div>
+      <span class="date">Sun 20 Sep</span>
+      <h3>Exam review, slides first<span class="ch">Ch 1–6</span></h3>
+      <p class="why">The exam is written from the slides. Go through all six lecture decks and, for each slide, write the question it would become. Then answer them with the deck closed.</p>
+      <ul>
+        <li><span class="tag">Slides</span>All six decks, question-per-slide. This is the single highest-yield hour before the exam.</li>
+        <li><span class="tag">Quizzes</span>Redo Quiz 1 and Quiz 2 from memory. The syllabus says quiz questions return, modified, on exams.</li>
+        <li><span class="tag">Diagrams</span>From memory, draw and label: an amino acid, a nucleotide, a phospholipid bilayer with a channel protein, water molecules hydrogen-bonding. Check against the book, redraw what you missed.</li>
+        <li><span class="tag">Handouts</span>Redo every recap handout blank: Biomolecules, Enzymes, Cell Transport.</li>
+        <li><span class="tag">Book</span>Freeman's end-of-chapter "Test Your Knowledge" for Ch 1–6, answers in the back.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day" data-day="10">
+    <input type="checkbox" id="d10" aria-label="Day 10 done">
+    <div>
+      <span class="date">Mon 21 Sep · Exam tomorrow at 11:20</span>
+      <h3>Light day<span class="ch">Ch 1–6</span></h3>
+      <p class="why">No new material. Cramming the night before trades sleep for facts and loses on both.</p>
+      <ul>
+        <li><span class="tag">Cards</span>One pass through the flashcards, then only the ones you missed, until the missed pile is empty.</li>
+        <li><span class="tag">List</span>Re-read your "?" list and confirm each has an answer.</li>
+        <li><span class="tag">Sleep</span>Full night. Breakfast. Arrive early enough to sit where you can see the diagrams.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Phase 2 · The weekly rhythm</h2>
+  <p>After Exam 1 the block shrinks and attaches to the Tuesday/Friday lecture schedule. It adds roughly two hours a week and should take time <em>off</em> the reading, because you will understand the slides before you sit down with them.</p>
+  <div class="rhythm">
+    <div class="w">Sunday<small>20 min</small></div>
+    <div class="d">Check the calendar below for the week's two chapters and any quiz. Queue the two videos so they are one tap away.</div>
+    <div class="w">Mon and Thu night<small>10–15 min</small></div>
+    <div class="d">The priming video for the next day's lecture, usually the Amoeba Sisters one. Skim the chapter's Key Concepts box. Write three questions you expect the lecture to answer. Walking in with questions is what makes a fast lecture followable.</div>
+    <div class="w">Tue and Fri, in lecture</div>
+    <div class="d">Don't transcribe the slides; they are on Canvas. Write what the professor stresses, examples, and anything you lost, marked with a "?" in the margin. The "?" marks are the day's to-do list.</div>
+    <div class="w">Tue and Fri, same day<small>20 min</small></div>
+    <div class="d">Resolve each "?" from the slides, the Freeman section, or the Khan article. Anything still open goes on the Thursday office-hours list. Same day, not the weekend: the lecture is still in your head.</div>
+    <div class="w">Quiz weeks</div>
+    <div class="d">Quizzes are at the start of class and cover the previous lecture or two (dates below). The Monday-night session before a quiz is a rehearsal: redo the handout blank, ten Khan questions, done.</div>
+    <div class="w">Reading</div>
+    <div class="d">The textbook is recommended, not required, so read it as a repair tool: when a slide doesn't make sense, read that Freeman section and try its "Check Your Understanding" prompt with the book closed. Don't read chapters front to back.</div>
+    <div class="w">Saturday<small>30 min</small></div>
+    <div class="d">Self-test only, no re-reading: the Khan lesson quizzes for the week's topics and the OpenStax review questions for the matching chapter. Make five flashcards per lecture from the questions you got wrong.</div>
+    <div class="w">Daily<small>5 min</small></div>
+    <div class="d">Flashcard review in Anki or Quizlet. Five minutes on a phone in a line somewhere is enough.</div>
+    <div class="w">Thursday</div>
+    <div class="d">Office hours 12:30–2:30 whenever the "?" list has anything on it, and a standing PASS tutoring appointment (details below) at the same time every week so it isn't a decision.</div>
+    <div class="w">Exam weeks</div>
+    <div class="d">Repeat the last three sprint days: Khan unit test cold, then question-per-slide through every deck on the exam, redo the quizzes, draw the diagrams, light day before.</div>
+  </div>
+
+  <h2>The semester, dated</h2>
+  <p>Every lecture with the video to watch the night before, the Khan unit for practice, and the OpenStax chapter for self-testing. Freeman chapter numbers are the 8th edition, the one in the eText. The course skips Chapter 8 and stops at Chapter 19, so those are not here.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Date</th><th>Lecture</th><th>Ch</th><th>Watch the night before</th><th>Practice</th><th>Due that day</th></tr></thead>
+    <tbody>
+      <tr class="exam"><td class="dt">Tue 22 Sep</td><td colspan="4">EXAM 1 · Chapters 1–6</td><td></td></tr>
+      <tr><td class="dt">Fri 25 Sep</td><td>Inside the Cell</td><td class="ch">7</td><td><a href="https://www.youtube.com/watch?v=Pxujitlv8wc">Prokaryotic vs Eukaryotic</a>, <a href="https://www.youtube.com/watch?v=8IlzKri08kk">Grand Cell Tour</a></td><td><a href="https://www.khanacademy.org/science/ap-biology/cell-structure-and-function">Khan Unit 2</a> · <a href="https://openstax.org/books/biology-2e/pages/4-review-questions">OpenStax Ch 4</a></td><td></td></tr>
+      <tr class="quiz"><td class="dt">Tue 29 Sep</td><td>Respiration &amp; Fermentation I</td><td class="ch">9</td><td><a href="https://www.youtube.com/watch?v=23ZzI6WZS28">What is ATP?</a> (Ch 8 is skipped; this 6-minute video is the piece of it you need), then <a href="https://www.youtube.com/watch?v=eJ9Zjc-jdys">Cellular Respiration</a></td><td><a href="https://www.khanacademy.org/science/ap-biology/cellular-energetics">Khan Unit 3</a> · <a href="https://openstax.org/books/biology-2e/pages/7-review-questions">OpenStax Ch 7</a></td><td class="due">Quiz 3 (Ch 7)</td></tr>
+      <tr><td class="dt">Fri 2 Oct</td><td>Respiration &amp; Fermentation II</td><td class="ch">9</td><td><a href="https://www.youtube.com/watch?v=YbdkbCU20_M">Fermentation</a>; <a href="https://www.youtube.com/watch?v=HeO3yagexTw">Crash Course #27</a> for the story</td><td>Khan Unit 3</td><td></td></tr>
+      <tr class="quiz"><td class="dt">Tue 6 Oct</td><td>Photosynthesis I</td><td class="ch">10</td><td><a href="https://www.youtube.com/watch?v=CMiPYHNNg28">Photosynthesis</a></td><td><a href="https://www.khanacademy.org/science/ap-biology/cellular-energetics">Khan Unit 3</a> · <a href="https://openstax.org/books/biology-2e/pages/8-review-questions">OpenStax Ch 8</a></td><td class="due">Quiz 4 (Ch 9)</td></tr>
+      <tr><td class="dt">Fri 9 Oct</td><td>Photosynthesis II</td><td class="ch">10</td><td><a href="https://www.youtube.com/watch?v=-ZRsLhaukn8">Crash Course #28</a></td><td>Khan Unit 3 unit test (exam checkpoint)</td><td></td></tr>
+      <tr class="exam"><td class="dt">Tue 13 Oct</td><td colspan="4">EXAM 2 · Chapters 7, 9, 10</td><td></td></tr>
+      <tr><td class="dt">Fri 16 Oct</td><td colspan="5">Fall break, no class</td></tr>
+      <tr><td class="dt">Tue 20 Oct</td><td>Cell–Cell Interactions</td><td class="ch">11</td><td><a href="https://www.youtube.com/watch?v=-dbRterutHY">Intro to Cell Signaling</a></td><td><a href="https://www.khanacademy.org/science/ap-biology/cell-communication-and-cell-cycle">Khan Unit 4</a> · <a href="https://openstax.org/books/biology-2e/pages/9-review-questions">OpenStax Ch 9</a></td><td></td></tr>
+      <tr><td class="dt">Fri 23 Oct</td><td>Cell Cycle / Mitosis</td><td class="ch">12</td><td><a href="https://www.youtube.com/watch?v=QVCjdNxJreE">Cell Cycle and Cancer</a>, <a href="https://www.youtube.com/watch?v=ShEzlXZPpPM">Mitosis</a></td><td>Khan Unit 4 · <a href="https://openstax.org/books/biology-2e/pages/10-review-questions">OpenStax Ch 10</a></td><td></td></tr>
+      <tr class="quiz"><td class="dt">Tue 27 Oct</td><td>Meiosis</td><td class="ch">13</td><td><a href="https://www.youtube.com/watch?v=VzDMG7ke69g">Meiosis</a>, <a href="https://www.youtube.com/watch?v=zrKdz93WlVk">Mitosis vs Meiosis</a></td><td><a href="https://www.khanacademy.org/science/ap-biology/heredity">Khan Unit 5</a> · <a href="https://openstax.org/books/biology-2e/pages/11-review-questions">OpenStax Ch 11</a></td><td class="due">Quiz 5 (Ch 11–12)</td></tr>
+      <tr><td class="dt">Fri 30 Oct</td><td>Mendel and the Gene I</td><td class="ch">14</td><td><a href="https://www.youtube.com/watch?v=i-0rSv6oxSY">Punnett Squares</a>, <a href="https://www.youtube.com/watch?v=YnJPbphsoMY">Crash Course #31</a></td><td>Khan Unit 5 · <a href="https://openstax.org/books/biology-2e/pages/12-review-questions">OpenStax Ch 12</a></td><td></td></tr>
+      <tr><td class="dt">Tue 3 Nov</td><td>Mendel and the Gene II</td><td class="ch">14</td><td><a href="https://www.youtube.com/watch?v=qIGXTJLrLf8">Dihybrid Crosses</a>, <a href="https://www.youtube.com/watch?v=YJHGfbW55l0">Non-Mendelian</a></td><td>Khan Unit 5 · <a href="https://openstax.org/books/biology-2e/pages/13-review-questions">OpenStax Ch 13</a></td><td></td></tr>
+      <tr><td class="dt">Fri 6 Nov</td><td colspan="4">Current Events Discussion I (written component plus participation, 3%). Written by you, no AI.</td><td class="due">Curr. Events I</td></tr>
+      <tr class="quiz"><td class="dt">Tue 10 Nov</td><td>DNA Synthesis, Repair &amp; Gene Function I</td><td class="ch">15–16</td><td><a href="https://www.youtube.com/watch?v=Qqe4thU-os8">DNA Replication</a></td><td><a href="https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation">Khan Unit 6</a> · <a href="https://openstax.org/books/biology-2e/pages/14-review-questions">OpenStax Ch 14</a></td><td class="due">Quiz 6 (Ch 13–14)</td></tr>
+      <tr><td class="dt">Fri 13 Nov</td><td>DNA Synthesis, Repair &amp; Gene Function II</td><td class="ch">15–16</td><td><a href="https://www.youtube.com/watch?v=vl6Vlf2thvI">Mutations</a>, <a href="https://www.youtube.com/watch?v=4YNDB_zSzfE">Crash Course #33</a></td><td>Khan Units 4–6 unit tests (exam checkpoint)</td><td></td></tr>
+      <tr class="exam"><td class="dt">Tue 17 Nov</td><td colspan="4">EXAM 3 · Chapters 11–16</td><td></td></tr>
+      <tr><td class="dt">Fri 20 Nov</td><td>Transcription &amp; Translation I</td><td class="ch">17</td><td><a href="https://www.youtube.com/watch?v=oefAI2x2CQM">Protein Synthesis</a>, <a href="https://www.youtube.com/watch?v=LsEYgwuP6ko">Codon Chart</a></td><td>Khan Unit 6 · <a href="https://openstax.org/books/biology-2e/pages/15-review-questions">OpenStax Ch 15</a></td><td></td></tr>
+      <tr><td class="dt">Tue 24 Nov</td><td>Transcription &amp; Translation II (online, Zoom)</td><td class="ch">17</td><td><a href="https://www.youtube.com/watch?v=j6YaOqKORYY">Crash Course #34</a>, <a href="https://www.youtube.com/watch?v=6ulXau2HyHg">#35</a></td><td>Khan Unit 6</td><td></td></tr>
+      <tr><td class="dt">Fri 27 Nov</td><td colspan="5">Thanksgiving, no class</td></tr>
+      <tr class="quiz"><td class="dt">Tue 1 Dec</td><td>Control of Gene Expression</td><td class="ch">18</td><td><a href="https://www.youtube.com/watch?v=h_1QLdtF8d0">Gene Regulation and the Operon</a></td><td>Khan Unit 6 · <a href="https://openstax.org/books/biology-2e/pages/16-review-questions">OpenStax Ch 16</a></td><td class="due">Quiz 7 (Ch 17)</td></tr>
+      <tr><td class="dt">Fri 4 Dec</td><td>Control of Gene Expression</td><td class="ch">18–19</td><td><a href="https://www.youtube.com/watch?v=ebIpkw3XapE">Gene Expression and Regulation</a></td><td>Khan Unit 6</td><td></td></tr>
+      <tr class="quiz"><td class="dt">Tue 8 Dec</td><td>Control of Gene Expression</td><td class="ch">19</td><td><a href="https://www.youtube.com/watch?v=MD3Fc0XOjWk">Epigenetics</a>, <a href="https://www.youtube.com/watch?v=NeeaP8pp9HI">Crash Course #36</a></td><td>Khan Unit 6 unit test (exam checkpoint)</td><td class="due">Quiz 8 (Ch 18–19)</td></tr>
+      <tr><td class="dt">Fri 11 Dec</td><td colspan="4">Current Events Discussion II</td><td class="due">Curr. Events II</td></tr>
+      <tr class="exam"><td class="dt">Tue 15 Dec</td><td colspan="4">FINAL EXAM · Chapters 17–19 only, 11:20–12:35</td><td></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Full playlists, for anything not in the table: <a href="https://www.youtube.com/playlist?list=PLwL0Myd7Dk1F0iQPGrjehze3eDpco1eVz">Amoeba Sisters Biology Learning Playlist</a> (103 videos, high-school level, in course order) and <a href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtPW_ofbxdHNciuLoTRLPMgB">Crash Course Biology 2023</a> (50 episodes with Dr. Sammy Ramsey, pitched at intro college). Use Amoeba Sisters when you're lost and Crash Course when you want the why.</p>
+
+  <h2>Lab practicals</h2>
+  <p>Lab is 25% of the grade, more than any single exam, and it runs as its own course: separate Canvas site, your TA, and Dr. Brenda Chow as lab director. The lecture syllabus says the lab assesses experimental design (replicates, control variables, error), building models through successive experiments, and quantitative and computer-based analysis. A lab practical tests whether you can <em>do</em> those things at a bench with a clock running, which is a different skill from the lecture exam and needs different prep.</p>
+  <div class="flag"><b>First, get the format from the TA.</b> In the next lab, ask: Is the practical stations with a timer? What counts as testable: structures on slides, procedures, calculations, reading data? Is there a list of specimens or structures we're expected to know? Can we bring anything? Everything below assumes a typical intro-bio practical; the TA's answer overrides it.</div>
+  <h3>What a practical usually looks like</h3>
+  <p>A ring of numbered stations, two or three minutes each, one to three questions per station, and you rotate on a bell. A station is a microscope with a slide and a pointer ("what is the structure at the pointer, and what does it do?"), a piece of equipment ("what is this, and what would you use it for?"), a data table or graph ("which variable is independent; what does this result mean?"), a calculation (magnification, a dilution, a unit conversion), or a procedure question ("why did we add the buffer before the enzyme?"). There is no going back to a station, so you cannot leave one blank and return.</p>
+  <h3>How to prepare, lab by lab</h3>
+  <ul class="tools">
+    <li><b>Same day as each lab, 15 minutes:</b> one page in a notebook with five things: the question the lab was asking, the <em>why</em> of each step (not the recipe), the equipment used and what it's for, a labelled sketch of what you saw, and one sentence of conclusion. Practicals test the why; the recipe is on the handout.</li>
+    <li><b>Draw what you saw.</b> Every slide, every specimen: a sketch with labels and the magnification written next to it. Before the practical, redraw each from memory and check. Diagram labelling is on the lecture exams too, so this pays twice.</li>
+    <li><b>The post-lab questions are the question bank.</b> Redo every one closed-book the week of the practical. Practical questions are usually those questions with the numbers or the specimen changed.</li>
+    <li><b>Build your own stations.</b> Five days out, make ten stations from the lab handouts: a photo, a diagram, a data table, a calculation, one per index card or phone photo. Two minutes each, write the answer, move on, no going back. Trade stations with a lab partner so you each get ten you didn't write.</li>
+    <li><b>Start five days out.</b> A practical covers several labs at once. It cannot be done the night before, and unlike the lecture exams there is no dropped lowest score.</li>
+  </ul>
+  <h3>The skills that show up on every intro-bio practical</h3>
+  <ul class="tools">
+    <li><b>Microscope.</b> Parts and what each does; total magnification is ocular times objective; how to focus from low power up; making a wet mount; estimating the size of a cell from the field of view. <a href="https://www.youtube.com/watch?v=tVcEEw6qbBQ">Amoeba Sisters · Microscopes and How to Use a Light Microscope</a> <span class="dur">9:16</span>, and <a href="https://www.youtube.com/watch?v=V66WBvI7Ufw">Crash Course #22 · Microscopes</a> for the why.</li>
+    <li><b>Experimental design.</b> Hypothesis versus prediction; independent, dependent and controlled variables; positive and negative controls; why replicates; what "error" means. <a href="https://www.youtube.com/watch?v=3nAETHZTObk">Amoeba Sisters · Nature of Science</a> and <a href="https://www.youtube.com/watch?v=xOLcZMw0hd4">Crash Course #2 · The Scientific Method</a>.</li>
+    <li><b>Writing a conclusion.</b> Claim, evidence, reasoning, in that order, in three sentences. <a href="https://www.youtube.com/watch?v=15aWaGYheJs">Amoeba Sisters · CER in Biology</a> <span class="dur">7:39</span>. This is also how the lab report questions want to be answered.</li>
+    <li><b>Numbers.</b> Metric prefixes and conversions (milli, micro, nano); a dilution; reading and drawing a graph with labelled axes, units and error bars; mean and a rough sense of spread. <a href="https://www.khanacademy.org/science/ap-biology/chemistry-of-life">Khan Academy</a> has these inside its lessons; Freeman's BioSkills section covers the metric system, graphs and basic statistics in a few pages.</li>
+    <li><b>Safety and equipment.</b> Where things are and why the rule exists. <a href="https://www.youtube.com/watch?v=MEIXRLcC6RA">Amoeba Sisters · General Lab Safety</a> <span class="dur">5:54</span>.</li>
+  </ul>
+  <p>Lab questions go to your TA or Dr. Chow, not Dr. Krogan, and the lab has its own policies on missed sessions. Read the lab syllabus on the lab Canvas site the same way you read this one.</p>
+
+  <h2>Self-testing toolkit</h2>
+  <p>Reading feels like learning and isn't. Answering questions with the book closed is what moves things into memory, and it is also the only way to find out what you don't know before the exam does. Everything here is free.</p>
+  <ul class="tools">
+    <li><b>The slides and the quizzes.</b> Not a website, but the top of this list. Question-per-slide through every deck, and every quiz redone from memory, is the closest thing to the real exam that exists.</li>
+    <li><b><a href="https://www.khanacademy.org/science/ap-biology">Khan Academy AP/College Biology</a>.</b> Every lesson in Units 1–6 has a practice set; every unit has a unit test. Make a free account so it tracks what you've mastered. The "AP" label is only the level: it matches BIO 110 well.</li>
+    <li><b><a href="https://openstax.org/books/biology-2e/pages/1-introduction">OpenStax Biology 2e</a>.</b> A free, peer-reviewed intro textbook. Each chapter ends with review questions and critical-thinking questions; the answer key is in the back matter of the online book. Also useful when Freeman's explanation doesn't land and you want a second telling.</li>
+    <li><b><a href="https://www.amoebasisters.com/handouts.html">Amoeba Sisters recap handouts</a>.</b> Free one-page fill-in sheets for each video. Fill it in during the video, then a week later redo it blank.</li>
+    <li><b>Freeman's own questions.</b> The "Check Your Understanding" boxes inside each chapter and the "Test Your Knowledge" questions at the end. The Pearson eText also has built-in flashcards and full-text search, which beats scrolling. Mastering Biology is a separate Pearson product; the syllabus doesn't mention it, so assume the course doesn't use it.</li>
+    <li><b>Flashcards, your own.</b> <a href="https://apps.ankiweb.net/">Anki</a> (free on computer and Android) or Quizlet. Five cards per lecture, a question on the front, one fact on the back. Cards you make yourself beat any downloaded deck, because making the card is half the studying.</li>
+    <li><b><a href="https://www.biointeractive.org/">HHMI BioInteractive</a>.</b> Free animations and click-and-learn interactives. Go here when a static diagram won't resolve into a picture, especially for membranes, respiration and DNA.</li>
+    <li><b><a href="https://learn.genetics.utah.edu/">Learn.Genetics</a>.</b> University of Utah's interactives on <a href="https://learn.genetics.utah.edu/content/cells/">cells</a> and <a href="https://learn.genetics.utah.edu/content/basics/">genetics</a>. Short and visual.</li>
+  </ul>
+
+  <h2>Help at AU, and how to ask for it</h2>
+  <ul class="tools">
+    <li><b>Dr. Krogan's office hours.</b> Thursdays 12:30–2:30, Hall of Science 306, or on Zoom (link under Modules / Course Information on Canvas). Go this Thursday, 17 September, with the list. Professors read an early visit as seriousness and a post-exam visit as damage control.</li>
+    <li><b>PASS peer tutoring.</b> Free one-on-one tutoring, and BIO 110 is on the supported list. Book through <a href="https://american.mywconline.net/">WC Online</a> under the "PASS Fall 2026" schedule, up to two weeks ahead; sessions are in Butler Pavilion 310 or on Zoom. Booking opened this week. Take a standing weekly slot.</li>
+    <li><b>Supplemental Instruction.</b> Free weekly group sessions attached to specific hard courses. Whether BIO 110 has one this term isn't published on the <a href="https://www.american.edu/provost/academic-access/supplemental-instruction-homepage.cfm">SI page</a>; email elc@american.edu or call 202-885-2991 and ask.</li>
+    <li><b>Lab questions</b> go to the lab TA or the Biology Laboratory Director, Dr. Brenda Chow, not to Dr. Krogan. The syllabus is explicit about that split.</li>
+  </ul>
+  <div class="script">"My high-school biology course was weak, so I'm rebuilding the foundation on my own with the textbook and Khan Academy. Of what we've covered so far, what are the two or three things you'd want me to have solid before Exam 1? Which diagrams should I be able to label? And is there anything in the lectures you're assuming from high school that I should go back and learn?"</div>
+  <p>That question does two things. It gets the priority list from the one person who writes the exam, and it tells the professor which of the faces in the room is trying.</p>
+
+  <h2>Phase 3 · After Exam 1</h2>
+  <p>The first exam is the data, and the syllabus makes it the cheapest data you will get all semester: if it is your lowest, it counts 10%. If the score is at or above the class median, keep only the weekly rhythm. If it is below, keep the rhythm, add a second self-test session mid-week, and make the PASS appointment non-negotiable. Either way, go back through the exam question by question and sort every miss into "didn't know it" or "knew it, misread the question". The two need different fixes, and most people have more of the second than they expect.</p>
+
+  <div class="foot">Built from the Fall 2026 syllabus (Dr. Naden Krogan, sections 005–007) on 12 September 2026. Links checked the same day. Freeman chapter numbers verified against the 8th-edition table of contents. The syllabus warns that topic timing may shift; exam dates are fixed.</div>
+</div>
+
+<script>
+(function(){
+  var KEY='bio110-sprint';
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){state={};}
+  var boxes=document.querySelectorAll('.day input[type=checkbox]');
+  var prog=document.getElementById('progress');
+  function render(){
+    var n=0;
+    boxes.forEach(function(b){
+      var d=b.closest('.day');
+      if(b.checked){n++;d.classList.add('done');}else{d.classList.remove('done');}
+    });
+    if(prog){prog.textContent=n===0?'0 of 10 days done':(n===10?'All 10 days done. Good luck Tuesday.':n+' of 10 days done');}
+  }
+  boxes.forEach(function(b){
+    var day=b.closest('.day').getAttribute('data-day');
+    b.checked=!!state[day];
+    b.addEventListener('change',function(){
+      state[day]=b.checked;
+      try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}
+      render();
+    });
+  });
+  render();
+})();
+</script>
+</body>
+</html>
