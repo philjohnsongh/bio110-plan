@@ -2390,7 +2390,10 @@ svg text{fill:currentColor}
   function chapterOf(el){
     var n = el;
     while (n && !(n.tagName === 'H2')) { n = n.previousElementSibling; }
-    return n ? n.textContent.replace(/\s+/g, ' ').trim() : '';
+    if (!n) return '';
+    var sm = n.querySelector('small');
+    var rest = Array.prototype.filter.call(n.childNodes, function(c){ return c !== sm; }).map(function(c){ return c.textContent; }).join('');
+    return ((sm ? sm.textContent.trim() + ' - ' : '') + rest).replace(/\s+/g, ' ').trim();
   }
   function txt(el){ return el ? el.textContent.replace(/\s+/g, ' ').trim() : ''; }
   var cards = document.querySelectorAll('article.term');
