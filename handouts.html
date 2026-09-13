@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BIO 110 Handouts</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+:root{
+  --bg:#F6F8F4; --surface:#FFFFFF; --ink:#1A2523; --muted:#5E6B68; --line:#D5DDD7;
+  --accent:#23705F; --accent-soft:#E2F0EA; --flag:#B0521C; --flag-soft:#F7E9DF;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#131917; --surface:#1B2320; --ink:#E4ECE7; --muted:#9BAAA4; --line:#2E3A35;
+    --accent:#63C2A9; --accent-soft:#1E3A32; --flag:#E39463; --flag-soft:#3A2A1E;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#131917; --surface:#1B2320; --ink:#E4ECE7; --muted:#9BAAA4; --line:#2E3A35;
+  --accent:#63C2A9; --accent-soft:#1E3A32; --flag:#E39463; --flag-soft:#3A2A1E;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:46rem;margin:0 auto;padding:2.5rem 1.25rem 5rem}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:2.4rem;font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.6rem;font-weight:700;margin-top:3.5rem;padding-top:1.25rem;border-top:2px solid var(--ink)}
+h2 small{display:block;font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
+p{margin:.8rem 0}
+.eyebrow{font-family:var(--display);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.lede{font-size:1.15rem;color:var(--muted);margin-top:.6rem}
+.nav{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;margin-top:1.25rem;font-family:var(--display);font-size:.9rem}
+.how{background:var(--accent-soft);border-radius:6px;padding:1rem 1.25rem;margin:1.5rem 0}
+.how ol{margin:.4rem 0 0;padding-left:1.2rem}
+.how li{margin:.35rem 0}
+.forest{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.25rem;margin:1.25rem 0}
+.forest .eyebrow{color:var(--accent)}
+.forest p{margin:.5rem 0}
+.forest ul{margin:.5rem 0 0;padding-left:1.1rem}
+.forest li{margin:.3rem 0;font-size:.97rem}
+.forest .hand{font-size:.95rem}
+.dur{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.term{padding:1.4rem 0;border-bottom:1px solid var(--line)}
+.term:last-of-type{border-bottom:0}
+.term h3{font-size:1.25rem;font-weight:700}
+.term .also{font-family:var(--display);font-size:.85rem;color:var(--muted);font-weight:500;margin-left:.5rem}
+.lbl{font-family:var(--display);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--accent);margin:.9rem 0 .2rem}
+.term p{margin:.2rem 0 .4rem}
+.tech{font-size:.97rem}
+.tech code{font-family:var(--mono);font-size:.85em}
+figure{margin:.4rem 0 0;padding:.75rem .9rem;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+figure svg{display:block;max-width:100%;height:auto;margin:0 auto;font-family:var(--display);font-size:12px;color:var(--ink)}
+figcaption{font-family:var(--display);font-size:.85rem;color:var(--muted);margin-top:.5rem;line-height:1.4}
+figcaption b{color:var(--ink);font-weight:700}
+.pic{font-size:.97rem;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.75rem .9rem;margin:.4rem 0 0}
+.pic b{font-family:var(--display);font-weight:700}
+details.tech{margin-top:.9rem;font-size:.97rem}
+details.tech summary{font-family:var(--display);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--accent);cursor:pointer;list-style:none;display:flex;align-items:center;gap:.45rem;padding:.25rem 0}
+details.tech summary::-webkit-details-marker{display:none}
+details.tech summary::before{content:"+";display:inline-block;width:1rem;text-align:center;font-size:1rem;line-height:1;border:1px solid var(--line);border-radius:3px}
+details.tech[open] summary::before{content:"\2013"}
+details.tech summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+details.tech p{margin:.4rem 0 0}
+@media (max-width:560px){figure{overflow-x:auto}figure svg{min-width:470px}}
+svg .acc{fill:var(--accent)}
+svg .accs{stroke:var(--accent)}
+svg .soft{fill:var(--accent-soft)}
+svg .flg{fill:var(--flag)}
+svg .flgs{stroke:var(--flag)}
+svg .flgsoft{fill:var(--flag-soft)}
+svg .mut{fill:var(--muted)}
+svg .muts{stroke:var(--muted)}
+svg .sur{fill:var(--surface)}
+svg text{fill:currentColor}
+.foot{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted);font-family:var(--display)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">General Biology I · Amoeba Sisters free recap handouts</div>
+  <h1>BIO 110 Handouts</h1>
+  <p class="lede">The one-page fill-in sheets that go with the Amoeba Sisters videos, grouped by chapter. Tap one and the PDF opens.</p>
+  <div class="nav"><a href="vocab.html">Word Bridge</a><a href="index.html">The plan</a></div>
+  <p>These are the Amoeba Sisters' own files, unchanged, hosted here so they are one tap away instead of a trip through their website. They are free for study use under <a href="https://philjohnsongh.github.io/bio110-plan/handouts/amoeba-sisters-terms-of-use.pdf">their terms</a>: don't edit them, don't sell them, and don't post answer keys publicly. Their name stays on every page, and the videos each sheet goes with are on the plan page. Everything else they make is at <a href="https://www.amoebasisters.com/handouts.html">amoebasisters.com</a>.</p>
+  <p>How to use one: open it before the video, fill it in while you watch (pausing is allowed), and a week later print or open it again and fill it in from memory. The second pass is the one that counts.</p>
+  <h2>Chapter 1 · Biology: The Study of Life</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/nature-of-science.pdf">Nature of Science</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/biological-levels.pdf">Biological Levels</a></li></ul>
+  <h2>Chapter 3 · Proteins</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/biomolecules.pdf">Biomolecules</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/enzymes.pdf">Enzymes</a></li></ul>
+  <h2>Chapter 4 · Nucleic acids</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/dna-chromosomes-genes-and-traits-an-intro-to-heredity.pdf">DNA, Chromosomes, Genes, and Traits An Intro to Heredity</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/dna-vs-rna-and-protein-synthesis.pdf">DNA vs. RNA & Protein Synthesis</a></li></ul>
+  <h2>Chapter 5 · Carbohydrates</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/biomolecules.pdf">Biomolecules</a></li></ul>
+  <h2>Chapter 6 · Lipids and membranes</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/cell-transport.pdf">Cell Transport</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/diffusion.pdf">Diffusion</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/osmosis.pdf">Osmosis</a></li></ul>
+  <h2>Chapter 7 · Inside the cell</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/introduction-to-cells.pdf">Introduction to Cells</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/prokaryotic-vs-eukaryotic-cells.pdf">Prokaryotic vs Eukaryotic Cells</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/comparing-cell-types-review.pdf">Comparing Cell Types Review</a></li></ul>
+  <h2>Chapter 9 · Respiration</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/atp.pdf">ATP</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/photosynthesis-and-cellular-respiration.pdf">Photosynthesis and Cellular Respiration</a></li></ul>
+  <h2>Chapter 10 · Photosynthesis</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/photosynthesis-and-cellular-respiration.pdf">Photosynthesis and Cellular Respiration</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/autotrophs-and-heterotrophs.pdf">Autotrophs and Heterotrophs</a></li></ul>
+  <h2>Chapter 12 · Cell cycle</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/mitosis.pdf">Mitosis</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/updated-chromsome-numbers.pdf">Chromosome Numbers</a></li></ul>
+  <h2>Chapter 13 · Meiosis</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/meiosis.pdf">Meiosis</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/updated-chromsome-numbers.pdf">Chromosome Numbers</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/asexual-and-sexual-reproduction.pdf">Asexual and Sexual Reproduction</a></li></ul>
+  <h2>Chapter 14 · Mendel</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/alleles-and-genes.pdf">Alleles and Genes</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/monohybrid-crosses-mendelian-inheritance.pdf">Monohybrid Crosses (Mendelian Inheritance)</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/dihybrid-crosses-mendelian-inheritance.pdf">Dihybrid Crosses (Mendelian Inheritance)</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/multiple-alleles-abo-blood-types-and-punnett-squares.pdf">Multiple Alleles (ABO Blood Types) & Punnett Squares</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/punnett-squares-and-sex-linked-traits.pdf">Punnett Squares and Sex-Linked Traits</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/pedigrees.pdf">Pedigrees</a></li></ul>
+  <h2>Chapters 15–17 · DNA, genes, transcription and translation</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/dna-replication.pdf">DNA Replication</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/mutations.pdf">Mutations</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/dna-vs-rna-and-protein-synthesis.pdf">DNA vs. RNA & Protein Synthesis</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/how-to-read-a-codon-chart.pdf">How to Read a Codon Chart</a></li></ul>
+  <h2>Lab</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/general-lab-safety.pdf">General Lab Safety</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/microscopes.pdf">Microscopes</a></li></ul>
+  <h2>Not in this course, but here if you want them</h2>
+  <ul class="tools"><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/animals.pdf">Animals</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/bacteria.pdf">Bacteria</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/biomagnification.pdf">Biomagnification</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/carbon-and-nitrogen-cycle.pdf">Carbon and Nitrogen Cycle</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/classification.pdf">Classification</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/dichotomous-keys-with-scientific-names.pdf">Dichotomous Keys with Scientific Names</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/digestive-system.pdf">Digestive System</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/ecological-relationships.pdf">Ecological Relationships</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/ecological-succession.pdf">Ecological Succession</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/eleven-human-body-systems.pdf">Eleven Human Body Systems</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/food-chains-food-webs-and-an-introduction-to-biodiversity.pdf">Food Chains, Food Webs, and an Introduction to Biodiversity</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/genetic-drift.pdf">Genetic Drift</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/hardy-weinberg-equilibrium.pdf">Hardy-Weinberg Equilibrium</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/natural-selection.pdf">Natural Selection</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/nervous-system.pdf">Nervous System</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/plant-reproduction-in-angiosperms.pdf">Plant Reproduction in Angiosperms</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/protists-and-fungi.pdf">Protists and Fungi</a></li><li><a href="https://philjohnsongh.github.io/bio110-plan/handouts/viruses.pdf">Viruses</a></li></ul>
+
+  <div class="foot">Handouts © Amoeba Sisters LLC, hosted unedited under their terms of use. Page built 14 September 2026. <a href="vocab.html">Word Bridge</a> · <a href="index.html">The plan</a></div>
+</div>
+</body>
+</html>
