@@ -83,11 +83,11 @@ svg text{fill:currentColor}
 <body>
 
 <div class="wrap">
-  <div class="eyebrow">General Biology I · Chapters 1–7 · Freeman 8th ed.</div>
+  <div class="eyebrow">General Biology I · Chapters 1–7 and 9–10 · Freeman 8th ed.</div>
   <h1>BIO 110 Word Bridge</h1>
   <p class="lede">The big picture for each chapter through Exam 2, and every term that matters, explained three ways: in plain words, in a picture, and the way the slides say it.</p>
   <div class="nav">
-    <a href="#ch1">Ch 1 · Life</a><a href="#ch2">Ch 2 · Water &amp; carbon</a><a href="#ch3">Ch 3 · Proteins</a><a href="#ch4">Ch 4 · DNA &amp; RNA</a><a href="#ch5">Ch 5 · Sugars</a><a href="#ch6">Ch 6 · Lipids &amp; membranes</a><a href="#ch7">Ch 7 · Inside the cell</a><a href="index.html">Back to the plan</a>
+    <a href="#ch1">Ch 1 · Life</a><a href="#ch2">Ch 2 · Water &amp; carbon</a><a href="#ch3">Ch 3 · Proteins</a><a href="#ch4">Ch 4 · DNA &amp; RNA</a><a href="#ch5">Ch 5 · Sugars</a><a href="#ch6">Ch 6 · Lipids &amp; membranes</a><a href="#ch7">Ch 7 · Inside the cell</a><a href="#ch9">Ch 9 · Respiration</a><a href="#ch10">Ch 10 · Photosynthesis</a><a href="index.html">Back to the plan</a>
   </div>
 
   <p style="margin-top:1.5rem">The course pitches its videos and slides at someone who already had a year of biology. If you didn't, the words arrive faster than the ideas behind them, and it feels like drowning in vocabulary. It isn't a memory problem. Each of these words stands for one small idea, and once you have the idea the word sticks by itself. This page gives you the idea first.</p>
@@ -1500,7 +1500,388 @@ svg text{fill:currentColor}
   </article>
 
 
-  <div class="foot">Built 13 September 2026 for Chapters 1–7 of Freeman, <i>Biological Science</i>, 8th ed. Plain-words explanations and pictures are simplifications on purpose; the technical versions are the wording the slides and exams use. If a term you need isn't here, that's a gap to report, not a sign it doesn't matter. <a href="index.html">Back to the plan</a>.</div>
+  <!-- ============================ CHAPTER 9 ============================ -->
+  <h2 id="ch9"><small>Chapter 9</small>Cellular Respiration and Fermentation</h2>
+
+  <div class="forest">
+    <span class="eyebrow">The forest</span>
+    <p>This is the chapter about how a cell gets energy out of food, and it has a reputation for being the hardest in the course because of the number of molecule names. Ignore the names on the first pass. The story is simple: <b>a cell takes glucose apart in stages, and at each stage it skims off a little energy.</b> Most of that energy is carried, not as ATP directly, but as electrons riding on carrier molecules. At the end, those electrons are handed down a chain of proteins in the mitochondrion to oxygen, and the energy they give up on the way is used to pump protons across a membrane. The protons flowing back through a turbine-like enzyme make most of the ATP. That is why you breathe: oxygen is the final place the electrons go.</p>
+    <p>Four stages, four rooms: glycolysis in the cytosol (glucose is split in half), pyruvate processing and the citric acid cycle in the mitochondrial matrix (the halves are taken fully apart, carbon leaves as CO₂, electrons are loaded onto carriers), and the electron transport chain in the inner membrane (the carriers unload, oxygen accepts, ATP is made). If there is no oxygen, the chain stops, and fermentation is the emergency workaround that keeps the first stage running.</p>
+    <p>The course skips Chapter 8, but two ideas from it are load-bearing here: what ATP is, and what it means to move electrons. They are the first two cards.</p>
+    <p>One sentence: <em>take glucose apart, load the electrons onto carriers, hand them down a chain to oxygen, and let the proton flow make ATP.</em></p>
+    <span class="eyebrow">Bridge videos, no background needed</span>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=ZkqEno1r2jk">FuseSchool · What Is Aerobic Respiration?</a> <span class="dur">2:53</span>. The whole equation and why it matters, in three minutes. Watch first.</li>
+      <li><a href="https://www.youtube.com/watch?v=HZtXLhm7ISA">FuseSchool · What Is Anaerobic Respiration?</a> <span class="dur">4:02</span> and <a href="https://www.youtube.com/watch?v=mhwUc84xBZA">Anaerobic respiration by yeast: fermentation</a> <span class="dur">3:53</span>. The no-oxygen versions: muscles and bread.</li>
+      <li>Then the Amoeba Sisters <a href="https://www.youtube.com/watch?v=23ZzI6WZS28">What is ATP?</a> and <a href="https://www.youtube.com/watch?v=eJ9Zjc-jdys">Cellular Respiration</a> from the plan page, which now have something to hang on.</li>
+    </ul>
+  </div>
+
+  <article class="term">
+    <h3>ATP<span class="also">from the skipped Chapter 8 · energy currency · phosphorylation</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>ATP is the cell's rechargeable battery. It is a nucleotide (adenine, ribose, like the ones in Chapter 4) with three phosphates in a row. Three negative phosphates crammed together repel each other, so the bond holding the last one on is under strain, and breaking it off releases energy the way a compressed spring does. The cell spends ATP by snapping off that last phosphate, leaving ADP (two phosphates), and very often sticks that phosphate onto another molecule to energise it; that is called phosphorylation. Respiration is the process of charging the battery back up: putting the third phosphate back on ADP. You make and use roughly your own body weight in ATP every day.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 150" role="img" aria-label="ATP as adenosine with three phosphates; the last phosphate breaks off, releasing energy, leaving ADP plus phosphate; respiration reverses it, putting the phosphate back on">
+        <defs><marker id="ar22" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <rect x="20" y="45" width="80" height="40" rx="8" class="soft" stroke="currentColor" stroke-width="2"/><text x="60" y="70" text-anchor="middle" font-size="11" font-weight="700">adenosine</text>
+        <g class="flgsoft" stroke="currentColor" stroke-width="2"><circle cx="125" cy="65" r="14"/><circle cx="160" cy="65" r="14"/><circle cx="195" cy="65" r="14"/></g>
+        <g text-anchor="middle" font-size="11" font-weight="700"><text x="125" y="69">P</text><text x="160" y="69">P</text><text x="195" y="69">P</text></g>
+        <line x1="100" y1="65" x2="111" y2="65" stroke="currentColor" stroke-width="2"/><line x1="139" y1="65" x2="146" y2="65" stroke="currentColor" stroke-width="2"/><line x1="174" y1="65" x2="181" y2="65" class="flgs" stroke-width="3"/>
+        <text x="110" y="25" font-size="11" font-weight="700">ATP</text>
+        <text x="178" y="105" text-anchor="middle" font-size="9" style="fill:var(--flag)">strained bond</text>
+        <line x1="225" y1="55" x2="290" y2="55" stroke="currentColor" stroke-width="2" marker-end="url(#ar22)"/><text x="257" y="45" text-anchor="middle" font-size="10">spend: energy out</text>
+        <line x1="290" y1="78" x2="225" y2="78" stroke="currentColor" stroke-width="2" marker-end="url(#ar22)"/><text x="257" y="95" text-anchor="middle" font-size="10">recharge: respiration</text>
+        <rect x="310" y="45" width="70" height="40" rx="8" class="soft" stroke="currentColor" stroke-width="2"/><text x="345" y="70" text-anchor="middle" font-size="10" font-weight="700">adenosine</text>
+        <g class="flgsoft" stroke="currentColor" stroke-width="2"><circle cx="404" cy="65" r="14"/><circle cx="439" cy="65" r="14"/></g>
+        <g text-anchor="middle" font-size="11" font-weight="700"><text x="404" y="69">P</text><text x="439" y="69">P</text></g>
+        <line x1="380" y1="65" x2="390" y2="65" stroke="currentColor" stroke-width="2"/><line x1="418" y1="65" x2="425" y2="65" stroke="currentColor" stroke-width="2"/>
+        <text x="400" y="25" font-size="11" font-weight="700">ADP</text>
+        <circle cx="490" cy="65" r="14" class="flgsoft" stroke="currentColor" stroke-width="2"/><text x="490" y="69" text-anchor="middle" font-size="11" font-weight="700">P</text>
+        <text x="490" y="105" text-anchor="middle" font-size="10">+ free phosphate</text>
+        <text x="260" y="138" text-anchor="middle" font-size="10" style="fill:var(--muted)">the freed phosphate is often stuck onto another molecule to energise it: phosphorylation</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a spring-loaded three-pack. Pop the third one off and the spring releases; the whole point of respiration is pushing it back on.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Adenosine triphosphate: adenine, ribose, and three phosphate groups linked by phosphoanhydride bonds. Hydrolysis of the terminal phosphate (ATP + H₂O → ADP + Pᵢ) is strongly exergonic (ΔG ≈ −30 kJ/mol under standard conditions, more in cells) because it relieves electrostatic repulsion and the products are stabilised by resonance and hydration. Cells couple this exergonic reaction to endergonic ones, usually by transferring the phosphate to a substrate or protein (phosphorylation), which changes its shape or reactivity. ATP is regenerated from ADP by substrate-level phosphorylation and, mostly, by oxidative phosphorylation.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Redox and electron carriers<span class="also">from Chapter 8 · oxidation · reduction · NAD⁺/NADH · FADH₂</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Chemical energy is really about where electrons sit. When a molecule loses electrons it is oxidised; when it gains them it is reduced; the two always happen together (one molecule's loss is another's gain), so the pair is a redox reaction. The mnemonic is OIL RIG: Oxidation Is Loss, Reduction Is Gain. Glucose is a molecule whose electrons are held loosely and at high energy; oxygen holds electrons tightly. Respiration is moving electrons from glucose to oxygen in small, controlled steps and catching the energy on the way. The electrons don't travel alone: they are picked up by carrier molecules, mainly NAD⁺, which becomes NADH when it's loaded (and FAD, which becomes FADH₂). Think of NADH as a wheelbarrow full of energetic electrons, pushed from the early stages to the mitochondrion's inner membrane.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 140" role="img" aria-label="Electrons move from a food molecule, which is oxidised, to a carrier NAD-plus, which is reduced to NADH; the loaded carrier is then wheeled to the electron transport chain">
+        <defs><marker id="ar23" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <rect x="20" y="40" width="110" height="50" rx="8" class="soft" stroke="currentColor" stroke-width="2"/><text x="75" y="60" text-anchor="middle" font-size="11" font-weight="700">food molecule</text><text x="75" y="77" text-anchor="middle" font-size="10">loses electrons</text>
+        <text x="75" y="115" text-anchor="middle" font-size="10" style="fill:var(--flag)">OXIDISED</text>
+        <g class="acc"><circle cx="160" cy="58" r="4"/><circle cx="172" cy="66" r="4"/></g>
+        <line x1="135" y1="65" x2="215" y2="65" stroke="currentColor" stroke-width="2" marker-end="url(#ar23)"/><text x="175" y="50" text-anchor="middle" font-size="10">e⁻ (+ H⁺)</text>
+        <rect x="220" y="40" width="90" height="50" rx="8" class="sur" stroke="currentColor" stroke-width="2"/><text x="265" y="60" text-anchor="middle" font-size="11" font-weight="700">NAD⁺</text><text x="265" y="77" text-anchor="middle" font-size="10">empty carrier</text>
+        <line x1="315" y1="65" x2="355" y2="65" stroke="currentColor" stroke-width="2" marker-end="url(#ar23)"/>
+        <rect x="360" y="40" width="90" height="50" rx="8" class="soft" stroke="currentColor" stroke-width="2"/><text x="405" y="60" text-anchor="middle" font-size="11" font-weight="700">NADH</text><text x="405" y="77" text-anchor="middle" font-size="10">loaded carrier</text>
+        <text x="405" y="115" text-anchor="middle" font-size="10" style="fill:var(--accent)">REDUCED (gained e⁻)</text>
+        <line x1="455" y1="65" x2="500" y2="65" class="accs" stroke-width="2.5" marker-end="url(#ar23)"/><text x="480" y="50" text-anchor="middle" font-size="9">to the</text><text x="480" y="95" text-anchor="middle" font-size="9">chain</text>
+        <text x="260" y="132" text-anchor="middle" font-size="11" font-weight="700">OIL RIG: Oxidation Is Loss, Reduction Is Gain (of electrons)</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> wheelbarrows. Glycolysis and the citric acid cycle fill them (NADH); the electron transport chain empties them.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Oxidation is loss of electrons (or, equivalently in biology, loss of hydrogen atoms or gain of oxygen); reduction is gain of electrons. Redox reactions are coupled. Electrons in C–H bonds are at higher potential energy than in C–O or O–H bonds, so oxidising glucose to CO₂ and H₂O is highly exergonic. NAD⁺ (nicotinamide adenine dinucleotide) accepts two electrons and one proton to form NADH; FAD accepts two electrons and two protons to form FADH₂. These reduced coenzymes donate electrons to the electron transport chain. NADP⁺/NADPH is the analogous carrier in photosynthesis.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Cellular respiration, the map<span class="also">four stages · where each happens · what each makes</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>The overall equation is glucose plus oxygen goes to carbon dioxide plus water, with energy captured as ATP. It happens in four stages, and knowing which room each one is in gets you halfway through the exam. Glycolysis, in the cytosol, splits one glucose into two pyruvate and makes a little ATP and NADH. Pyruvate processing, in the mitochondrial matrix, strips a carbon off each pyruvate as CO₂ and loads more NADH. The citric acid cycle, also in the matrix, takes the remaining carbons apart completely, releasing the rest of the CO₂ and loading most of the NADH. The electron transport chain, in the inner membrane, unloads all that NADH onto oxygen and makes most of the ATP. The CO₂ you breathe out comes from stages two and three; the oxygen you breathe in is used only in stage four.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 560 210" role="img" aria-label="Four stages in sequence: glycolysis in the cytosol makes 2 pyruvate, 2 ATP and 2 NADH; pyruvate processing in the matrix makes acetyl-CoA, 2 CO2 and 2 NADH; the citric acid cycle in the matrix makes 4 CO2, 6 NADH, 2 FADH2 and 2 ATP; the electron transport chain in the inner membrane uses oxygen and makes about 26 ATP">
+        <defs><marker id="ar24" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <rect x="10" y="20" width="120" height="150" rx="6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/><text x="70" y="12" text-anchor="middle" font-size="10" style="fill:var(--muted)">cytosol</text>
+        <rect x="150" y="20" width="400" height="150" rx="6" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="350" y="12" text-anchor="middle" font-size="10" style="fill:var(--muted)">mitochondrion</text>
+        <g font-size="10" text-anchor="middle">
+          <rect x="20" y="50" width="100" height="44" rx="6" class="soft" stroke="currentColor"/><text x="70" y="68" font-weight="700">1 Glycolysis</text><text x="70" y="84">glucose → 2 pyruvate</text>
+          <text x="70" y="115">2 ATP (net)</text><text x="70" y="130">2 NADH</text>
+          <line x1="120" y1="72" x2="158" y2="72" stroke="currentColor" stroke-width="2" marker-end="url(#ar24)"/>
+          <rect x="160" y="50" width="100" height="44" rx="6" class="soft" stroke="currentColor"/><text x="210" y="64" font-weight="700">2 Pyruvate</text><text x="210" y="76" font-weight="700">processing</text><text x="210" y="89">→ acetyl-CoA</text>
+          <text x="210" y="115">2 CO₂ out</text><text x="210" y="130">2 NADH</text>
+          <line x1="260" y1="72" x2="298" y2="72" stroke="currentColor" stroke-width="2" marker-end="url(#ar24)"/>
+          <rect x="300" y="50" width="100" height="44" rx="6" class="soft" stroke="currentColor"/><text x="350" y="64" font-weight="700">3 Citric acid</text><text x="350" y="76" font-weight="700">cycle</text><text x="350" y="89">carbons fully taken apart</text>
+          <text x="350" y="115">4 CO₂ out</text><text x="350" y="130">6 NADH, 2 FADH₂, 2 ATP</text>
+          <line x1="400" y1="72" x2="438" y2="72" class="accs" stroke-width="2.5" marker-end="url(#ar24)"/><text x="419" y="62" font-size="9" style="fill:var(--accent)">NADH</text>
+          <rect x="440" y="50" width="100" height="44" rx="6" class="flgsoft" stroke="currentColor"/><text x="490" y="64" font-weight="700">4 Electron</text><text x="490" y="76" font-weight="700">transport chain</text><text x="490" y="89">O₂ → H₂O</text>
+          <text x="490" y="115" font-weight="700">~26 ATP</text><text x="490" y="130">uses the O₂ you breathe</text>
+          <text x="210" y="155" style="fill:var(--muted)">stages 2–3: matrix</text><text x="490" y="155" style="fill:var(--muted)">stage 4: inner membrane</text>
+        </g>
+        <text x="280" y="195" text-anchor="middle" font-size="11" font-weight="700">glucose + 6 O₂ → 6 CO₂ + 6 H₂O + about 30 ATP</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> four rooms. Split it, strip it, cycle it, cash it in. Almost all the ATP comes from the last room.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Aerobic respiration oxidises glucose completely: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O, ΔG ≈ −2870 kJ/mol. Stages: (1) glycolysis, cytosol, glucose → 2 pyruvate, net 2 ATP by substrate-level phosphorylation and 2 NADH; (2) pyruvate oxidation, matrix, 2 pyruvate → 2 acetyl-CoA + 2 CO₂ + 2 NADH; (3) citric acid (Krebs, TCA) cycle, matrix, 2 acetyl-CoA → 4 CO₂, 6 NADH, 2 FADH₂, 2 ATP (as GTP); (4) electron transport and oxidative phosphorylation, inner membrane, reoxidising 10 NADH and 2 FADH₂ with O₂ as terminal acceptor to yield roughly 26 ATP. Modern estimates give about 30 ATP per glucose rather than the older 36–38. Fats and proteins enter at intermediate points.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Glycolysis<span class="also">pyruvate · substrate-level phosphorylation</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>"Glyco-lysis" means sugar-splitting. Ten enzyme steps in the cytosol take one six-carbon glucose and cut it into two three-carbon pieces called pyruvate. The odd part is that it costs two ATP up front to get glucose primed, then pays back four, so the net is two ATP per glucose, plus two loaded NADH. It needs no oxygen and every living thing on Earth does it, which is the strongest hint that it is the oldest part of the whole process. The ATP here is made the direct way, by an enzyme physically transferring a phosphate from a sugar fragment onto ADP; that is called substrate-level phosphorylation, to distinguish it from the turbine method in stage four.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 150" role="img" aria-label="Glucose, a six-carbon chain, is split into two three-carbon pyruvate molecules; two ATP are spent, four are made, net two, plus two NADH">
+        <defs><marker id="ar25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <g class="acc"><circle cx="40" cy="70" r="8"/><circle cx="62" cy="70" r="8"/><circle cx="84" cy="70" r="8"/><circle cx="106" cy="70" r="8"/><circle cx="128" cy="70" r="8"/><circle cx="150" cy="70" r="8"/></g>
+        <text x="95" y="45" text-anchor="middle" font-size="11" font-weight="700">glucose (6 C)</text>
+        <line x1="175" y1="70" x2="300" y2="70" stroke="currentColor" stroke-width="2.5" marker-end="url(#ar25)"/>
+        <text x="237" y="40" text-anchor="middle" font-size="10">spend 2 ATP</text><text x="237" y="55" text-anchor="middle" font-size="10">make 4 ATP</text>
+        <text x="237" y="92" text-anchor="middle" font-size="10">10 steps, cytosol</text><text x="237" y="106" text-anchor="middle" font-size="10">no oxygen needed</text>
+        <g class="acc"><circle cx="330" cy="50" r="8"/><circle cx="352" cy="50" r="8"/><circle cx="374" cy="50" r="8"/><circle cx="330" cy="92" r="8"/><circle cx="352" cy="92" r="8"/><circle cx="374" cy="92" r="8"/></g>
+        <text x="352" y="30" text-anchor="middle" font-size="11" font-weight="700">2 pyruvate (3 C each)</text>
+        <text x="452" y="55" text-anchor="middle" font-size="11" font-weight="700">net: 2 ATP</text><text x="452" y="75" text-anchor="middle" font-size="11" font-weight="700">+ 2 NADH</text>
+        <text x="452" y="100" text-anchor="middle" font-size="9" style="fill:var(--muted)">ATP made by direct</text><text x="452" y="112" text-anchor="middle" font-size="9" style="fill:var(--muted)">phosphate transfer</text>
+        <text x="260" y="140" text-anchor="middle" font-size="10" style="fill:var(--muted)">all six carbons are still here; none has left as CO₂ yet</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> cut the six-pack into two three-packs. It costs two coins to start and returns four.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Glycolysis: ten cytosolic reactions converting glucose to two pyruvate. Energy-investment phase: two ATP phosphorylate glucose (hexokinase) and fructose-6-phosphate (phosphofructokinase, the key regulated step, inhibited by ATP: feedback inhibition). Energy-payoff phase: glyceraldehyde-3-phosphate is oxidised (NAD⁺ → NADH) and two substrate-level phosphorylations per triose yield 4 ATP. Net: 2 ATP, 2 NADH, 2 pyruvate. Occurs in all domains; oxygen-independent.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Pyruvate processing and the citric acid cycle<span class="also">acetyl-CoA · Krebs cycle · where CO₂ comes from</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Pyruvate enters the mitochondrion. First a carbon is clipped off each one and leaves as CO₂, and the two-carbon piece that's left is attached to a helper molecule (coenzyme A) to make acetyl-CoA; an NADH is loaded in the process. Then the two-carbon piece is fed into the citric acid cycle: it's joined to a four-carbon molecule to make a six-carbon one (citrate), and over eight steps that gets taken apart, two carbons leaving as CO₂, until the four-carbon starting molecule is back and can go again. That's why it's a cycle. Each turn loads three NADH and one FADH₂ and makes one ATP. Since one glucose gives two acetyl-CoA, the cycle turns twice per glucose. At this point all six carbons of the glucose have left as CO₂, and nearly all the energy is sitting in loaded carriers.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 210" role="img" aria-label="Pyruvate loses a carbon as CO2 and becomes acetyl-CoA, which enters a circular pathway: joins a four-carbon molecule to make six carbons, two carbons leave as CO2 during the cycle, and the four-carbon molecule is regenerated; each turn yields 3 NADH, 1 FADH2, 1 ATP">
+        <defs><marker id="ar26" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <g class="acc"><circle cx="30" cy="60" r="7"/><circle cx="48" cy="60" r="7"/><circle cx="66" cy="60" r="7"/></g><text x="48" y="40" text-anchor="middle" font-size="10" font-weight="700">pyruvate (3 C)</text>
+        <line x1="80" y1="60" x2="135" y2="60" stroke="currentColor" stroke-width="2" marker-end="url(#ar26)"/><text x="108" y="50" text-anchor="middle" font-size="9">CO₂ out</text><text x="108" y="78" text-anchor="middle" font-size="9">NADH loaded</text>
+        <g class="acc"><circle cx="150" cy="60" r="7"/><circle cx="168" cy="60" r="7"/></g><rect x="180" y="52" width="26" height="16" rx="4" class="sur" stroke="currentColor"/><text x="193" y="64" text-anchor="middle" font-size="8">CoA</text>
+        <text x="178" y="40" text-anchor="middle" font-size="10" font-weight="700">acetyl-CoA (2 C)</text>
+        <line x1="193" y1="72" x2="260" y2="100" stroke="currentColor" stroke-width="2" marker-end="url(#ar26)"/>
+        <circle cx="330" cy="120" r="70" fill="none" stroke="currentColor" stroke-width="3"/>
+        <text x="330" y="112" text-anchor="middle" font-size="11" font-weight="700">citric acid</text><text x="330" y="128" text-anchor="middle" font-size="11" font-weight="700">cycle</text>
+        <text x="330" y="146" text-anchor="middle" font-size="9" style="fill:var(--muted)">8 steps, turns twice per glucose</text>
+        <text x="268" y="92" text-anchor="end" font-size="9">2 C in → 6 C</text>
+        <line x1="392" y1="80" x2="440" y2="55" stroke="currentColor" stroke-width="2" marker-end="url(#ar26)"/><text x="470" y="52" text-anchor="middle" font-size="10">2 CO₂ out</text>
+        <line x1="400" y1="125" x2="450" y2="125" class="accs" stroke-width="2.5" marker-end="url(#ar26)"/><text x="485" y="120" text-anchor="middle" font-size="10" font-weight="700">3 NADH</text><text x="485" y="133" text-anchor="middle" font-size="10" font-weight="700">1 FADH₂</text>
+        <line x1="385" y1="170" x2="430" y2="190" stroke="currentColor" stroke-width="2" marker-end="url(#ar26)"/><text x="465" y="200" text-anchor="middle" font-size="10">1 ATP</text>
+        <text x="300" y="200" text-anchor="middle" font-size="9" style="fill:var(--muted)">4 C molecule regenerated, goes round again</text>
+        <text x="60" y="130" font-size="10">per turn:</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a carousel that takes on two carbons at the gate and drops them off as CO₂ on the way round, loading wheelbarrows as it goes.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Pyruvate is transported into the matrix and oxidatively decarboxylated by the pyruvate dehydrogenase complex: pyruvate + NAD⁺ + CoA → acetyl-CoA + CO₂ + NADH. In the citric acid cycle, acetyl-CoA condenses with oxaloacetate (4 C) to citrate (6 C); two decarboxylations and four oxidations regenerate oxaloacetate, yielding per turn 3 NADH, 1 FADH₂, 1 GTP (≈ ATP) and 2 CO₂. Regulated by feedback (NADH and ATP inhibit key dehydrogenases). Intermediates also feed biosynthesis, so the cycle is a metabolic hub.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Electron transport chain<span class="also">inner membrane · proton gradient · why oxygen</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>The loaded carriers (NADH, FADH₂) arrive at the inner mitochondrial membrane, which is studded with a series of protein complexes. They hand their electrons to the first complex, and the electrons then get passed down the line, complex to complex, each one holding them a bit more tightly than the last, like water going down a staircase. At each step some energy is released, and the complexes use it to pump protons (H⁺) out of the matrix into the space between the two membranes. At the bottom of the staircase the electrons are handed to oxygen, which grabs two protons as well and becomes water. If there's no oxygen, the last step can't happen, the whole staircase backs up, and everything upstream stops. That is what suffocation is at the molecular level. Note what the chain does <em>not</em> do: it makes no ATP itself. It makes a proton gradient.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 200" role="img" aria-label="The inner mitochondrial membrane with four protein complexes; electrons from NADH step down through them to oxygen, forming water; at each step protons are pumped from the matrix into the intermembrane space, building up on the outside">
+        <defs><marker id="ar27" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <rect x="20" y="85" width="480" height="40" class="soft" stroke="currentColor" stroke-width="1.5"/>
+        <text x="30" y="30" font-size="10" style="fill:var(--muted)">intermembrane space (outside the inner membrane)</text>
+        <text x="30" y="190" font-size="10" style="fill:var(--muted)">matrix (inside)</text>
+        <g class="sur" stroke="currentColor" stroke-width="2"><rect x="70" y="70" width="50" height="70" rx="10"/><rect x="170" y="72" width="50" height="66" rx="10"/><rect x="270" y="74" width="50" height="62" rx="10"/><rect x="370" y="76" width="50" height="58" rx="10"/></g>
+        <g font-size="10" text-anchor="middle" font-weight="700"><text x="95" y="110">I</text><text x="195" y="110">II–III</text><text x="295" y="110">IV</text><text x="395" y="110">→O₂</text></g>
+        <path d="M40,160 L95,150 L195,150 L295,150 L395,150 L440,165" fill="none" class="accs" stroke-width="2.5" marker-end="url(#ar27)"/>
+        <text x="40" y="150" font-size="10" font-weight="700">NADH</text><text x="30" y="176" font-size="9">unloads e⁻</text>
+        <g class="acc"><circle cx="140" cy="150" r="3"/><circle cx="240" cy="150" r="3"/><circle cx="340" cy="150" r="3"/></g>
+        <text x="470" y="180" text-anchor="middle" font-size="10" font-weight="700">O₂ + 4 e⁻ + 4 H⁺</text><text x="470" y="193" text-anchor="middle" font-size="10" font-weight="700">→ 2 H₂O</text>
+        <g stroke="currentColor" stroke-width="2"><line x1="95" y1="140" x2="95" y2="55" marker-end="url(#ar27)"/><line x1="195" y1="138" x2="195" y2="55" marker-end="url(#ar27)"/><line x1="295" y1="136" x2="295" y2="55" marker-end="url(#ar27)"/></g>
+        <g font-size="10" text-anchor="middle" style="fill:var(--flag)"><text x="95" y="48">H⁺</text><text x="195" y="48">H⁺</text><text x="295" y="48">H⁺</text><text x="130" y="48">H⁺</text><text x="240" y="48">H⁺</text><text x="340" y="48">H⁺</text><text x="160" y="62">H⁺</text><text x="265" y="62">H⁺</text></g>
+        <text x="440" y="48" font-size="9" style="fill:var(--flag)">protons pile up out here</text>
+        <text x="200" y="176" text-anchor="middle" font-size="9" style="fill:var(--muted)">electrons step down, energy pumps protons up</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a staircase for electrons that pumps water uphill at every step. Oxygen is the floor at the bottom; take it away and nothing can step down.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>The ETC comprises four inner-membrane complexes (I–IV) plus the mobile carriers ubiquinone (Q) and cytochrome c. NADH donates electrons to complex I, FADH₂ to complex II; electrons pass down a series of redox centres of increasing electronegativity (reduction potential) to complex IV, which reduces O₂ to H₂O. Complexes I, III and IV use the released free energy to pump H⁺ from the matrix to the intermembrane space, generating a proton-motive force (chemical plus electrical gradient). Cyanide blocks complex IV; without a terminal acceptor, NADH cannot be reoxidised and upstream stages halt. Some anaerobic prokaryotes use other terminal acceptors (nitrate, sulfate).</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Chemiosmosis and ATP synthase<span class="also">oxidative phosphorylation · the two ways to make ATP</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Now the protons pumped out by the chain are crowded on one side of the membrane and want back in, and there's only one way through: an enzyme called ATP synthase, which is literally a molecular turbine. Protons flowing through it make its shaft spin, and the spinning presses phosphate onto ADP to make ATP. Energy stored as a proton pile, cashed as ATP by a turbine: that process is chemiosmosis, and ATP made this way is called oxidative phosphorylation, because the electrons that pumped the protons came from oxidising food. It makes about nine-tenths of your ATP. The other tenth, from glycolysis and the citric acid cycle, is substrate-level phosphorylation, the direct hand-off. Exams love asking which is which.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 180" role="img" aria-label="Protons crowded in the intermembrane space flow back through ATP synthase, a turbine in the inner membrane; the flow drives the joining of ADP and phosphate into ATP in the matrix">
+        <defs><marker id="ar28" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <rect x="20" y="80" width="480" height="40" class="soft" stroke="currentColor" stroke-width="1.5"/>
+        <g font-size="11" style="fill:var(--flag)" font-weight="700"><text x="40" y="40">H⁺</text><text x="70" y="60">H⁺</text><text x="100" y="35">H⁺</text><text x="130" y="55">H⁺</text><text x="160" y="40">H⁺</text><text x="190" y="62">H⁺</text><text x="380" y="45">H⁺</text><text x="420" y="60">H⁺</text><text x="450" y="38">H⁺</text><text x="340" y="60">H⁺</text></g>
+        <text x="30" y="20" font-size="10" style="fill:var(--muted)">many protons out here (pumped by the chain)</text>
+        <rect x="240" y="60" width="60" height="30" rx="8" class="sur" stroke="currentColor" stroke-width="2"/>
+        <rect x="255" y="90" width="30" height="40" class="sur" stroke="currentColor" stroke-width="2"/>
+        <circle cx="270" cy="150" r="24" class="sur" stroke="currentColor" stroke-width="2"/>
+        <path d="M262,142 l16,16 M278,142 l-16,16" stroke="currentColor" stroke-width="1.5"/>
+        <text x="270" y="55" text-anchor="middle" font-size="10" font-weight="700">ATP synthase</text>
+        <path d="M230,50 C250,70 265,90 268,128" fill="none" class="flgs" stroke-width="2.5" marker-end="url(#ar28)"/>
+        <text x="215" y="115" text-anchor="end" font-size="10" style="fill:var(--flag)">protons flow back in</text>
+        <text x="215" y="128" text-anchor="end" font-size="10">turbine spins</text>
+        <text x="330" y="140" font-size="11">ADP + P</text><line x1="380" y1="136" x2="410" y2="136" class="accs" stroke-width="2.5" marker-end="url(#ar28)"/><text x="418" y="140" font-size="12" font-weight="700" style="fill:var(--accent)">ATP</text>
+        <text x="330" y="160" font-size="10" style="fill:var(--muted)">matrix: few protons in here</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a dam and a turbine. The chain pumps water uphill into the reservoir; it flows back down through the turbine, and the turbine charges the batteries.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Chemiosmosis (Mitchell, 1961) is ATP synthesis driven by a transmembrane proton gradient. ATP synthase is a rotary motor: H⁺ flow through the membrane-embedded F₀ subunit rotates a central stalk that induces conformational changes in the F₁ catalytic subunits, which bind ADP + Pᵢ and release ATP. Oxidative phosphorylation = ETC + chemiosmosis, yielding about 2.5 ATP per NADH and 1.5 per FADH₂. Substrate-level phosphorylation transfers a phosphate directly from a phosphorylated intermediate to ADP (glycolysis, citric acid cycle). Uncouplers (e.g. DNP) dissipate the gradient as heat; brown fat does this deliberately with UCP1.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Fermentation<span class="also">anaerobic · lactic acid · ethanol · why it exists</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Without oxygen the electron transport chain stalls, and the problem that causes isn't the lost ATP; it's that every NAD⁺ in the cell quickly ends up loaded as NADH with nowhere to unload. Glycolysis needs empty NAD⁺ to run, so it would stop too, and then there'd be no ATP at all. Fermentation is the fix: take the electrons off NADH and dump them onto pyruvate, freeing NAD⁺ so glycolysis can keep going. It makes no extra ATP, just the two from glycolysis, and it produces waste. In your muscles the waste is lactate (lactic acid fermentation, the burn in a sprint). In yeast it's ethanol and CO₂ (alcoholic fermentation: beer, wine, and the bubbles in bread). Fermentation is not a lesser respiration; it's glycolysis with a way of recycling its own carriers.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 190" role="img" aria-label="With oxygen, pyruvate goes to the mitochondrion and about 30 ATP result. Without oxygen, pyruvate accepts electrons from NADH to regenerate NAD-plus, giving lactate in muscle or ethanol and CO2 in yeast, and only the 2 ATP from glycolysis">
+        <defs><marker id="ar29" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <rect x="20" y="70" width="90" height="40" rx="6" class="soft" stroke="currentColor"/><text x="65" y="88" text-anchor="middle" font-size="10" font-weight="700">glycolysis</text><text x="65" y="102" text-anchor="middle" font-size="9">2 ATP, 2 NADH</text>
+        <line x1="110" y1="90" x2="160" y2="90" stroke="currentColor" stroke-width="2" marker-end="url(#ar29)"/>
+        <rect x="162" y="70" width="70" height="40" rx="6" class="sur" stroke="currentColor"/><text x="197" y="94" text-anchor="middle" font-size="10" font-weight="700">pyruvate</text>
+        <line x1="232" y1="80" x2="300" y2="40" stroke="currentColor" stroke-width="2" marker-end="url(#ar29)"/><text x="262" y="50" text-anchor="middle" font-size="9">O₂ present</text>
+        <rect x="302" y="20" width="200" height="40" rx="6" class="soft" stroke="currentColor"/><text x="402" y="37" text-anchor="middle" font-size="10" font-weight="700">mitochondrion: full respiration</text><text x="402" y="52" text-anchor="middle" font-size="10">~30 ATP per glucose</text>
+        <line x1="232" y1="100" x2="300" y2="135" class="flgs" stroke-width="2" marker-end="url(#ar29)"/><text x="255" y="132" text-anchor="middle" font-size="9" style="fill:var(--flag)">no O₂</text>
+        <rect x="302" y="115" width="200" height="60" rx="6" class="flgsoft" stroke="currentColor"/><text x="402" y="132" text-anchor="middle" font-size="10" font-weight="700">fermentation</text>
+        <text x="402" y="147" text-anchor="middle" font-size="9">NADH dumps e⁻ onto pyruvate → NAD⁺ freed</text>
+        <text x="402" y="161" text-anchor="middle" font-size="9">muscle: lactate · yeast: ethanol + CO₂</text>
+        <text x="402" y="187" text-anchor="middle" font-size="10" font-weight="700">still only 2 ATP, but glycolysis keeps running</text>
+        <path d="M330,150 C330,120 200,120 197,112" fill="none" class="accs" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar29)"/>
+        <text x="150" y="140" font-size="9" style="fill:var(--accent)">NAD⁺ recycled back</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> the power station is closed, so the workshop empties its wheelbarrows onto the floor just to keep them usable. Messy, but the lights stay on.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Fermentation regenerates NAD⁺ from NADH by transferring electrons to an organic acceptor derived from pyruvate, allowing glycolysis (and its 2 ATP) to continue without oxygen. Lactic acid fermentation: pyruvate + NADH → lactate + NAD⁺ (muscle under anaerobic load, lactic acid bacteria). Alcoholic fermentation: pyruvate → acetaldehyde + CO₂, then acetaldehyde + NADH → ethanol + NAD⁺ (yeast). Fermentation yields ~2 ATP per glucose versus ~30 for aerobic respiration, so obligate fermenters must process far more glucose. Anaerobic respiration proper (ETC with a non-oxygen terminal acceptor) is distinct from fermentation.</p></details>
+  </article>
+
+  <!-- ============================ CHAPTER 10 ============================ -->
+  <h2 id="ch10"><small>Chapter 10</small>Photosynthesis</h2>
+
+  <div class="forest">
+    <span class="eyebrow">The forest</span>
+    <p>Photosynthesis is respiration run backwards, with sunlight paying the bill. <b>Plants take carbon dioxide and water and build sugar, and the energy to do it comes from light.</b> The chapter has two halves that map onto two places in the chloroplast. In the thylakoid membranes, light is caught by chlorophyll, its energy is used to rip electrons out of water (which is where the oxygen you breathe comes from), and those electrons ride a chain, just like in the mitochondrion, to make ATP and to load a carrier called NADPH. In the stroma, the Calvin cycle spends that ATP and NADPH to grab CO₂ out of the air and stitch it into sugar.</p>
+    <p>So: light reactions make the energy (ATP, NADPH) and release oxygen; the Calvin cycle uses the energy to make sugar. Nearly every exam question is about which half does what, where it happens, and what goes in and out.</p>
+    <p>One sentence: <em>light splits water and charges the batteries; the Calvin cycle spends them to turn CO₂ into sugar.</em></p>
+    <span class="eyebrow">Bridge videos, no background needed</span>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=eo5XndJaz-Y">TED-Ed · The simple story of photosynthesis and food</a> <span class="dur">4:01</span>. Watch first. Where food comes from, told from the top.</li>
+      <li><a href="https://www.youtube.com/watch?v=CL9A8YhwUps">FuseSchool · What Is Photosynthesis?</a> <span class="dur">3:25</span>. The equation and the two stages, pitched at 15-year-olds.</li>
+      <li><a href="https://www.youtube.com/watch?v=0UzMaoaXKaM">TED-Ed · Nature's smallest factory: the Calvin cycle</a> <span class="dur">5:38</span>. The second half of the chapter as a story. Save it for after the light-reactions cards.</li>
+    </ul>
+  </div>
+
+  <article class="term">
+    <h3>Photosynthesis, the map<span class="also">light reactions · Calvin cycle · what goes where</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>The overall equation is CO₂ plus water plus light gives sugar plus oxygen, the exact reverse of respiration. It runs as two linked processes inside the chloroplast. The light reactions happen in the thylakoid membranes (the green discs): light in, water split, oxygen out, and two energy carriers charged, ATP and NADPH. The Calvin cycle happens in the stroma (the fluid around the discs): it takes the ATP and NADPH from the light reactions, uses them to fix CO₂ into a three-carbon sugar, and hands the spent ADP and NADP⁺ back to be recharged. The two halves are a loop: the light reactions can't run without empty carriers coming back, and the Calvin cycle can't run without charged ones arriving. Neither half needs the sun directly except the first; the "dark reactions" name for the Calvin cycle is old and misleading, since it runs in daylight.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 200" role="img" aria-label="Inside a chloroplast: the light reactions in the thylakoid take in light and water, release oxygen, and charge ATP and NADPH; the Calvin cycle in the stroma takes CO2 and the charged carriers and makes sugar, returning ADP and NADP-plus">
+        <defs><marker id="ar30" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <rect x="15" y="15" width="490" height="170" rx="40" class="soft" stroke="currentColor" stroke-width="2"/>
+        <text x="30" y="35" font-size="10" style="fill:var(--muted)">chloroplast</text>
+        <rect x="40" y="55" width="180" height="100" rx="8" class="acc" opacity=".25"/>
+        <rect x="40" y="55" width="180" height="100" rx="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="130" y="75" text-anchor="middle" font-size="11" font-weight="700">light reactions</text><text x="130" y="90" text-anchor="middle" font-size="10">thylakoid membranes</text>
+        <text x="130" y="118" text-anchor="middle" font-size="10">light + H₂O in</text><text x="130" y="134" text-anchor="middle" font-size="10">O₂ out</text>
+        <rect x="290" y="55" width="190" height="100" rx="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="385" y="75" text-anchor="middle" font-size="11" font-weight="700">Calvin cycle</text><text x="385" y="90" text-anchor="middle" font-size="10">stroma</text>
+        <text x="385" y="118" text-anchor="middle" font-size="10">CO₂ in</text><text x="385" y="134" text-anchor="middle" font-size="10" font-weight="700">sugar out</text>
+        <line x1="222" y1="85" x2="286" y2="85" class="accs" stroke-width="2.5" marker-end="url(#ar30)"/><text x="254" y="78" text-anchor="middle" font-size="9" style="fill:var(--accent)">ATP, NADPH</text>
+        <line x1="286" y1="125" x2="222" y2="125" stroke="currentColor" stroke-width="2" marker-end="url(#ar30)"/><text x="254" y="140" text-anchor="middle" font-size="9">ADP, NADP⁺</text>
+        <text x="260" y="176" text-anchor="middle" font-size="10">6 CO₂ + 6 H₂O + light → C₆H₁₂O₆ + 6 O₂</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> two departments passing batteries back and forth. Light charges them on the discs; the stroma spends them on sugar and sends them back flat.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Photosynthesis: 6 CO₂ + 6 H₂O + light → C₆H₁₂O₆ + 6 O₂. The light-dependent reactions in thylakoid membranes convert light energy to chemical energy as ATP and NADPH, oxidising water to O₂. The light-independent reactions (Calvin cycle) in the stroma reduce CO₂ to carbohydrate using that ATP and NADPH, regenerating ADP and NADP⁺. Photosynthesis is endergonic overall (ΔG ≈ +2870 kJ/mol glucose), the mirror of respiration. The O₂ released derives from water, not CO₂ (shown by isotope labelling).</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Light and pigments<span class="also">chlorophyll · photon · absorption spectrum · why plants are green</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Light comes in packets called photons, and shorter-wavelength light (blue) carries more energy per packet than longer (red). A pigment is a molecule that absorbs some wavelengths and not others; the ones it doesn't absorb bounce off, and that's the colour you see. Chlorophyll absorbs blue and red strongly and barely absorbs green, so green is reflected, so plants look green. When a chlorophyll absorbs a photon, one of its electrons is kicked up to a higher-energy state, and that excited electron is the whole starting point of photosynthesis: the light reactions are about catching it before it falls back. Other pigments (carotenoids, the orange ones you see in autumn once the chlorophyll is gone) absorb in the gap and pass the energy along.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 170" role="img" aria-label="The visible spectrum from violet to red as a bar; above it, chlorophyll's absorption curve is high in blue and red and low in green; green is reflected, which is why leaves look green">
+        <rect x="40" y="110" width="60" height="18" fill="#6a3fb5"/><rect x="100" y="110" width="60" height="18" fill="#2f5bd6"/><rect x="160" y="110" width="80" height="18" fill="#3fae4a"/><rect x="240" y="110" width="60" height="18" fill="#e3c62a"/><rect x="300" y="110" width="60" height="18" fill="#ec8a2a"/><rect x="360" y="110" width="80" height="18" fill="#d33b3b"/>
+        <g font-size="10" text-anchor="middle"><text x="70" y="145">violet</text><text x="130" y="145">blue</text><text x="200" y="145">green</text><text x="270" y="145">yellow</text><text x="330" y="145">orange</text><text x="400" y="145">red</text></g>
+        <text x="40" y="162" font-size="9" style="fill:var(--muted)">400 nm, more energy per photon</text><text x="440" y="162" text-anchor="end" font-size="9" style="fill:var(--muted)">700 nm, less</text>
+        <path d="M40,95 C80,30 120,25 150,60 C170,85 220,95 240,90 C280,85 330,80 360,40 C385,20 420,60 440,95" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <text x="110" y="22" font-size="10" font-weight="700">absorbed</text><text x="400" y="22" font-size="10" font-weight="700">absorbed</text>
+        <text x="200" y="75" text-anchor="middle" font-size="10" style="fill:var(--flag)">not absorbed: reflected</text>
+        <text x="200" y="88" text-anchor="middle" font-size="9" style="fill:var(--flag)">so leaves look green</text>
+        <text x="470" y="100" text-anchor="middle" font-size="9" style="fill:var(--muted)">chlorophyll</text><text x="470" y="112" text-anchor="middle" font-size="9" style="fill:var(--muted)">absorption</text>
+        <text x="20" y="60" font-size="9" transform="rotate(-90 20 60)" text-anchor="middle">absorbed →</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> plants eat red and blue and spit out green. What you see is the leftovers.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Photon energy is inversely proportional to wavelength (E = hc/λ). Chlorophyll a and b absorb maximally in the blue-violet (~430–450 nm) and red (~640–680 nm) regions; carotenoids absorb blue-green and also protect against photodamage. The absorption spectrum of chlorophyll and the action spectrum of photosynthesis (Engelmann's experiment) coincide. Absorption promotes an electron to an excited state; the energy can be lost as heat, re-emitted as fluorescence, transferred by resonance to a neighbouring pigment, or, in a reaction centre, used to drive electron transfer to an acceptor.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>The light reactions<span class="also">photosystem II and I · splitting water · NADPH · photophosphorylation</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Chlorophyll molecules are grouped into two kinds of assembly in the thylakoid membrane, photosystem II and photosystem I (named in order of discovery, not order of use; II goes first). Light hits photosystem II and knocks an excited electron loose. To replace it, the photosystem rips an electron out of water, and water torn apart that way falls into oxygen and protons; that oxygen leaves the plant. The excited electron rides a short transport chain, pumping protons into the thylakoid interior as it goes, exactly like the mitochondrial chain, and those protons flow back out through an ATP synthase to make ATP. The electron, now lower in energy, arrives at photosystem I, gets a second kick from a second photon, and is finally handed to NADP⁺ to make NADPH. Two light hits, one electron, one water molecule: out come oxygen, ATP and NADPH.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 210" role="img" aria-label="The Z scheme simplified: light excites an electron in photosystem II, replaced by an electron from water, releasing oxygen; the electron drops through a transport chain, pumping protons that make ATP; it reaches photosystem I, is excited again by light, and is passed to NADP-plus to make NADPH">
+        <defs><marker id="ar31" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <line x1="30" y1="190" x2="30" y2="30" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar31)"/><text x="18" y="110" font-size="9" transform="rotate(-90 18 110)" text-anchor="middle">electron energy</text>
+        <rect x="60" y="130" width="60" height="40" rx="6" class="soft" stroke="currentColor" stroke-width="2"/><text x="90" y="148" text-anchor="middle" font-size="10" font-weight="700">PS II</text><text x="90" y="162" text-anchor="middle" font-size="9">chlorophyll</text>
+        <text x="90" y="118" text-anchor="middle" font-size="12" style="fill:var(--flag)">☀ light</text>
+        <line x1="90" y1="128" x2="90" y2="60" class="flgs" stroke-width="2.5" marker-end="url(#ar31)"/><text x="105" y="90" font-size="9">e⁻ kicked up</text>
+        <path d="M95,55 C150,55 170,110 230,120" fill="none" class="accs" stroke-width="2.5" marker-end="url(#ar31)"/>
+        <text x="170" y="70" text-anchor="middle" font-size="9">electron chain: pumps H⁺</text><text x="170" y="82" text-anchor="middle" font-size="9" font-weight="700">→ ATP</text>
+        <rect x="235" y="105" width="60" height="40" rx="6" class="soft" stroke="currentColor" stroke-width="2"/><text x="265" y="123" text-anchor="middle" font-size="10" font-weight="700">PS I</text><text x="265" y="137" text-anchor="middle" font-size="9">chlorophyll</text>
+        <text x="265" y="165" text-anchor="middle" font-size="12" style="fill:var(--flag)">☀ light</text>
+        <line x1="265" y1="103" x2="265" y2="40" class="flgs" stroke-width="2.5" marker-end="url(#ar31)"/><text x="280" y="75" font-size="9">kicked up again</text>
+        <path d="M270,36 C320,36 340,50 380,55" fill="none" class="accs" stroke-width="2.5" marker-end="url(#ar31)"/>
+        <rect x="385" y="40" width="110" height="34" rx="6" class="sur" stroke="currentColor" stroke-width="2"/><text x="440" y="55" text-anchor="middle" font-size="10">NADP⁺ + e⁻ + H⁺</text><text x="440" y="68" text-anchor="middle" font-size="10" font-weight="700">→ NADPH</text>
+        <line x1="60" y1="175" x2="82" y2="168" stroke="currentColor" stroke-width="2" marker-end="url(#ar31)"/>
+        <text x="60" y="195" font-size="10">H₂O split to replace the electron</text><text x="60" y="207" font-size="10" font-weight="700">→ O₂ released + H⁺</text>
+        <text x="400" y="120" text-anchor="middle" font-size="9" style="fill:var(--muted)">two light hits per electron;</text><text x="400" y="132" text-anchor="middle" font-size="9" style="fill:var(--muted)">the "Z" is the two ups and the drop between</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> two trampolines. Light bounces the electron up, it rolls down a slope (making ATP), gets bounced again, and lands in NADPH. Water refills the first trampoline and leaks oxygen.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Non-cyclic electron flow (the Z scheme): photosystem II (P680) absorbs light and passes an excited electron to plastoquinone; the oxygen-evolving complex splits water (2 H₂O → O₂ + 4 H⁺ + 4 e⁻) to replace it. Electrons pass through the cytochrome b₆f complex to plastocyanin, pumping H⁺ into the thylakoid lumen; the resulting gradient drives ATP synthase (photophosphorylation). Photosystem I (P700) re-excites the electron and, via ferredoxin, NADP⁺ reductase forms NADPH. Cyclic electron flow around PS I makes extra ATP without NADPH to balance the Calvin cycle's demand. Antenna complexes funnel energy to reaction centres by resonance transfer.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>The Calvin cycle<span class="also">carbon fixation · rubisco · RuBP · G3P</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>This is the sugar factory in the stroma, and it runs in three phases. Fixation: an enzyme called rubisco grabs a CO₂ from the air and bolts it onto a five-carbon molecule (RuBP), making an unstable six-carbon thing that immediately breaks into two three-carbon pieces. Reduction: those pieces are energised with ATP and loaded with electrons from NADPH, which turns them into a three-carbon sugar, G3P; that is the product, and the plant builds glucose and everything else from it. Regeneration: most of the G3P is spent rebuilding RuBP so the cycle can grab the next CO₂. For every three CO₂ fixed, one G3P leaves as profit and the rest is reinvested. Rubisco is the most abundant protein on Earth and also famously slow and sloppy, which is the next card.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 210" role="img" aria-label="The Calvin cycle as a loop with three phases: fixation, where rubisco adds CO2 to RuBP; reduction, where ATP and NADPH turn the products into G3P; and regeneration, where most G3P rebuilds RuBP; one G3P leaves per three CO2 fixed">
+        <defs><marker id="ar32" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <circle cx="240" cy="110" r="75" fill="none" stroke="currentColor" stroke-width="3"/>
+        <text x="240" y="105" text-anchor="middle" font-size="11" font-weight="700">Calvin cycle</text><text x="240" y="120" text-anchor="middle" font-size="9" style="fill:var(--muted)">stroma</text>
+        <line x1="90" y1="60" x2="170" y2="72" stroke="currentColor" stroke-width="2.5" marker-end="url(#ar32)"/><text x="60" y="55" font-size="10" font-weight="700">3 CO₂ in</text>
+        <text x="150" y="40" text-anchor="middle" font-size="10" font-weight="700">1 fixation</text><text x="150" y="52" text-anchor="middle" font-size="9">rubisco bolts CO₂ onto RuBP (5 C)</text>
+        <line x1="330" y1="60" x2="300" y2="75" class="accs" stroke-width="2.5" marker-end="url(#ar32)"/><text x="360" y="45" text-anchor="middle" font-size="10" font-weight="700">2 reduction</text><text x="360" y="57" text-anchor="middle" font-size="9">spends ATP + NADPH</text><text x="360" y="69" text-anchor="middle" font-size="9" style="fill:var(--accent)">(from the light reactions)</text>
+        <line x1="310" y1="140" x2="400" y2="165" stroke="currentColor" stroke-width="2.5" marker-end="url(#ar32)"/><rect x="402" y="152" width="90" height="30" rx="6" class="flgsoft" stroke="currentColor"/><text x="447" y="171" text-anchor="middle" font-size="10" font-weight="700">1 G3P out</text>
+        <text x="447" y="196" text-anchor="middle" font-size="9">→ glucose, starch, everything</text>
+        <text x="150" y="185" text-anchor="middle" font-size="10" font-weight="700">3 regeneration</text><text x="150" y="197" text-anchor="middle" font-size="9">the rest rebuilds RuBP</text>
+        <line x1="180" y1="160" x2="200" y2="150" stroke="currentColor" stroke-width="2" marker-end="url(#ar32)"/>
+        <text x="60" y="120" font-size="9" style="fill:var(--muted)">ADP, NADP⁺</text><text x="60" y="132" font-size="9" style="fill:var(--muted)">go back to</text><text x="60" y="144" font-size="9" style="fill:var(--muted)">be recharged</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a bakery that reinvests. Three deliveries of CO₂ make one loaf to sell and the flour to keep the ovens going.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Carbon fixation: rubisco (ribulose-1,5-bisphosphate carboxylase/oxygenase) adds CO₂ to RuBP (5 C), producing an unstable 6 C intermediate that splits into two 3-phosphoglycerate (3-PGA). Reduction: 3-PGA is phosphorylated by ATP and reduced by NADPH to glyceraldehyde-3-phosphate (G3P). Regeneration: five of every six G3P are rearranged, using ATP, to regenerate three RuBP. Stoichiometry per G3P exported: 3 CO₂, 9 ATP, 6 NADPH. Two G3P make one glucose. G3P is also the branch point to sucrose (export) and starch (storage).</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Photorespiration, C4 and CAM<span class="also">rubisco's mistake · hot, dry places</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Rubisco has a flaw: it can't tell CO₂ from O₂ very well, and when it grabs oxygen by mistake the plant loses carbon and energy cleaning up the result. That wasteful side-reaction is photorespiration, and it gets worse when it's hot and dry, because the plant closes the pores in its leaves to save water, CO₂ inside runs low, and oxygen from the light reactions builds up. Two groups of plants evolved workarounds. C4 plants (corn, sugar cane) grab CO₂ with a different, fussier enzyme in the outer leaf cells and pump it, concentrated, into inner cells where rubisco works. CAM plants (cacti, pineapple) open their pores only at night, store the CO₂ as an acid, and release it to rubisco by day with the pores shut. Both are ways of hand-feeding rubisco enough CO₂ that it stops making mistakes.</p>
+    <div class="lbl">Picture</div>
+    <div class="pic"><b>Hold this image:</b> rubisco is a sorting worker who sometimes grabs the wrong box. C4 plants put a sharper-eyed worker at the door to pass it only the right boxes. CAM plants take deliveries at night, when the wrong boxes aren't around, and stock the shelf for the day shift.</div>
+    <details class="tech"><summary>The technical version</summary><p>Rubisco's oxygenase activity fixes O₂ instead of CO₂, producing 2-phosphoglycolate; salvaging it (photorespiration) consumes ATP and releases CO₂, reducing net photosynthesis, particularly at high temperature and low intercellular CO₂ when stomata close. C4 plants spatially separate initial fixation (PEP carboxylase in mesophyll cells, forming a 4 C acid) from the Calvin cycle (bundle-sheath cells, where the acid is decarboxylated to concentrate CO₂ around rubisco). CAM plants separate the steps in time: stomata open at night, CO₂ stored as malate in vacuoles, released to the Calvin cycle by day. Both cost extra ATP but pay off in hot, dry conditions.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>How the two chapters fit together<span class="also">respiration and photosynthesis as mirror images</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Put the two equations side by side and they are the same line read in opposite directions. Photosynthesis takes CO₂ and water, adds light energy, and makes sugar and oxygen. Respiration takes sugar and oxygen and gives back CO₂ and water, releasing the energy as ATP. The electron story matches too: photosynthesis uses light to push electrons from water uphill into sugar; respiration lets them roll back downhill from sugar to oxygen, catching the energy on the way. Plants do both: they photosynthesise in daylight and respire all the time, like everything else alive. The oxygen you breathe is the leftover from water being split in a leaf, and the CO₂ you exhale is the leftover from sugar being taken apart in your mitochondria, which a leaf will grab next.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 150" role="img" aria-label="Two opposite arrows between the same two states: photosynthesis runs from carbon dioxide and water to sugar and oxygen with light energy in; respiration runs from sugar and oxygen back to carbon dioxide and water with ATP energy out">
+        <defs><marker id="ar33" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <rect x="20" y="45" width="120" height="60" rx="8" class="sur" stroke="currentColor" stroke-width="2"/><text x="80" y="70" text-anchor="middle" font-size="11" font-weight="700">CO₂ + H₂O</text><text x="80" y="88" text-anchor="middle" font-size="9" style="fill:var(--muted)">low energy</text>
+        <rect x="380" y="45" width="120" height="60" rx="8" class="soft" stroke="currentColor" stroke-width="2"/><text x="440" y="70" text-anchor="middle" font-size="11" font-weight="700">sugar + O₂</text><text x="440" y="88" text-anchor="middle" font-size="9" style="fill:var(--muted)">high energy</text>
+        <line x1="150" y1="60" x2="370" y2="60" class="accs" stroke-width="3" marker-end="url(#ar33)"/>
+        <text x="260" y="45" text-anchor="middle" font-size="11" font-weight="700" style="fill:var(--accent)">photosynthesis (chloroplast)</text><text x="260" y="30" text-anchor="middle" font-size="10" style="fill:var(--flag)">☀ light energy in</text>
+        <line x1="370" y1="92" x2="150" y2="92" stroke="currentColor" stroke-width="3" marker-end="url(#ar33)"/>
+        <text x="260" y="112" text-anchor="middle" font-size="11" font-weight="700">respiration (mitochondrion)</text><text x="260" y="128" text-anchor="middle" font-size="10">energy out as ATP</text>
+        <text x="260" y="145" text-anchor="middle" font-size="9" style="fill:var(--muted)">electrons go uphill on the top arrow and roll back down on the bottom one</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> one road, two directions. Sunlight drives up the hill; ATP is what you collect coasting back down.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Photosynthesis (6 CO₂ + 6 H₂O + light → C₆H₁₂O₆ + 6 O₂) is endergonic, storing light energy as chemical potential energy in reduced carbon; aerobic respiration (C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + ~30 ATP) is exergonic, releasing it. Both use membrane-bound electron transport chains and chemiosmotic ATP synthesis; both use nicotinamide carriers (NADPH in photosynthesis, NADH in respiration). Photoautotrophs perform both; heterotrophs only respiration. Together they drive the global carbon and oxygen cycles.</p></details>
+  </article>
+
+
+  <div class="foot">Built 13 September 2026 for Chapters 1–7 and 9–10 of Freeman, <i>Biological Science</i>, 8th ed. Plain-words explanations and pictures are simplifications on purpose; the technical versions are the wording the slides and exams use. If a term you need isn't here, that's a gap to report, not a sign it doesn't matter. <a href="index.html">Back to the plan</a>.</div>
 </div>
 </body>
 </html>
