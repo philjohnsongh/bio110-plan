@@ -59,6 +59,14 @@ figcaption{font-family:var(--display);font-size:.85rem;color:var(--muted);margin
 figcaption b{color:var(--ink);font-weight:700}
 .pic{font-size:.97rem;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.75rem .9rem;margin:.4rem 0 0}
 .pic b{font-family:var(--display);font-weight:700}
+details.tech{margin-top:.9rem;font-size:.97rem}
+details.tech summary{font-family:var(--display);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--accent);cursor:pointer;list-style:none;display:flex;align-items:center;gap:.45rem;padding:.25rem 0}
+details.tech summary::-webkit-details-marker{display:none}
+details.tech summary::before{content:"+";display:inline-block;width:1rem;text-align:center;font-size:1rem;line-height:1;border:1px solid var(--line);border-radius:3px}
+details.tech[open] summary::before{content:"\2013"}
+details.tech summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+details.tech p{margin:.4rem 0 0}
+@media (max-width:560px){figure{overflow-x:auto}figure svg{min-width:470px}}
 svg .acc{fill:var(--accent)}
 svg .accs{stroke:var(--accent)}
 svg .soft{fill:var(--accent-soft)}
@@ -75,11 +83,11 @@ svg text{fill:currentColor}
 <body>
 
 <div class="wrap">
-  <div class="eyebrow">General Biology I · Chapters 1–4 · Freeman 8th ed.</div>
+  <div class="eyebrow">General Biology I · Chapters 1–7 · Freeman 8th ed.</div>
   <h1>BIO 110 Word Bridge</h1>
-  <p class="lede">The big picture for each chapter, and every term that matters, explained three ways: in plain words, in a picture, and the way the slides say it.</p>
+  <p class="lede">The big picture for each chapter through Exam 2, and every term that matters, explained three ways: in plain words, in a picture, and the way the slides say it.</p>
   <div class="nav">
-    <a href="#ch1">Ch 1 · Life</a><a href="#ch2">Ch 2 · Water &amp; carbon</a><a href="#ch3">Ch 3 · Proteins</a><a href="#ch4">Ch 4 · DNA &amp; RNA</a><a href="index.html">Back to the plan</a>
+    <a href="#ch1">Ch 1 · Life</a><a href="#ch2">Ch 2 · Water &amp; carbon</a><a href="#ch3">Ch 3 · Proteins</a><a href="#ch4">Ch 4 · DNA &amp; RNA</a><a href="#ch5">Ch 5 · Sugars</a><a href="#ch6">Ch 6 · Lipids &amp; membranes</a><a href="#ch7">Ch 7 · Inside the cell</a><a href="index.html">Back to the plan</a>
   </div>
 
   <p style="margin-top:1.5rem">The course pitches its videos and slides at someone who already had a year of biology. If you didn't, the words arrive faster than the ideas behind them, and it feels like drowning in vocabulary. It isn't a memory problem. Each of these words stands for one small idea, and once you have the idea the word sticks by itself. This page gives you the idea first.</p>
@@ -88,8 +96,8 @@ svg text{fill:currentColor}
     <b style="font-family:var(--display)">How to use it</b>
     <ol>
       <li><b>Forest first.</b> Before a chapter's videos or slides, read its "forest" box and watch the bridge video there. Those are pitched at someone with no background. Ten minutes, and the chapter has a shape.</li>
-      <li><b>Then the words.</b> For each term, read the plain version and look at the picture. Skip the technical version the first time through.</li>
-      <li><b>Then the course material.</b> Now the Amoeba Sisters video, the slides, the textbook. When a word stops you, come back here and this time read the technical version too, because that is the wording the slides and the exam use.</li>
+      <li><b>Then the words.</b> For each term, read the plain version and look at the picture. The technical version is folded shut; leave it shut the first time through.</li>
+      <li><b>Then the course material.</b> Now the Amoeba Sisters video, the slides, the textbook. When a word stops you, come back here and this time open the technical version too, because that is the wording the slides and the exam use.</li>
       <li><b>Ignore what you already know.</b> Some of these are things you half-know from everyday life. Skip those. This is a bridge, not a syllabus.</li>
     </ol>
   </div>
@@ -134,8 +142,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> a bag that copies itself. Every cell in you traces back, bag to bag, to a single cell.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">The cell is the fundamental structural and functional unit of life: a membrane-bound compartment containing cytoplasm and genetic material. Cell theory states that all organisms are composed of one or more cells and that all cells arise from pre-existing cells by division. The course will spend Chapters 6 and 7 on the membrane and the inside of the cell.</p>
+    <details class="tech"><summary>The technical version</summary><p>The cell is the fundamental structural and functional unit of life: a membrane-bound compartment containing cytoplasm and genetic material. Cell theory states that all organisms are composed of one or more cells and that all cells arise from pre-existing cells by division. The course will spend Chapters 6 and 7 on the membrane and the inside of the cell.</p></details>
   </article>
 
   <article class="term">
@@ -172,8 +179,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> the birds do the choosing, not the beetles. The dark ones weren't trying to be dark; they were just the ones left to have babies.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">Evolution is change in the heritable characteristics of a population across generations. Natural selection occurs when heritable variation in a trait causes differential reproductive success; the trait that increases fitness (reproductive success relative to others) increases in frequency. A trait that spreads because it increases fitness is an adaptation. Freeman's phrase: descent with modification.</p>
+    <details class="tech"><summary>The technical version</summary><p>Evolution is change in the heritable characteristics of a population across generations. Natural selection occurs when heritable variation in a trait causes differential reproductive success; the trait that increases fitness (reproductive success relative to others) increases in frequency. A trait that spreads because it increases fitness is an adaptation. Freeman's phrase: descent with modification.</p></details>
   </article>
 
   <article class="term">
@@ -203,8 +209,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> three trunks from one root. Two of the trunks are single-celled things without a nucleus; the third is everything else, and it's the smallest branch by number of species.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">The tree of life is the phylogeny of all organisms, inferred largely from comparing gene sequences (originally ribosomal RNA, by Woese). Its three domains are Bacteria, Archaea and Eukarya. Bacteria and Archaea are prokaryotic (no nucleus); Eukarya are eukaryotic. A species is commonly defined as a group of interbreeding populations reproductively isolated from others, though the course will show that this definition has edges.</p>
+    <details class="tech"><summary>The technical version</summary><p>The tree of life is the phylogeny of all organisms, inferred largely from comparing gene sequences (originally ribosomal RNA, by Woese). Its three domains are Bacteria, Archaea and Eukarya. Bacteria and Archaea are prokaryotic (no nucleus); Eukarya are eukaryotic. A species is commonly defined as a group of interbreeding populations reproductively isolated from others, though the course will show that this definition has edges.</p></details>
   </article>
 
   <article class="term">
@@ -233,8 +238,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> studio apartment versus house. "Eu-" is "true" and the nucleus is the kernel; eukaryotes have a true kernel.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">Prokaryotic cells lack a membrane-bound nucleus; their chromosome sits in a region of cytoplasm called the nucleoid, and they generally lack membrane-bound organelles. Eukaryotic cells have a nucleus enclosed by a double membrane and a set of membrane-bound organelles (mitochondria, endoplasmic reticulum, Golgi, and so on). Eukaryotic cells are typically much larger. Chapter 7 details both.</p>
+    <details class="tech"><summary>The technical version</summary><p>Prokaryotic cells lack a membrane-bound nucleus; their chromosome sits in a region of cytoplasm called the nucleoid, and they generally lack membrane-bound organelles. Eukaryotic cells have a nucleus enclosed by a double membrane and a set of membrane-bound organelles (mitochondria, endoplasmic reticulum, Golgi, and so on). Eukaryotic cells are typically much larger. Chapter 7 details both.</p></details>
   </article>
 
   <article class="term">
@@ -267,8 +271,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> hypothesis is the "because"; prediction is the "then we should see"; control is the "compared to what".</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">A hypothesis is a testable explanation for an observation; a prediction is a measurable outcome that must hold if the hypothesis is correct. A controlled experiment varies one factor (the independent variable) between a treatment group and a control group, holds other conditions constant, and measures the response (the dependent variable). Replicates and controls let you distinguish an effect from chance. Freeman uses the null hypothesis, the "no effect" alternative, as the comparison.</p>
+    <details class="tech"><summary>The technical version</summary><p>A hypothesis is a testable explanation for an observation; a prediction is a measurable outcome that must hold if the hypothesis is correct. A controlled experiment varies one factor (the independent variable) between a treatment group and a control group, holds other conditions constant, and measures the response (the dependent variable). Replicates and controls let you distinguish an effect from chance. Freeman uses the null hypothesis, the "no effect" alternative, as the comparison.</p></details>
   </article>
 
   <article class="term">
@@ -277,8 +280,7 @@ svg text{fill:currentColor}
     <p>In everyday English a theory is a hunch. In science it is the opposite: an explanation that has survived so many tests that it organizes a whole field. Cell theory and the theory of evolution are theories in that sense, the same sense as the theory of gravity. A hypothesis is one testable guess; a theory is a big, well-tested explanation that many hypotheses hang from. The word trap is real and it shows up on exams.</p>
     <div class="lbl">Picture</div>
     <div class="pic"><b>Hold this image:</b> a hypothesis is a single brick you are testing to see if it holds weight. A theory is a building that has stood for a century, made of thousands of bricks that all held. Nobody calls the building "just a brick."</div>
-    <div class="lbl">The technical version</div>
-    <p class="tech">A scientific theory is a broad explanatory framework supported by a large body of evidence and capable of generating testable hypotheses. It is not provisional in the everyday sense; it can be refined but is not overturned by a single result. Contrast: hypothesis (specific, testable, provisional) and law (a description of a regularity, not an explanation).</p>
+    <details class="tech"><summary>The technical version</summary><p>A scientific theory is a broad explanatory framework supported by a large body of evidence and capable of generating testable hypotheses. It is not provisional in the everyday sense; it can be refined but is not overturned by a single result. Contrast: hypothesis (specific, testable, provisional) and law (a description of a regularity, not an explanation).</p></details>
   </article>
 
   <!-- ============================ CHAPTER 2 ============================ -->
@@ -322,8 +324,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> the nucleus is the address (which element); the outer electrons are the hands (how it bonds). Carbon has four hands.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">An atom consists of a nucleus of protons (charge +1) and neutrons (charge 0), surrounded by electrons (charge −1) occupying orbitals grouped into shells. Atomic number = number of protons and defines the element; mass number = protons + neutrons. Atoms of the same element with different neutron numbers are isotopes. Chemical behaviour is determined by the electrons in the outermost (valence) shell.</p>
+    <details class="tech"><summary>The technical version</summary><p>An atom consists of a nucleus of protons (charge +1) and neutrons (charge 0), surrounded by electrons (charge −1) occupying orbitals grouped into shells. Atomic number = number of protons and defines the element; mass number = protons + neutrons. Atoms of the same element with different neutron numbers are isotopes. Chemical behaviour is determined by the electrons in the outermost (valence) shell.</p></details>
   </article>
 
   <article class="term">
@@ -340,8 +341,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> HONC 1-2-3-4. Hydrogen one hand, oxygen two, nitrogen three, carbon four. Those four elements are most of you.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">Electrons occupy shells of increasing energy; the first holds 2, the second 8. Atoms are most stable with a filled valence (outermost) shell, and the number of unpaired valence electrons sets an atom's valence, the number of covalent bonds it typically forms: H 1, O 2, N 3, C 4. Unpaired valence electrons are what bonding pairs up.</p>
+    <details class="tech"><summary>The technical version</summary><p>Electrons occupy shells of increasing energy; the first holds 2, the second 8. Atoms are most stable with a filled valence (outermost) shell, and the number of unpaired valence electrons sets an atom's valence, the number of covalent bonds it typically forms: H 1, O 2, N 3, C 4. Unpaired valence electrons are what bonding pairs up.</p></details>
   </article>
 
   <article class="term">
@@ -371,8 +371,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> a tug of war over the shared electrons. A tie is nonpolar; a lopsided pull is polar, and the winner's end goes a little negative.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">A covalent bond is a shared pair of valence electrons between two atoms; a molecule is two or more atoms joined covalently. Electronegativity is an atom's tendency to attract shared electrons (O and N high; C and H similar and moderate). Equal sharing gives a nonpolar covalent bond (C–H, C–C); unequal sharing gives a polar covalent bond (O–H, N–H) with partial charges δ− on the more electronegative atom and δ+ on the other. Double and triple bonds share two or three pairs.</p>
+    <details class="tech"><summary>The technical version</summary><p>A covalent bond is a shared pair of valence electrons between two atoms; a molecule is two or more atoms joined covalently. Electronegativity is an atom's tendency to attract shared electrons (O and N high; C and H similar and moderate). Equal sharing gives a nonpolar covalent bond (C–H, C–C); unequal sharing gives a polar covalent bond (O–H, N–H) with partial charges δ− on the more electronegative atom and δ+ on the other. Double and triple bonds share two or three pairs.</p></details>
   </article>
 
   <article class="term">
@@ -396,8 +395,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> covalent is sharing; ionic is giving. Sharing makes a molecule; giving makes two charged ions that cling.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">An ionic bond is the electrostatic attraction between oppositely charged ions formed when one atom transfers one or more electrons to another. Cations carry net positive charge (Na⁺, K⁺, Ca²⁺); anions net negative (Cl⁻). In aqueous solution the ions are surrounded by water molecules (hydration shells) and dissociate. Many biologically important ions (Na⁺, K⁺, Ca²⁺, H⁺) appear throughout the course.</p>
+    <details class="tech"><summary>The technical version</summary><p>An ionic bond is the electrostatic attraction between oppositely charged ions formed when one atom transfers one or more electrons to another. Cations carry net positive charge (Na⁺, K⁺, Ca²⁺); anions net negative (Cl⁻). In aqueous solution the ions are surrounded by water molecules (hydration shells) and dissociate. Many biologically important ions (Na⁺, K⁺, Ca²⁺, H⁺) appear throughout the course.</p></details>
   </article>
 
   <article class="term">
@@ -428,8 +426,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> Velcro between molecules. Solid lines are the strong bonds inside; the dashed line is the weak one between. Weak alone, strong in numbers.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">A hydrogen bond is a weak electrostatic attraction between a partially positive hydrogen atom that is covalently bonded to an electronegative atom (O or N) and a partially negative O or N on another molecule or another part of the same molecule. Individually weak (about 1/20 of a covalent bond) and constantly breaking and re-forming, hydrogen bonds are collectively responsible for water's cohesion, the pairing of DNA strands, and protein secondary structure.</p>
+    <details class="tech"><summary>The technical version</summary><p>A hydrogen bond is a weak electrostatic attraction between a partially positive hydrogen atom that is covalently bonded to an electronegative atom (O or N) and a partially negative O or N on another molecule or another part of the same molecule. Individually weak (about 1/20 of a covalent bond) and constantly breaking and re-forming, hydrogen bonds are collectively responsible for water's cohesion, the pairing of DNA strands, and protein secondary structure.</p></details>
   </article>
 
   <article class="term">
@@ -454,8 +451,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> a crowd holding hands. Hard to pull one person out (cohesion), the crowd grips the walls too (adhesion), and it takes a lot of shoving to get the crowd moving (high specific heat).</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">Cohesion: attraction between like molecules, here water to water via hydrogen bonding, producing surface tension. Adhesion: attraction between unlike molecules, e.g. water to polar surfaces. Specific heat: energy required to raise 1 g of a substance by 1 °C; water's is high because energy goes into breaking hydrogen bonds before raising kinetic energy. Heat of vaporization is high for the same reason (evaporative cooling). Ice is less dense than liquid water because hydrogen bonds hold molecules in an open crystal lattice. Water is also an excellent solvent for polar and charged solutes.</p>
+    <details class="tech"><summary>The technical version</summary><p>Cohesion: attraction between like molecules, here water to water via hydrogen bonding, producing surface tension. Adhesion: attraction between unlike molecules, e.g. water to polar surfaces. Specific heat: energy required to raise 1 g of a substance by 1 °C; water's is high because energy goes into breaking hydrogen bonds before raising kinetic energy. Heat of vaporization is high for the same reason (evaporative cooling). Ice is less dense than liquid water because hydrogen bonds hold molecules in an open crystal lattice. Water is also an excellent solvent for polar and charged solutes.</p></details>
   </article>
 
   <article class="term">
@@ -485,8 +481,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> water is a crowd holding hands. Charged things get invited in; uncharged things get squeezed out into a huddle. That huddle is a membrane waiting to happen.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">Hydrophilic substances are polar or ionic and interact favourably with water, dissolving as water molecules form hydration shells around them. Hydrophobic substances are nonpolar and do not interact with water; they aggregate because that arrangement lets water maximise its own hydrogen bonding (the hydrophobic effect, an entropy-driven process). A solution is a homogeneous mixture of solute in solvent; concentration is often given in molarity (moles of solute per litre).</p>
+    <details class="tech"><summary>The technical version</summary><p>Hydrophilic substances are polar or ionic and interact favourably with water, dissolving as water molecules form hydration shells around them. Hydrophobic substances are nonpolar and do not interact with water; they aggregate because that arrangement lets water maximise its own hydrogen bonding (the hydrophobic effect, an entropy-driven process). A solution is a homogeneous mixture of solute in solvent; concentration is often given in molarity (moles of solute per litre).</p></details>
   </article>
 
   <article class="term">
@@ -513,8 +508,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> pH counts protons, backwards, in tens. Low number, lots of H⁺, acid. Each step is ten times.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">Water dissociates slightly: H₂O ⇌ H⁺ + OH⁻ (the proton is actually carried as hydronium, H₃O⁺). An acid donates protons, raising [H⁺]; a base accepts protons, lowering it. pH = −log₁₀[H⁺]; at 25 °C pure water has [H⁺] = 10⁻⁷ M, so pH 7. A buffer is a weak acid/conjugate base pair that minimises pH change by absorbing or releasing H⁺; the carbonic acid/bicarbonate system buffers blood near 7.4.</p>
+    <details class="tech"><summary>The technical version</summary><p>Water dissociates slightly: H₂O ⇌ H⁺ + OH⁻ (the proton is actually carried as hydronium, H₃O⁺). An acid donates protons, raising [H⁺]; a base accepts protons, lowering it. pH = −log₁₀[H⁺]; at 25 °C pure water has [H⁺] = 10⁻⁷ M, so pH 7. A buffer is a weak acid/conjugate base pair that minimises pH change by absorbing or releasing H⁺; the carbonic acid/bicarbonate system buffers blood near 7.4.</p></details>
   </article>
 
   <article class="term">
@@ -537,8 +531,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> carbon is Lego with four studs. Chains, branches, rings: everything in Chapters 3 to 6 is carbon Lego with attachments.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">Organic molecules contain carbon covalently bonded to hydrogen. Carbon's valence of four and its ability to form single, double and triple bonds with itself and with H, O, N, S and P allow diverse skeletons: linear, branched, and ring structures. Hydrocarbons are nonpolar. The chapter also introduces Freeman's theme of chemical evolution: the hypothesis that simple carbon compounds formed and grew more complex under early-Earth conditions before life existed.</p>
+    <details class="tech"><summary>The technical version</summary><p>Organic molecules contain carbon covalently bonded to hydrogen. Carbon's valence of four and its ability to form single, double and triple bonds with itself and with H, O, N, S and P allow diverse skeletons: linear, branched, and ring structures. Hydrocarbons are nonpolar. The chapter also introduces Freeman's theme of chemical evolution: the hypothesis that simple carbon compounds formed and grew more complex under early-Earth conditions before life existed.</p></details>
   </article>
 
   <article class="term">
@@ -560,8 +553,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> apps on a phone. Carboxyl and amino are the two you'll see most, because every amino acid has one of each (that's where the name comes from).</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">Functional groups are specific groups of atoms with characteristic chemical properties regardless of the skeleton they attach to. Hydroxyl (–OH): polar, hydrogen-bonds. Carbonyl (C=O): aldehyde if terminal, ketone if internal; reactive. Carboxyl (–COOH): weak acid, ionises to –COO⁻. Amino (–NH₂): weak base, protonates to –NH₃⁺. Phosphate (–OPO₃²⁻): negatively charged; links nucleotides and stores energy in ATP. Sulfhydryl (–SH): forms disulfide bridges (S–S) between cysteines in proteins. Methyl (–CH₃) is nonpolar and appears in later chapters as a regulatory tag.</p>
+    <details class="tech"><summary>The technical version</summary><p>Functional groups are specific groups of atoms with characteristic chemical properties regardless of the skeleton they attach to. Hydroxyl (–OH): polar, hydrogen-bonds. Carbonyl (C=O): aldehyde if terminal, ketone if internal; reactive. Carboxyl (–COOH): weak acid, ionises to –COO⁻. Amino (–NH₂): weak base, protonates to –NH₃⁺. Phosphate (–OPO₃²⁻): negatively charged; links nucleotides and stores energy in ATP. Sulfhydryl (–SH): forms disulfide bridges (S–S) between cysteines in proteins. Methyl (–CH₃) is nonpolar and appears in later chapters as a regulatory tag.</p></details>
   </article>
 
   <article class="term">
@@ -587,8 +579,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> a ball on a hill. Downhill runs by itself and gives off energy; uphill needs a push. Life spends a lot of energy pushing things uphill.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">In a chemical reaction, reactants are converted to products by breaking and forming covalent bonds. Potential energy is stored in chemical bonds; kinetic energy is energy of motion (including thermal energy). Freeman introduces Gibbs free energy: ΔG = ΔH − TΔS, where ΔH is change in enthalpy (heat content) and ΔS change in entropy (disorder). Reactions with ΔG &lt; 0 are exergonic and spontaneous; ΔG &gt; 0 endergonic, requiring energy input. The second law of thermodynamics states that total entropy increases. Spontaneity is independent of rate, which is set by activation energy (Chapter 3, enzymes).</p>
+    <details class="tech"><summary>The technical version</summary><p>In a chemical reaction, reactants are converted to products by breaking and forming covalent bonds. Potential energy is stored in chemical bonds; kinetic energy is energy of motion (including thermal energy). Freeman introduces Gibbs free energy: ΔG = ΔH − TΔS, where ΔH is change in enthalpy (heat content) and ΔS change in entropy (disorder). Reactions with ΔG &lt; 0 are exergonic and spontaneous; ΔG &gt; 0 endergonic, requiring energy input. The second law of thermodynamics states that total entropy increases. Spontaneity is independent of rate, which is set by activation energy (Chapter 3, enzymes).</p></details>
   </article>
 
   <!-- ============================ CHAPTER 3 ============================ -->
@@ -631,8 +622,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> joining beads squeezes out a water; splitting them needs a water. Dehydration to build, hydrolysis to break.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">Monomers are small molecular subunits; polymers are chains of monomers joined by covalent bonds. Polymerisation proceeds by condensation (dehydration) reactions, in which a hydroxyl from one monomer and a hydrogen from another are removed as water and a covalent bond forms. Hydrolysis reverses this by adding water. Condensation is endergonic and in cells is coupled to energy sources (ATP); hydrolysis is exergonic. The specific bonds are peptide bonds (proteins), phosphodiester bonds (nucleic acids), and glycosidic linkages (carbohydrates).</p>
+    <details class="tech"><summary>The technical version</summary><p>Monomers are small molecular subunits; polymers are chains of monomers joined by covalent bonds. Polymerisation proceeds by condensation (dehydration) reactions, in which a hydroxyl from one monomer and a hydrogen from another are removed as water and a covalent bond forms. Hydrolysis reverses this by adding water. Condensation is endergonic and in cells is coupled to energy sources (ATP); hydrolysis is exergonic. The specific bonds are peptide bonds (proteins), phosphodiester bonds (nucleic acids), and glycosidic linkages (carbohydrates).</p></details>
   </article>
 
   <article class="term">
@@ -659,8 +649,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> the name says it: an <em>amino</em> group on one side, an <em>acid</em> (carboxyl) on the other. The R is the only thing that changes.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">An amino acid has a central α-carbon bonded to an amino group (–NH₂), a carboxyl group (–COOH), a hydrogen, and a side chain (R-group). At cellular pH the amino group is protonated (–NH₃⁺) and the carboxyl deprotonated (–COO⁻). The 20 standard amino acids are grouped by R-group chemistry: nonpolar (hydrophobic), polar uncharged, and charged (acidic or basic). Side-chain properties drive folding and determine function.</p>
+    <details class="tech"><summary>The technical version</summary><p>An amino acid has a central α-carbon bonded to an amino group (–NH₂), a carboxyl group (–COOH), a hydrogen, and a side chain (R-group). At cellular pH the amino group is protonated (–NH₃⁺) and the carboxyl deprotonated (–COO⁻). The 20 standard amino acids are grouped by R-group chemistry: nonpolar (hydrophobic), polar uncharged, and charged (acidic or basic). Side-chain properties drive folding and determine function.</p></details>
   </article>
 
   <article class="term">
@@ -684,8 +673,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> a charm bracelet. The chain is the same links repeated; the charms (R-groups) hanging off it are what differ.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">A peptide bond is the covalent C–N bond formed by condensation between the carboxyl carbon of one amino acid and the amino nitrogen of the next. It has partial double-bond character, so it is planar and rigid, which constrains folding. A polypeptide has an N-terminus and a C-terminus; the repeating N–Cα–C atoms form the backbone, and R-groups project from it. Proteins are functional polypeptides; oligopeptides are short chains.</p>
+    <details class="tech"><summary>The technical version</summary><p>A peptide bond is the covalent C–N bond formed by condensation between the carboxyl carbon of one amino acid and the amino nitrogen of the next. It has partial double-bond character, so it is planar and rigid, which constrains folding. A polypeptide has an N-terminus and a C-terminus; the repeating N–Cα–C atoms form the backbone, and R-groups project from it. Proteins are functional polypeptides; oligopeptides are short chains.</p></details>
   </article>
 
   <article class="term">
@@ -728,8 +716,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> letters (1°), then cursive loops (2°), then the word crumpled into a ball (3°), then several balls stuck together (4°).</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">Primary structure: the amino acid sequence, joined by peptide bonds. Secondary structure: regular local patterns, the α-helix and β-pleated sheet, stabilised by hydrogen bonds between backbone C=O and N–H groups. Tertiary structure: the overall three-dimensional fold of one polypeptide, stabilised by side-chain interactions: hydrophobic interactions, hydrogen bonds, ionic bonds, van der Waals interactions, and covalent disulfide bridges. Quaternary structure: the association of two or more polypeptide subunits (e.g. haemoglobin, four subunits). Sequence determines structure; structure determines function.</p>
+    <details class="tech"><summary>The technical version</summary><p>Primary structure: the amino acid sequence, joined by peptide bonds. Secondary structure: regular local patterns, the α-helix and β-pleated sheet, stabilised by hydrogen bonds between backbone C=O and N–H groups. Tertiary structure: the overall three-dimensional fold of one polypeptide, stabilised by side-chain interactions: hydrophobic interactions, hydrogen bonds, ionic bonds, van der Waals interactions, and covalent disulfide bridges. Quaternary structure: the association of two or more polypeptide subunits (e.g. haemoglobin, four subunits). Sequence determines structure; structure determines function.</p></details>
   </article>
 
   <article class="term">
@@ -753,8 +740,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> a key that's been melted. All the metal is still there; it just doesn't open the lock any more.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">Folding is spontaneous and driven largely by the hydrophobic effect, with the final conformation stabilised by the interactions listed under tertiary structure; chaperone proteins assist folding in cells. Denaturation is loss of native conformation, and therefore function, without breaking peptide bonds, caused by heat, pH change, or chemicals that disrupt non-covalent interactions. It can be reversible for small proteins (Anfinsen's ribonuclease experiment showed sequence alone specifies the fold) but is often irreversible in practice. Misfolded proteins that propagate their shape are prions.</p>
+    <details class="tech"><summary>The technical version</summary><p>Folding is spontaneous and driven largely by the hydrophobic effect, with the final conformation stabilised by the interactions listed under tertiary structure; chaperone proteins assist folding in cells. Denaturation is loss of native conformation, and therefore function, without breaking peptide bonds, caused by heat, pH change, or chemicals that disrupt non-covalent interactions. It can be reversible for small proteins (Anfinsen's ribonuclease experiment showed sequence alone specifies the fold) but is often irreversible in practice. Misfolded proteins that propagate their shape are prions.</p></details>
   </article>
 
   <article class="term">
@@ -788,8 +774,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> a matchmaker, not a motor. It doesn't push the reaction; it holds the two molecules so the reaction is easy, then lets go and does it again.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">A catalyst increases the rate of a reaction without being consumed and without changing ΔG. Enzymes are protein catalysts (some RNAs also catalyse; see ribozyme). The substrate binds the active site, forming an enzyme–substrate complex; binding often involves induced fit, a conformational change that tightens the fit. The enzyme lowers activation energy (E_a) by stabilising the transition state, orienting substrates, and providing a favourable microenvironment. Rate depends on substrate concentration, temperature and pH; many enzymes need cofactors (metal ions) or coenzymes (organic, often vitamin-derived). Regulation by inhibitors and feedback comes later in the course.</p>
+    <details class="tech"><summary>The technical version</summary><p>A catalyst increases the rate of a reaction without being consumed and without changing ΔG. Enzymes are protein catalysts (some RNAs also catalyse; see ribozyme). The substrate binds the active site, forming an enzyme–substrate complex; binding often involves induced fit, a conformational change that tightens the fit. The enzyme lowers activation energy (E_a) by stabilising the transition state, orienting substrates, and providing a favourable microenvironment. Rate depends on substrate concentration, temperature and pH; many enzymes need cofactors (metal ions) or coenzymes (organic, often vitamin-derived). Regulation by inhibitors and feedback comes later in the course.</p></details>
   </article>
 
   <!-- ============================ CHAPTER 4 ============================ -->
@@ -827,8 +812,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> a bead with a handle. Phosphate and sugar are the handle that links to the next bead; the base is the letter painted on it.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">A nucleotide consists of a phosphate group, a pentose sugar (ribose in RNA; 2′-deoxyribose in DNA, lacking the 2′ –OH), and a nitrogenous base attached at the sugar's 1′ carbon. The phosphate is attached at 5′; the 3′ carbon carries the hydroxyl that forms the next linkage. Sugar carbons are numbered with primes to distinguish them from base atoms. A nucleoside is sugar plus base without phosphate. Nucleoside triphosphates (ATP, GTP) are the activated monomers used for polymerisation and, in ATP's case, the cell's energy currency.</p>
+    <details class="tech"><summary>The technical version</summary><p>A nucleotide consists of a phosphate group, a pentose sugar (ribose in RNA; 2′-deoxyribose in DNA, lacking the 2′ –OH), and a nitrogenous base attached at the sugar's 1′ carbon. The phosphate is attached at 5′; the 3′ carbon carries the hydroxyl that forms the next linkage. Sugar carbons are numbered with primes to distinguish them from base atoms. A nucleoside is sugar plus base without phosphate. Nucleoside triphosphates (ATP, GTP) are the activated monomers used for polymerisation and, in ATP's case, the cell's energy currency.</p></details>
   </article>
 
   <article class="term">
@@ -857,8 +841,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> "Pure As Gold" for the purines (A, G); the other three are pyrimidines. A–T two bonds, G–C three: the letters with the curves get the extra bond.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">Purines (adenine, guanine) are double-ring bases; pyrimidines (cytosine, thymine, uracil) are single-ring. Complementary base pairing via hydrogen bonds: A pairs with T (or U in RNA) by two hydrogen bonds; G pairs with C by three. Purine–pyrimidine pairing keeps the double helix at constant diameter (Chargaff's rules: [A]=[T], [G]=[C]). GC-rich regions are more thermally stable. Uracil replaces thymine in RNA.</p>
+    <details class="tech"><summary>The technical version</summary><p>Purines (adenine, guanine) are double-ring bases; pyrimidines (cytosine, thymine, uracil) are single-ring. Complementary base pairing via hydrogen bonds: A pairs with T (or U in RNA) by two hydrogen bonds; G pairs with C by three. Purine–pyrimidine pairing keeps the double helix at constant diameter (Chargaff's rules: [A]=[T], [G]=[C]). GC-rich regions are more thermally stable. Uracil replaces thymine in RNA.</p></details>
   </article>
 
   <article class="term">
@@ -892,8 +875,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> two lanes of traffic. Same road, opposite directions. 5′ is the front bumper, 3′ the tow hook, and you can only hitch a new car onto the hook.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">A phosphodiester bond links the 3′ hydroxyl of one nucleotide's sugar to the 5′ phosphate of the next, forming a directional sugar-phosphate backbone with a free 5′ phosphate at one end and a free 3′ hydroxyl at the other. Sequences are written 5′→3′. Polymerases add nucleotides only to the 3′ end, so strands grow 5′→3′. In DNA the two strands are antiparallel and complementary, wound into a right-handed double helix (Watson and Crick, 1953) with the bases stacked inside and the backbones outside; the helix has a major and a minor groove where proteins read the sequence.</p>
+    <details class="tech"><summary>The technical version</summary><p>A phosphodiester bond links the 3′ hydroxyl of one nucleotide's sugar to the 5′ phosphate of the next, forming a directional sugar-phosphate backbone with a free 5′ phosphate at one end and a free 3′ hydroxyl at the other. Sequences are written 5′→3′. Polymerases add nucleotides only to the 3′ end, so strands grow 5′→3′. In DNA the two strands are antiparallel and complementary, wound into a right-handed double helix (Watson and Crick, 1953) with the bases stacked inside and the backbones outside; the helix has a major and a minor groove where proteins read the sequence.</p></details>
   </article>
 
   <article class="term">
@@ -927,8 +909,7 @@ svg text{fill:currentColor}
       </svg>
       <figcaption><b>Remember it as:</b> DNA is the library's reference copy, chained to the desk. RNA is the photocopy you take away, and the photocopy can be folded into a paper airplane.</figcaption>
     </figure>
-    <div class="lbl">The technical version</div>
-    <p class="tech">DNA: 2′-deoxyribose, bases A T G C, double-stranded antiparallel helix; chemically stable (the missing 2′ –OH makes it resistant to hydrolysis), which suits information storage. RNA: ribose, bases A U G C, usually single-stranded but with extensive intramolecular base pairing producing secondary structure (hairpins, stem-loops) and tertiary structure; more reactive, and functional as messenger, structural, and catalytic molecules. A template strand directs synthesis of a complementary strand by base pairing; this underlies replication (Chapter 15) and transcription (Chapter 17). A gene is a DNA sequence encoding a functional product, usually a polypeptide or an RNA.</p>
+    <details class="tech"><summary>The technical version</summary><p>DNA: 2′-deoxyribose, bases A T G C, double-stranded antiparallel helix; chemically stable (the missing 2′ –OH makes it resistant to hydrolysis), which suits information storage. RNA: ribose, bases A U G C, usually single-stranded but with extensive intramolecular base pairing producing secondary structure (hairpins, stem-loops) and tertiary structure; more reactive, and functional as messenger, structural, and catalytic molecules. A template strand directs synthesis of a complementary strand by base pairing; this underlies replication (Chapter 15) and transcription (Chapter 17). A gene is a DNA sequence encoding a functional product, usually a polypeptide or an RNA.</p></details>
   </article>
 
   <article class="term">
@@ -937,11 +918,589 @@ svg text{fill:currentColor}
     <p>A chicken-and-egg problem: proteins are needed to copy DNA, but DNA is needed to make proteins. So which came first? The RNA-world hypothesis says neither. RNA can store information (it has bases that pair) and RNA can fold into shapes that do chemistry (an RNA enzyme is a ribozyme), so early life could have run on RNA alone, with DNA and proteins arriving later as specialists. The evidence includes ribozymes still working in your cells today: the machine that builds every protein in you, the ribosome, is at its core an RNA catalyst. Chemical evolution is Freeman's broader term for the whole idea that simple molecules on the early Earth grew more complex, step by step, until something could copy itself.</p>
     <div class="lbl">Picture</div>
     <div class="pic"><b>Hold this image:</b> a recipe card that can also cook. DNA is only a recipe; a protein is only a cook; RNA, folded up, can be both, badly. "Badly" is enough to get started, and then the specialists take over.</div>
-    <div class="lbl">The technical version</div>
-    <p class="tech">The RNA-world hypothesis proposes that self-replicating RNA molecules preceded DNA and proteins as the first information-carrying and catalytic molecules. Support: RNA's capacity for complementary base pairing (information) and for folding into catalytic structures (ribozymes, discovered by Cech and Altman); in vitro selection of RNAs that catalyse their own partial replication; and the peptidyl transferase activity of the ribosome residing in rRNA. Chemical evolution refers to the abiotic formation of increasingly complex carbon compounds, including nucleotides, under early-Earth conditions, followed by polymerisation.</p>
+    <details class="tech"><summary>The technical version</summary><p>The RNA-world hypothesis proposes that self-replicating RNA molecules preceded DNA and proteins as the first information-carrying and catalytic molecules. Support: RNA's capacity for complementary base pairing (information) and for folding into catalytic structures (ribozymes, discovered by Cech and Altman); in vitro selection of RNAs that catalyse their own partial replication; and the peptidyl transferase activity of the ribosome residing in rRNA. Chemical evolution refers to the abiotic formation of increasingly complex carbon compounds, including nucleotides, under early-Earth conditions, followed by polymerisation.</p></details>
   </article>
 
-  <div class="foot">Built 13 September 2026 for Chapters 1–4 of Freeman, <i>Biological Science</i>, 8th ed. Plain-words explanations and pictures are simplifications on purpose; the technical versions are the wording the slides and exams use. If a term you need isn't here, that's a gap to report, not a sign it doesn't matter. <a href="index.html">Back to the plan</a>.</div>
+  <!-- ============================ CHAPTER 5 ============================ -->
+  <h2 id="ch5"><small>Chapter 5</small>An Introduction to Carbohydrates</h2>
+
+  <div class="forest">
+    <span class="eyebrow">The forest</span>
+    <p>Carbohydrates are sugars and the things built from sugars. The chapter is short and it is one idea: <b>a sugar is a small ring of carbons, sugars link into chains, and the same sugar linked two slightly different ways gives you either food or wood.</b> Starch (in potatoes) and cellulose (in plant cell walls, paper, cotton) are both long chains of glucose. The only difference is the angle of the link between the beads, and that difference decides whether your enzymes can cut it. You digest starch. You cannot digest cellulose. Same beads.</p>
+    <p>Carbohydrates do three jobs: they store energy (starch in plants, glycogen in you), they build structures (cellulose, chitin), and, attached to proteins on the outside of cells, they act as identity tags that other cells read.</p>
+    <p>One sentence: <em>rings of glucose, chained; the link angle decides whether it's fuel or scaffolding.</em></p>
+    <span class="eyebrow">Bridge video, no background needed</span>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=wxzc_2c6GMg">TED-Ed · How do carbohydrates impact your health?</a> <span class="dur">5:11</span>. Simple versus complex carbs, fibre, and why the body treats them differently. The chemistry is in the background but it is the right chemistry.</li>
+    </ul>
+  </div>
+
+  <article class="term">
+    <h3>Sugar<span class="also">carbohydrate · monosaccharide · glucose</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>A carbohydrate is a molecule made of carbon, hydrogen and oxygen in roughly the proportions of carbon plus water, which is what the name means: carbo-hydrate. The simplest carbohydrate is a single sugar, a monosaccharide, and the one that matters most is glucose: six carbons that curl into a ring in water, with an –OH hanging off most of them. All those –OH groups make sugars very polar, so they dissolve easily and are sticky with hydrogen bonds. Glucose is the fuel nearly every cell on Earth burns, and Chapter 9 is about how.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 170" role="img" aria-label="Glucose drawn as a six-membered ring of five carbons and one oxygen, with hydroxyl groups pointing off the ring; formula C6H12O6, six carbons, twelve hydrogens, six oxygens">
+        <polygon points="120,40 170,62 170,110 120,132 70,110 70,62" fill="none" stroke="currentColor" stroke-width="3"/>
+        <text x="170" y="58" font-weight="700" font-size="12" style="fill:var(--accent)">O</text>
+        <g class="acc"><circle cx="120" cy="40" r="6"/><circle cx="170" cy="110" r="6"/><circle cx="120" cy="132" r="6"/><circle cx="70" cy="110" r="6"/><circle cx="70" cy="62" r="6"/></g>
+        <g stroke="currentColor" stroke-width="2"><line x1="170" y1="110" x2="200" y2="125"/><line x1="120" y1="132" x2="120" y2="158"/><line x1="70" y1="110" x2="40" y2="125"/><line x1="70" y1="62" x2="40" y2="47"/><line x1="120" y1="40" x2="120" y2="14"/></g>
+        <g font-size="11" font-family="ui-monospace, Menlo, monospace"><text x="204" y="130">OH</text><text x="112" y="170">OH</text><text x="18" y="130">OH</text><text x="18" y="50">OH</text><text x="108" y="10">CH₂OH</text></g>
+        <text x="330" y="45" font-weight="700">glucose</text>
+        <text x="330" y="70" font-size="13" font-family="ui-monospace, Menlo, monospace">C₆H₁₂O₆</text>
+        <text x="330" y="95" font-size="11">6 carbons, 12 hydrogens, 6 oxygens</text>
+        <text x="330" y="115" font-size="11">= 6 × (C + H₂O), "carbon + water"</text>
+        <text x="330" y="145" font-size="11" style="fill:var(--muted)">● carbon in the ring; the –OH groups</text>
+        <text x="330" y="160" font-size="11" style="fill:var(--muted)">make it polar and water-loving</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a hexagon bristling with –OH. The bristles are why sugar dissolves in tea and why it's sticky.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Carbohydrates have the general formula (CH₂O)ₙ and are defined by a carbonyl group (aldehyde or ketone) plus multiple hydroxyl groups. Monosaccharides are classified by carbon number (trioses, pentoses like ribose, hexoses like glucose) and by carbonyl position (aldose vs ketose). In solution, five- and six-carbon sugars cyclise; the ring form of glucose exists as α and β anomers, differing only in the orientation of the –OH on carbon 1, and that difference is what distinguishes starch from cellulose. Glucose, galactose and fructose are isomers: same formula, different arrangement.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Linking sugars<span class="also">glycosidic linkage · disaccharide · polysaccharide</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Sugars join the same way amino acids do: an –OH from each, a water leaves, a bond forms. Between sugars that bond is called a glycosidic linkage. Two sugars joined make a disaccharide: table sugar (sucrose) is glucose plus fructose; milk sugar (lactose) is glucose plus galactose. Many sugars joined make a polysaccharide, and those are the big ones: starch, glycogen, cellulose, chitin. Unlike proteins, where twenty different beads make an alphabet, most polysaccharides are one bead repeated. What varies is the linkage and the branching.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 130" role="img" aria-label="One hexagon for a monosaccharide; two hexagons joined by a highlighted glycosidic linkage for a disaccharide, with water released; a chain of hexagons for a polysaccharide">
+        <g fill="none" stroke="currentColor" stroke-width="2.5">
+          <polygon points="60,30 82,42 82,66 60,78 38,66 38,42" class="soft"/>
+          <polygon points="180,30 202,42 202,66 180,78 158,66 158,42" class="soft"/><polygon points="240,30 262,42 262,66 240,78 218,66 218,42" class="soft"/>
+          <polygon points="340,30 362,42 362,66 340,78 318,66 318,42" class="soft"/><polygon points="392,30 414,42 414,66 392,78 370,66 370,42" class="soft"/><polygon points="444,30 466,42 466,66 444,78 422,66 422,42" class="soft"/><polygon points="496,30 518,42 518,66 496,78 474,66 474,42" class="soft"/>
+        </g>
+        <line x1="202" y1="54" x2="218" y2="54" class="accs" stroke-width="5"/>
+        <g class="accs" stroke-width="5"><line x1="362" y1="54" x2="370" y2="54"/><line x1="414" y1="54" x2="422" y2="54"/><line x1="466" y1="54" x2="474" y2="54"/></g>
+        <text x="60" y="100" text-anchor="middle" font-size="11" font-weight="700">monosaccharide</text><text x="60" y="115" text-anchor="middle" font-size="10">one sugar</text>
+        <text x="210" y="100" text-anchor="middle" font-size="11" font-weight="700">disaccharide</text><text x="210" y="115" text-anchor="middle" font-size="10">two, minus a water</text>
+        <text x="418" y="100" text-anchor="middle" font-size="11" font-weight="700">polysaccharide</text><text x="418" y="115" text-anchor="middle" font-size="10">hundreds to thousands</text>
+        <text x="210" y="20" text-anchor="middle" font-size="10" style="fill:var(--accent)">glycosidic linkage</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> the same condensation trick as proteins, with hexagons instead of beads. Mono, di, poly: one, two, many.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>A glycosidic linkage is the covalent bond formed by a condensation reaction between hydroxyl groups of two monosaccharides. Linkages are named by the carbons joined and the anomer of the first sugar: α-1,4 in maltose and starch, β-1,4 in cellulose, α-1,2 in sucrose. Disaccharides: sucrose (glucose + fructose), lactose (glucose + galactose), maltose (glucose + glucose). Polysaccharides may be linear or branched (α-1,6 branch points in glycogen and amylopectin).</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Starch, glycogen, cellulose, chitin<span class="also">α versus β linkage · why you can't digest wood</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Four famous polysaccharides. Starch is how plants store glucose; glycogen is how animals do, mostly in liver and muscle; both are glucose chains with the link at one angle (called alpha), which makes the chain coil up like a spring, and your enzymes can cut it. Cellulose is also a glucose chain, but every other bead is flipped so the link is at the other angle (beta); that makes the chain dead straight, and straight chains stack into fibres held by hydrogen bonds. That is wood, cotton and paper. No enzyme in your body can cut a beta link, so cellulose passes through you as fibre. Chitin is the same trick with a slightly modified sugar, and it makes insect shells and fungal walls.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 190" role="img" aria-label="Left: alpha-linked glucose chain curling into a coil, labeled starch and glycogen, digestible. Right: beta-linked chain running straight, three chains stacked with dashed hydrogen bonds between them, labeled cellulose, not digestible">
+        <text x="120" y="22" text-anchor="middle" font-weight="700">α linkage: chain coils</text>
+        <path d="M30,60 c30,-40 80,-40 90,0 c10,40 -60,40 -50,0 c10,-40 90,-40 100,0 c10,40 -60,40 -50,0 c10,-40 90,-40 100,0" fill="none" stroke="currentColor" stroke-width="3"/>
+        <g class="acc"><circle cx="30" cy="60" r="5"/><circle cx="75" cy="30" r="5"/><circle cx="120" cy="60" r="5"/><circle cx="95" cy="90" r="5"/><circle cx="170" cy="30" r="5"/><circle cx="220" cy="60" r="5"/></g>
+        <text x="120" y="130" text-anchor="middle" font-size="11" font-weight="700">starch, glycogen</text>
+        <text x="120" y="148" text-anchor="middle" font-size="11">energy storage</text>
+        <text x="120" y="166" text-anchor="middle" font-size="11" style="fill:var(--accent)">your enzymes cut this</text>
+        <text x="400" y="22" text-anchor="middle" font-weight="700">β linkage: chain runs straight</text>
+        <g stroke="currentColor" stroke-width="3"><line x1="300" y1="45" x2="500" y2="45"/><line x1="300" y1="75" x2="500" y2="75"/><line x1="300" y1="105" x2="500" y2="105"/></g>
+        <g class="acc"><circle cx="320" cy="45" r="5"/><circle cx="360" cy="45" r="5"/><circle cx="400" cy="45" r="5"/><circle cx="440" cy="45" r="5"/><circle cx="480" cy="45" r="5"/><circle cx="320" cy="75" r="5"/><circle cx="360" cy="75" r="5"/><circle cx="400" cy="75" r="5"/><circle cx="440" cy="75" r="5"/><circle cx="480" cy="75" r="5"/><circle cx="320" cy="105" r="5"/><circle cx="360" cy="105" r="5"/><circle cx="400" cy="105" r="5"/><circle cx="440" cy="105" r="5"/><circle cx="480" cy="105" r="5"/></g>
+        <g class="accs" stroke-width="1.5" stroke-dasharray="3 2"><line x1="340" y1="50" x2="340" y2="70"/><line x1="420" y1="50" x2="420" y2="70"/><line x1="340" y1="80" x2="340" y2="100"/><line x1="420" y1="80" x2="420" y2="100"/><line x1="460" y1="50" x2="460" y2="70"/><line x1="460" y1="80" x2="460" y2="100"/></g>
+        <text x="400" y="130" text-anchor="middle" font-size="11" font-weight="700">cellulose (chitin is similar)</text>
+        <text x="400" y="148" text-anchor="middle" font-size="11">structure: chains H-bond into fibres</text>
+        <text x="400" y="166" text-anchor="middle" font-size="11" style="fill:var(--flag)">you have no enzyme for this link</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> alpha coils, beta stacks. A coiled spring is easy to get at and cut; a stack of straight rods is a plank.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Starch (plants) is a mixture of amylose (unbranched α-1,4 glucose, helical) and amylopectin (α-1,4 with α-1,6 branches). Glycogen (animals) is α-1,4 glucose with more frequent α-1,6 branching, stored in liver and muscle. Cellulose is unbranched β-1,4 glucose; alternate residues are flipped 180°, giving a linear chain that hydrogen-bonds to neighbouring chains into microfibrils. Chitin is β-1,4 N-acetylglucosamine (exoskeletons, fungal walls); peptidoglycan is a related bacterial wall polymer. Humans lack cellulase; ruminants and termites rely on symbiotic microbes that have it.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>What carbohydrates do<span class="also">energy · structure · cell identity (glycoproteins)</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Three jobs. Energy: glucose is burned for power, and starch and glycogen are the pantry it's kept in. Structure: cellulose and chitin are load-bearing. Identity: short sugar chains stuck onto proteins on the outer surface of a cell act as name tags. Your blood type is a sugar tag; your immune system decides what is "you" partly by reading sugar tags. A protein with sugars attached is a glycoprotein.</p>
+    <div class="lbl">Picture</div>
+    <div class="pic"><b>Hold this image:</b> a house. The firewood in the shed is starch. The timber frame is cellulose. The nameplate by the door is the sugar tag on a glycoprotein. Same material, three jobs.</div>
+    <details class="tech"><summary>The technical version</summary><p>Carbohydrates serve as energy stores (starch, glycogen; glucose oxidation in cellular respiration yields ATP), structural polymers (cellulose, chitin, peptidoglycan), and as recognition molecules. Glycoproteins and glycolipids on the extracellular face of the plasma membrane carry oligosaccharides that mediate cell–cell recognition and signalling; ABO blood groups differ by the terminal sugar on a membrane glycolipid. Carbohydrates also form the backbone of nucleic acids (ribose, deoxyribose).</p></details>
+  </article>
+
+  <!-- ============================ CHAPTER 6 ============================ -->
+  <h2 id="ch6"><small>Chapter 6</small>Lipids, Membranes, and the First Cells</h2>
+
+  <div class="forest">
+    <span class="eyebrow">The forest</span>
+    <p>This chapter takes one property from Chapter 2, that oil and water don't mix, and builds a cell out of it. <b>Lipids are the oily molecules. A phospholipid is a lipid with a water-loving head and two water-fearing tails, and when you drop a pile of them in water they arrange themselves, with no help, into a two-layer sheet with the tails hidden inside.</b> That sheet is a membrane. It closes into a bubble. The bubble has an inside and an outside, and that is the beginning of a cell.</p>
+    <p>The second half is about what gets through the sheet. Small uncharged things slip through; ions and big polar things can't, unless a protein lets them. Diffusion is things spreading out; osmosis is water spreading toward the saltier side; and the proteins in the membrane are the doors, some open, some needing a push (energy) to move things uphill.</p>
+    <p>One sentence: <em>oily tails hide from water, so phospholipids self-assemble into a bag; proteins in the bag decide what gets in.</em></p>
+    <span class="eyebrow">Bridge videos, no background needed</span>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=QhUrc4BnPgg">TED-Ed · What is fat?</a> <span class="dur">4:22</span>. Fatty acids, triglycerides, saturated versus unsaturated, from the food end.</li>
+      <li><a href="https://www.youtube.com/watch?v=nsklF1w4eok">TED-Ed · Cell membranes are way more complicated than you think</a> <span class="dur">5:21</span>. The bilayer as a crowded, moving surface. Watch this before the Amoeba Sisters membrane video.</li>
+      <li><a href="https://www.youtube.com/watch?v=PRi6uHDKeW4">FuseSchool · Transport in Cells: Diffusion and Osmosis</a> <span class="dur">3:52</span>. Pitched at 15-year-olds, which is the right level for a first pass at osmosis.</li>
+    </ul>
+  </div>
+
+  <article class="term">
+    <h3>Lipid<span class="also">fatty acid · saturated vs unsaturated</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>"Lipid" is the chemist's word for fats, oils, and their relatives: molecules that are mostly carbon and hydrogen, so they are nonpolar and won't dissolve in water. Unlike proteins and sugars, lipids aren't a chain of one repeating bead; they're a family defined by that one behaviour. The basic building block is the fatty acid: a long tail of carbons and hydrogens with an acid group at one end. If every carbon in the tail holds as many hydrogens as it can, the tail is straight and the fat is "saturated" (butter, solid at room temperature). If there's a double bond somewhere, the tail has a kink, the molecules can't pack tightly, and the fat is "unsaturated" (olive oil, liquid).</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 150" role="img" aria-label="Two fatty acids: a saturated one with a straight zigzag tail, and an unsaturated one with a double bond that puts a kink in the tail; straight tails pack tightly and are solid, kinked tails pack loosely and are liquid">
+        <rect x="20" y="40" width="46" height="30" rx="6" class="flgsoft" stroke="currentColor"/><text x="43" y="60" text-anchor="middle" font-size="10" font-family="ui-monospace, Menlo, monospace">COOH</text>
+        <polyline points="66,55 86,45 106,55 126,45 146,55 166,45 186,55 206,45 226,55 246,45" fill="none" stroke="currentColor" stroke-width="3"/>
+        <text x="150" y="90" text-anchor="middle" font-size="11" font-weight="700">saturated: straight</text>
+        <text x="150" y="108" text-anchor="middle" font-size="11">packs tight → solid (butter)</text>
+        <rect x="280" y="40" width="46" height="30" rx="6" class="flgsoft" stroke="currentColor"/><text x="303" y="60" text-anchor="middle" font-size="10" font-family="ui-monospace, Menlo, monospace">COOH</text>
+        <polyline points="326,55 346,45 366,55 386,45 406,55" fill="none" stroke="currentColor" stroke-width="3"/>
+        <line x1="406" y1="55" x2="424" y2="40" class="accs" stroke-width="3"/><line x1="409" y1="59" x2="427" y2="44" class="accs" stroke-width="3"/>
+        <polyline points="424,40 440,20 456,32 472,12 488,24" fill="none" stroke="currentColor" stroke-width="3"/>
+        <text x="418" y="75" text-anchor="middle" font-size="10" style="fill:var(--accent)">C=C double bond: kink</text>
+        <text x="400" y="108" text-anchor="middle" font-size="11" font-weight="700">unsaturated: bent</text>
+        <text x="400" y="126" text-anchor="middle" font-size="11">packs loose → liquid (oil)</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> straight sticks stack into a solid block; bent sticks leave gaps and stay loose. The kink is a double bond.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Lipids are defined functionally as carbon-containing compounds that are largely nonpolar and hydrophobic; they are not polymers. A fatty acid is a hydrocarbon chain (typically 12–22 carbons) with a terminal carboxyl group. Saturated fatty acids have only C–C single bonds; unsaturated have one or more C=C double bonds, which in the cis configuration introduce a bend that lowers packing density and melting point. Trans fats are unsaturated but straight. Degree of saturation and chain length control membrane fluidity.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Fat and phospholipid<span class="also">triglyceride · glycerol · amphipathic · steroid</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>A fat (triglyceride) is three fatty-acid tails bolted onto a small three-carbon molecule called glycerol. It is entirely oily, which is why it's good for storing energy and useless for building membranes. A phospholipid is the same idea with one tail swapped for a phosphate group, and that changes everything: the phosphate end is charged and loves water, while the two remaining tails hate it. A molecule with a water-loving part and a water-fearing part is called amphipathic, and amphipathic molecules are what membranes are made of. Steroids are lipids of a different shape, four fused rings; cholesterol is one, and it sits in membranes to tune their stiffness.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 170" role="img" aria-label="Left: a triglyceride, a glycerol backbone with three fatty-acid tails, all oily. Right: a phospholipid, a charged phosphate head with two oily tails, labeled amphipathic">
+        <rect x="30" y="40" width="22" height="90" rx="5" class="sur" stroke="currentColor" stroke-width="2"/><text x="41" y="150" text-anchor="middle" font-size="10">glycerol</text>
+        <g stroke="currentColor" stroke-width="3" fill="none"><polyline points="52,55 72,48 92,55 112,48 132,55 152,48 172,55"/><polyline points="52,85 72,78 92,85 112,78 132,85 152,78 172,85"/><polyline points="52,115 72,108 92,115 112,108 132,115 152,108 172,115"/></g>
+        <text x="110" y="25" text-anchor="middle" font-weight="700">fat (triglyceride)</text>
+        <text x="110" y="165" text-anchor="middle" font-size="10">three oily tails: all hydrophobic, stores energy</text>
+        <circle cx="330" cy="60" r="24" class="flgsoft" stroke="currentColor" stroke-width="2"/><text x="330" y="57" text-anchor="middle" font-size="9">phosphate</text><text x="330" y="69" text-anchor="middle" font-size="9">head</text>
+        <rect x="320" y="84" width="20" height="14" rx="3" class="sur" stroke="currentColor"/>
+        <g stroke="currentColor" stroke-width="3" fill="none"><polyline points="324,98 316,112 324,126 316,140 324,154"/><polyline points="336,98 344,112 336,126 344,140 336,154"/></g>
+        <text x="410" y="25" text-anchor="middle" font-weight="700">phospholipid</text>
+        <text x="410" y="58" font-size="11" style="fill:var(--flag)">← head loves water</text>
+        <text x="410" y="125" font-size="11">← tails hate water</text>
+        <text x="410" y="150" font-size="11" font-weight="700">= amphipathic</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a fat is three tails and no head, so it just huddles. A phospholipid is a head and two tails, so it lines up: heads out, tails in.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Triglycerides (fats): glycerol esterified to three fatty acids via ester linkages formed by condensation; nonpolar, energy-dense storage. Phospholipids: glycerol with two fatty acids and a phosphate group (often bearing a further polar group such as choline); the phosphate head is hydrophilic and the tails hydrophobic, making the molecule amphipathic. Steroids: four fused carbon rings; cholesterol is amphipathic (a single –OH) and modulates membrane fluidity in animal cells. Isoprenoids and waxes are other lipid classes.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Lipid bilayer<span class="also">plasma membrane · fluid mosaic model · micelle</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Drop phospholipids into water and they sort themselves out: heads toward the water, tails away from it. The stable arrangement is two layers back to back, tails in the middle where there's no water, heads facing out on both sides. That is a lipid bilayer, and it is what every cell membrane is. Nobody builds it; it assembles because the tails are hiding. It is also fluid: the molecules slide around each other like people in a crowd, and proteins float in it like boats. "Fluid mosaic" is the name for that picture: a moving sea of lipids with a mosaic of proteins in it. A micelle is the one-layer version, a ball with tails pointing to the centre, which forms when the lipids have only one tail.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 170" role="img" aria-label="A lipid bilayer in cross-section: two rows of phospholipids with heads facing the water on the outside and inside, tails meeting in the middle; two proteins embedded through the bilayer, one with a channel; water labeled above and below">
+        <text x="260" y="18" text-anchor="middle" font-size="11">water (outside the cell)</text>
+        <g class="flgsoft" stroke="currentColor" stroke-width="1.5">
+          <circle cx="40" cy="45" r="9"/><circle cx="64" cy="45" r="9"/><circle cx="88" cy="45" r="9"/><circle cx="112" cy="45" r="9"/><circle cx="136" cy="45" r="9"/><circle cx="160" cy="45" r="9"/><circle cx="184" cy="45" r="9"/><circle cx="290" cy="45" r="9"/><circle cx="314" cy="45" r="9"/><circle cx="338" cy="45" r="9"/><circle cx="410" cy="45" r="9"/><circle cx="434" cy="45" r="9"/><circle cx="458" cy="45" r="9"/><circle cx="482" cy="45" r="9"/>
+          <circle cx="40" cy="125" r="9"/><circle cx="64" cy="125" r="9"/><circle cx="88" cy="125" r="9"/><circle cx="112" cy="125" r="9"/><circle cx="136" cy="125" r="9"/><circle cx="160" cy="125" r="9"/><circle cx="184" cy="125" r="9"/><circle cx="290" cy="125" r="9"/><circle cx="314" cy="125" r="9"/><circle cx="338" cy="125" r="9"/><circle cx="410" cy="125" r="9"/><circle cx="434" cy="125" r="9"/><circle cx="458" cy="125" r="9"/><circle cx="482" cy="125" r="9"/>
+        </g>
+        <g stroke="currentColor" stroke-width="2" fill="none">
+          <path d="M36,54 v26 M44,54 v26 M60,54 v26 M68,54 v26 M84,54 v26 M92,54 v26 M108,54 v26 M116,54 v26 M132,54 v26 M140,54 v26 M156,54 v26 M164,54 v26 M180,54 v26 M188,54 v26 M286,54 v26 M294,54 v26 M310,54 v26 M318,54 v26 M334,54 v26 M342,54 v26 M406,54 v26 M414,54 v26 M430,54 v26 M438,54 v26 M454,54 v26 M462,54 v26 M478,54 v26 M486,54 v26"/>
+          <path d="M36,116 v-26 M44,116 v-26 M60,116 v-26 M68,116 v-26 M84,116 v-26 M92,116 v-26 M108,116 v-26 M116,116 v-26 M132,116 v-26 M140,116 v-26 M156,116 v-26 M164,116 v-26 M180,116 v-26 M188,116 v-26 M286,116 v-26 M294,116 v-26 M310,116 v-26 M318,116 v-26 M334,116 v-26 M342,116 v-26 M406,116 v-26 M414,116 v-26 M430,116 v-26 M438,116 v-26 M454,116 v-26 M462,116 v-26 M478,116 v-26 M486,116 v-26"/>
+        </g>
+        <rect x="205" y="30" width="70" height="110" rx="14" class="soft" stroke="currentColor" stroke-width="2"/>
+        <rect x="232" y="30" width="16" height="110" class="sur" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2"/>
+        <text x="240" y="158" text-anchor="middle" font-size="10">channel protein</text>
+        <ellipse cx="373" cy="85" rx="24" ry="52" class="soft" stroke="currentColor" stroke-width="2"/>
+        <text x="373" y="158" text-anchor="middle" font-size="10">another protein</text>
+        <text x="100" y="162" text-anchor="middle" font-size="11">water (inside the cell)</text>
+        <text x="100" y="89" text-anchor="middle" font-size="10" style="fill:var(--muted)">tails: no water here</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a sandwich with the oily filling on the inside and bread facing the water on both sides, and the whole thing is a crowd that keeps moving.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Amphipathic phospholipids in water spontaneously form bilayers (two tails) or micelles (one tail) to minimise hydrophobic exposure; the hydrophobic effect drives assembly. The fluid mosaic model (Singer and Nicolson, 1972) describes the membrane as a fluid phospholipid bilayer with integral (transmembrane) and peripheral proteins. Fluidity increases with unsaturation and temperature and is buffered by cholesterol. Lipids diffuse laterally rapidly but rarely flip between leaflets. Freeman's "first cells" thread: bilayer vesicles form abiotically, offering a plausible origin of the first compartments.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Selective permeability</h3>
+    <div class="lbl">In plain words</div>
+    <p>The bilayer is a wall with rules. Small molecules with no charge, like oxygen, carbon dioxide and water (a little), can squeeze through the oily middle. Anything charged (ions like Na⁺, K⁺, Cl⁻) or large and polar (sugars, amino acids) cannot: the oily middle rejects them exactly the way oil rejects salt water. "Selectively permeable" means it lets some things through and not others, and the things it blocks are precisely the ones the cell most needs to control. That is why the membrane is full of proteins: they are the exceptions to the rule.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 150" role="img" aria-label="A bilayer band across the middle; small nonpolar molecules oxygen and carbon dioxide pass straight through with arrows; ions and a large sugar bounce off, with arrows stopped at the surface">
+        <defs><marker id="ar11" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <rect x="20" y="60" width="480" height="34" rx="4" class="soft" stroke="currentColor" stroke-width="1.5"/>
+        <text x="260" y="81" text-anchor="middle" font-size="10" style="fill:var(--muted)">oily interior of the bilayer</text>
+        <g font-size="11" text-anchor="middle">
+          <text x="80" y="30">O₂</text><line x1="80" y1="36" x2="80" y2="120" stroke="currentColor" stroke-width="2" marker-end="url(#ar11)"/>
+          <text x="150" y="30">CO₂</text><line x1="150" y1="36" x2="150" y2="120" stroke="currentColor" stroke-width="2" marker-end="url(#ar11)"/>
+          <text x="220" y="30">H₂O (slowly)</text><line x1="220" y1="36" x2="220" y2="120" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar11)"/>
+          <text x="330" y="30">Na⁺, K⁺, Cl⁻</text><line x1="330" y1="36" x2="330" y2="56" class="flgs" stroke-width="2" marker-end="url(#ar11)"/><line x1="320" y1="58" x2="340" y2="58" class="flgs" stroke-width="3"/>
+          <text x="440" y="30">glucose, amino acids</text><line x1="440" y1="36" x2="440" y2="56" class="flgs" stroke-width="2" marker-end="url(#ar11)"/><line x1="430" y1="58" x2="450" y2="58" class="flgs" stroke-width="3"/>
+        </g>
+        <text x="150" y="142" text-anchor="middle" font-size="11">small and uncharged: through</text>
+        <text x="385" y="142" text-anchor="middle" font-size="11" style="fill:var(--flag)">charged or big and polar: blocked</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> the membrane is a bouncer who lets in anyone small and neutral and stops anyone charged or bulky. The proteins are the guest list.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Permeability of a pure bilayer scales with lipid solubility and inversely with size: small nonpolar molecules (O₂, CO₂, N₂) cross rapidly; small uncharged polar molecules (H₂O, glycerol) slowly; large polar molecules (glucose) and all ions essentially not at all. Membrane proteins (channels, carriers, pumps) confer selective permeability to those solutes. Water crossing is greatly accelerated by aquaporin channels.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Diffusion<span class="also">concentration gradient · equilibrium</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Molecules in a liquid or gas are always jiggling randomly. If there are more of them on one side of a room than the other, more will happen to jiggle from the crowded side to the empty side than the reverse, so on average they spread out until they're even. That spreading is diffusion. Nothing pushes them; it's just that random motion from a crowded place ends up somewhere less crowded more often than not. A concentration gradient is the difference between the crowded side and the empty side, and things diffuse "down" it, from more to less. When it's even, diffusion hasn't stopped, the molecules still move; there's just no net change. That is equilibrium.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 140" role="img" aria-label="Two panels of a box with a permeable divider. Before: many dots crowded on the left, few on the right, with a net arrow pointing right. After: dots spread evenly, arrows both ways equal, labeled equilibrium">
+        <defs><marker id="ar12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <rect x="20" y="30" width="200" height="80" fill="none" stroke="currentColor" stroke-width="2"/><line x1="120" y1="30" x2="120" y2="110" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <g class="acc"><circle cx="35" cy="45" r="4"/><circle cx="55" cy="60" r="4"/><circle cx="40" cy="80" r="4"/><circle cx="70" cy="45" r="4"/><circle cx="90" cy="70" r="4"/><circle cx="60" cy="95" r="4"/><circle cx="100" cy="50" r="4"/><circle cx="80" cy="90" r="4"/><circle cx="105" cy="95" r="4"/><circle cx="30" cy="100" r="4"/><circle cx="150" cy="70" r="4"/><circle cx="190" cy="90" r="4"/></g>
+        <line x1="100" y1="20" x2="170" y2="20" stroke="currentColor" stroke-width="2.5" marker-end="url(#ar12)"/>
+        <text x="120" y="128" text-anchor="middle" font-size="11">before: net movement down the gradient</text>
+        <rect x="300" y="30" width="200" height="80" fill="none" stroke="currentColor" stroke-width="2"/><line x1="400" y1="30" x2="400" y2="110" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <g class="acc"><circle cx="315" cy="45" r="4"/><circle cx="345" cy="70" r="4"/><circle cx="320" cy="95" r="4"/><circle cx="370" cy="50" r="4"/><circle cx="380" cy="90" r="4"/><circle cx="350" cy="100" r="4"/><circle cx="415" cy="45" r="4"/><circle cx="445" cy="70" r="4"/><circle cx="420" cy="95" r="4"/><circle cx="470" cy="50" r="4"/><circle cx="480" cy="90" r="4"/><circle cx="450" cy="100" r="4"/></g>
+        <line x1="380" y1="16" x2="420" y2="16" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar12)"/><line x1="420" y1="24" x2="380" y2="24" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar12)"/>
+        <text x="400" y="128" text-anchor="middle" font-size="11">after: equilibrium, still moving, no net change</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a drop of ink in a glass. No one stirs it, and it still spreads until the water is evenly tinted.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Diffusion is net movement of molecules from higher to lower concentration driven by random thermal motion; it is a spontaneous process that increases entropy and requires no energy input. A concentration gradient is the difference in concentration across a distance. Net diffusion ceases at equilibrium, when concentrations are equal, though individual molecules continue to move. Passive transport across membranes (simple and facilitated diffusion) is diffusion down a gradient; for ions, the electrical gradient also matters (electrochemical gradient).</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Osmosis<span class="also">hypertonic · hypotonic · isotonic</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Osmosis is diffusion of water, specifically across a membrane that lets water through but not the stuff dissolved in it. Water moves toward the side with more dissolved stuff (the saltier side), because that side has proportionally less water. The three words describe the outside relative to the inside of a cell. Hypertonic: the outside is saltier, water leaves, the cell shrivels. Hypotonic: the outside is more dilute, water rushes in, the cell swells and can burst. Isotonic: equal, no net change. The prefixes help: hyper- "more", hypo- "less", iso- "same", always describing the solute concentration of the solution the cell sits in.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 170" role="img" aria-label="Three cells in three solutions: in a hypertonic solution water leaves and the cell shrinks; in an isotonic solution nothing changes; in a hypotonic solution water enters and the cell swells">
+        <defs><marker id="ar13" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <g>
+          <rect x="20" y="30" width="140" height="100" rx="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <g class="flg"><circle cx="35" cy="45" r="3"/><circle cx="145" cy="50" r="3"/><circle cx="40" cy="115" r="3"/><circle cx="140" cy="110" r="3"/><circle cx="30" cy="80" r="3"/><circle cx="150" cy="82" r="3"/><circle cx="90" cy="40" r="3"/><circle cx="100" cy="122" r="3"/><circle cx="60" cy="122" r="3"/><circle cx="120" cy="38" r="3"/></g>
+          <path d="M70,80 c5,-20 30,-25 40,-8 c10,15 -5,35 -20,28 c-10,-5 -25,0 -20,-20 z" class="soft" stroke="currentColor" stroke-width="2"/>
+          <line x1="90" y1="62" x2="90" y2="42" stroke="currentColor" stroke-width="2" marker-end="url(#ar13)"/><line x1="90" y1="100" x2="90" y2="118" stroke="currentColor" stroke-width="2" marker-end="url(#ar13)"/>
+          <text x="90" y="150" text-anchor="middle" font-size="11" font-weight="700">hypertonic outside</text><text x="90" y="165" text-anchor="middle" font-size="10">water leaves, cell shrinks</text>
+        </g>
+        <g>
+          <rect x="190" y="30" width="140" height="100" rx="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <g class="flg"><circle cx="205" cy="45" r="3"/><circle cx="315" cy="115" r="3"/><circle cx="200" cy="110" r="3"/><circle cx="320" cy="50" r="3"/><circle cx="260" cy="38" r="3"/></g>
+          <circle cx="260" cy="80" r="26" class="soft" stroke="currentColor" stroke-width="2"/>
+          <g class="flg"><circle cx="252" cy="76" r="3"/><circle cx="268" cy="86" r="3"/></g>
+          <line x1="260" y1="52" x2="260" y2="40" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar13)"/><line x1="252" y1="40" x2="252" y2="52" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar13)"/>
+          <text x="260" y="150" text-anchor="middle" font-size="11" font-weight="700">isotonic</text><text x="260" y="165" text-anchor="middle" font-size="10">in = out, no change</text>
+        </g>
+        <g>
+          <rect x="360" y="30" width="140" height="100" rx="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="430" cy="80" r="40" class="soft" stroke="currentColor" stroke-width="2"/>
+          <g class="flg"><circle cx="420" cy="70" r="3"/><circle cx="440" cy="90" r="3"/><circle cx="445" cy="68" r="3"/><circle cx="418" cy="92" r="3"/></g>
+          <line x1="430" y1="33" x2="430" y2="46" stroke="currentColor" stroke-width="2" marker-end="url(#ar13)"/><line x1="430" y1="127" x2="430" y2="114" stroke="currentColor" stroke-width="2" marker-end="url(#ar13)"/>
+          <text x="430" y="150" text-anchor="middle" font-size="11" font-weight="700">hypotonic outside</text><text x="430" y="165" text-anchor="middle" font-size="10">water enters, cell swells</text>
+        </g>
+        <text x="260" y="20" text-anchor="middle" font-size="10" style="fill:var(--muted)">● = dissolved solute; water moves toward the side with more of it</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> water goes where the salt is. Hyper-salty outside pulls water out; hypo-salty outside pushes water in. The prefix describes the outside.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Osmosis is the diffusion of water across a selectively permeable membrane from a region of higher water concentration (lower solute) to lower water concentration (higher solute). Tonicity describes the solute concentration of a solution relative to the cell: hypertonic (higher solute outside, net water efflux), hypotonic (lower outside, net influx; lysis in animal cells, turgor in walled cells), isotonic (no net movement). Freeman also introduces water potential in plant contexts. Osmoregulation is the control of water balance.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Membrane proteins and transport<span class="also">channel · carrier · pump · passive vs active transport</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Three kinds of door. A channel is a tunnel through the membrane shaped for one thing, often an ion; when it's open, that thing flows through down its gradient, no energy needed. A carrier grabs its passenger on one side, changes shape, and releases it on the other, also down the gradient, no energy needed; glucose gets in this way. Both of those are passive transport: the gradient does the work. A pump is a carrier that burns energy (ATP, the cell's fuel) to move something the wrong way, from low concentration to high, uphill. That is active transport, and it's how a cell keeps sodium out and potassium in even though both are constantly leaking back.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 190" role="img" aria-label="Three proteins in a bilayer: a channel with ions flowing down their gradient, a carrier changing shape to pass glucose down its gradient, and a pump using ATP to push sodium against its gradient; the first two are passive, the third active">
+        <defs><marker id="ar14" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <rect x="10" y="70" width="500" height="40" class="soft" stroke="currentColor" stroke-width="1.5"/>
+        <text x="20" y="40" font-size="10" style="fill:var(--muted)">high concentration side</text><text x="20" y="150" font-size="10" style="fill:var(--muted)">low concentration side</text>
+        <rect x="80" y="55" width="50" height="70" rx="10" fill="var(--surface)" class="sur" stroke="currentColor" stroke-width="2"/><rect x="99" y="55" width="12" height="70" fill="var(--bg)" stroke="currentColor" stroke-dasharray="2 2"/>
+        <line x1="105" y1="40" x2="105" y2="140" stroke="currentColor" stroke-width="2" marker-end="url(#ar14)"/>
+        <text x="105" y="165" text-anchor="middle" font-size="11" font-weight="700">channel</text><text x="105" y="180" text-anchor="middle" font-size="10">passive</text>
+        <ellipse cx="250" cy="90" rx="30" ry="40" class="sur" stroke="currentColor" stroke-width="2"/>
+        <rect x="242" y="48" width="16" height="12" rx="3" class="flgsoft" stroke="currentColor"/>
+        <path d="M250,40 q-45,50 0,100" fill="none" stroke="currentColor" stroke-width="2" marker-end="url(#ar14)"/>
+        <text x="250" y="165" text-anchor="middle" font-size="11" font-weight="700">carrier</text><text x="250" y="180" text-anchor="middle" font-size="10">passive: changes shape</text>
+        <ellipse cx="400" cy="90" rx="30" ry="40" class="sur" stroke="currentColor" stroke-width="2"/>
+        <line x1="400" y1="140" x2="400" y2="40" class="accs" stroke-width="2.5" marker-end="url(#ar14)"/>
+        <text x="455" y="95" font-size="11" font-weight="700" style="fill:var(--accent)">ATP</text><text x="455" y="110" font-size="10">energy in</text>
+        <text x="400" y="165" text-anchor="middle" font-size="11" font-weight="700">pump</text><text x="400" y="180" text-anchor="middle" font-size="10">active: uphill, costs ATP</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a slide, a revolving door, and an elevator. The first two only go down; the elevator goes up but you pay for it.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Passive transport moves solutes down their electrochemical gradient without energy input: simple diffusion through the bilayer, or facilitated diffusion through channel proteins (aqueous pores, often gated) and carrier proteins (which bind the solute and undergo conformational change; e.g. GLUT glucose transporters). Active transport moves solutes against their gradient using energy: primary active transport hydrolyses ATP directly (the Na⁺/K⁺-ATPase pumps 3 Na⁺ out and 2 K⁺ in per ATP); secondary active transport couples uphill movement of one solute to downhill movement of another (cotransport). Bulk transport (endocytosis, exocytosis) moves material in vesicles and appears in Chapter 7.</p></details>
+  </article>
+
+  <!-- ============================ CHAPTER 7 ============================ -->
+  <h2 id="ch7"><small>Chapter 7</small>Inside the Cell</h2>
+
+  <div class="forest">
+    <span class="eyebrow">The forest</span>
+    <p>A eukaryotic cell is a factory with departments, and this chapter is the floor plan. <b>Each organelle is a membrane-wrapped room with one job, and the rooms are connected by a shipping system.</b> The nucleus holds the master plans (DNA) and sends out working copies. Ribosomes read the copies and build proteins. Proteins meant for export or for the membrane go through the endoplasmic reticulum, get finished and sorted in the Golgi, and are shipped in little membrane bubbles (vesicles) to where they're needed. Mitochondria burn fuel for power. Lysosomes are recycling. The cytoskeleton is the scaffolding and the rail network everything moves along.</p>
+    <p>If you learn the map, every later chapter is a visit to one room. Chapter 9 is the mitochondrion. Chapter 10 is the chloroplast. Chapters 15 to 17 are the nucleus and the ribosome.</p>
+    <p>One sentence: <em>a factory of membrane-walled rooms, with plans in the nucleus, assembly on ribosomes, and shipping through the ER, Golgi and vesicles.</em></p>
+    <span class="eyebrow">Bridge videos, no background needed</span>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=URUJD5NEXC8">Nucleus Medical Media · Biology: Cell Structure</a> <span class="dur">7:22</span>. A calm, animated walk through every organelle, made for patients rather than students. Watch this first.</li>
+      <li><a href="https://www.youtube.com/watch?v=QplXd76lAYQ">Harvard BioVisions · The Inner Life of the Cell (narrated)</a> <span class="dur">8:00</span>. The famous animation of a white blood cell's interior. Don't try to follow every word; watch it for the feel of how crowded and busy a cell is.</li>
+      <li><a href="https://learn.genetics.utah.edu/content/cells/insideacell20/">Learn.Genetics · Inside a Cell</a> lets you click each organelle, and <a href="https://learn.genetics.utah.edu/content/cells/scale/">Cell Size and Scale</a> is the fastest way to feel how small all this is.</li>
+    </ul>
+  </div>
+
+  <article class="term">
+    <h3>Organelle<span class="also">cytoplasm · cytosol · the floor plan</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>An organelle ("little organ") is a structure inside a cell with a specific job, usually wrapped in its own membrane so its chemistry stays separate from everything else. The cytoplasm is everything inside the cell membrane except the nucleus; the cytosol is the watery fluid part of that, the stuff the organelles float in. Keeping jobs in separate rooms is the whole advantage of being a eukaryote: the recycling acid in a lysosome can't dissolve the cell, because it's walled off.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 300" role="img" aria-label="A labeled map of an animal cell: nucleus with nucleolus in the centre, rough endoplasmic reticulum wrapping it, smooth ER, Golgi apparatus, mitochondria, lysosome, ribosomes as dots, cytoskeleton fibres, and the plasma membrane around everything">
+        <ellipse cx="260" cy="150" rx="245" ry="135" class="soft" stroke="currentColor" stroke-width="2.5"/>
+        <text x="30" y="30" font-size="10">plasma membrane</text><line x1="60" y1="34" x2="48" y2="60" stroke="currentColor" stroke-width="1"/>
+        <circle cx="240" cy="150" r="50" class="sur" stroke="currentColor" stroke-width="2.5"/>
+        <circle cx="240" cy="150" r="44" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 3"/>
+        <circle cx="228" cy="140" r="12" class="soft" stroke="currentColor" stroke-width="1.5"/>
+        <text x="240" y="176" text-anchor="middle" font-size="11" font-weight="700">nucleus</text><text x="228" y="144" text-anchor="middle" font-size="8">nucleolus</text>
+        <path d="M175,110 c-25,15 -30,40 -20,65 M182,100 c-35,20 -40,55 -25,85 M300,100 c30,15 40,45 28,75" fill="none" stroke="currentColor" stroke-width="2"/>
+        <g class="acc"><circle cx="160" cy="118" r="2"/><circle cx="156" cy="130" r="2"/><circle cx="154" cy="142" r="2"/><circle cx="155" cy="155" r="2"/><circle cx="158" cy="168" r="2"/><circle cx="163" cy="180" r="2"/><circle cx="310" cy="110" r="2"/><circle cx="318" cy="125" r="2"/><circle cx="323" cy="140" r="2"/><circle cx="324" cy="155" r="2"/></g>
+        <text x="130" y="95" text-anchor="end" font-size="10">rough ER (ribosomes on it)</text><line x1="134" y1="98" x2="160" y2="112" stroke="currentColor" stroke-width="1"/>
+        <path d="M330,180 c15,10 10,30 25,35 c15,5 20,-15 35,-5" fill="none" stroke="currentColor" stroke-width="2"/>
+        <text x="405" y="230" font-size="10">smooth ER</text>
+        <g fill="none" stroke="currentColor" stroke-width="2"><path d="M60,175 c30,-8 60,-8 90,0"/><path d="M62,188 c30,-8 58,-8 88,0"/><path d="M66,201 c28,-8 54,-8 82,0"/><path d="M70,214 c26,-8 50,-8 76,0"/></g>
+        <circle cx="52" cy="230" r="5" class="sur" stroke="currentColor"/><circle cx="150" cy="232" r="5" class="sur" stroke="currentColor"/>
+        <text x="105" y="250" text-anchor="middle" font-size="10">Golgi apparatus + vesicles</text>
+        <ellipse cx="400" cy="90" rx="34" ry="18" class="sur" stroke="currentColor" stroke-width="2"/><path d="M375,90 c8,-10 8,10 16,0 c8,-10 8,10 16,0 c8,-10 8,10 16,0" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="400" y="62" text-anchor="middle" font-size="10">mitochondrion</text>
+        <ellipse cx="380" cy="230" rx="30" ry="16" class="sur" stroke="currentColor" stroke-width="2"/><path d="M358,230 c7,-9 7,9 14,0 c7,-9 7,9 14,0 c7,-9 7,9 14,0" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="120" cy="120" r="14" class="flgsoft" stroke="currentColor" stroke-width="2"/><text x="120" y="98" text-anchor="middle" font-size="10">lysosome</text>
+        <g class="acc"><circle cx="300" cy="230" r="2"/><circle cx="310" cy="250" r="2"/><circle cx="280" cy="245" r="2"/><circle cx="330" cy="120" r="2"/><circle cx="200" cy="250" r="2"/><circle cx="215" cy="235" r="2"/></g>
+        <text x="300" y="270" text-anchor="middle" font-size="10">● free ribosomes in the cytosol</text>
+        <g stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" fill="none"><line x1="40" y1="120" x2="180" y2="60"/><line x1="440" y1="150" x2="330" y2="250"/><line x1="200" y1="270" x2="440" y2="200"/></g>
+        <text x="470" y="140" text-anchor="end" font-size="10" style="fill:var(--muted)">cytoskeleton</text>
+        <text x="470" y="270" text-anchor="end" font-size="10" style="fill:var(--muted)">cytosol: the fluid everything floats in</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> the map. Every card below is one room on it, and every later chapter is a visit to one room.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Organelles are membrane-bound compartments with specialised functions (the term is sometimes extended to non-membranous structures like ribosomes). Cytoplasm is all contents inside the plasma membrane excluding the nucleus; cytosol is its aqueous phase. Compartmentalisation allows incompatible reactions to occur simultaneously, concentrates reactants, and enables regulation. Plant cells additionally have a cell wall, chloroplasts, and a large central vacuole.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Nucleus<span class="also">nuclear envelope · nuclear pores · chromosome · nucleolus</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>The room where the master plans are kept. The DNA is in there, wound up with proteins into chromosomes, and the nucleus is wrapped in a double membrane (the nuclear envelope) with holes in it, the nuclear pores, which are gateways that check what goes in and out. Plans never leave; copies (RNA) go out through the pores, and proteins that work in the nucleus come in through them, carrying a molecular "address label" that the pore recognises. The nucleolus is a dense patch inside where ribosomes are put together.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 190" role="img" aria-label="The nucleus in cross-section: a double membrane with gaps for nuclear pores, chromosomes inside, a nucleolus, RNA leaving through a pore and a protein with an address tag entering through another">
+        <defs><marker id="ar15" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <circle cx="200" cy="95" r="80" class="sur" stroke="currentColor" stroke-width="3"/>
+        <circle cx="200" cy="95" r="72" fill="none" stroke="currentColor" stroke-width="3"/>
+        <g class="sur"><rect x="264" y="60" width="24" height="14" transform="rotate(-25 276 67)"/><rect x="264" y="116" width="24" height="14" transform="rotate(25 276 123)"/><rect x="112" y="60" width="24" height="14" transform="rotate(25 124 67)"/><rect x="190" y="8" width="14" height="24"/></g>
+        <text x="197" y="0" font-size="1"> </text>
+        <text x="320" y="40" font-size="10">nuclear pores: gateways</text><line x1="318" y1="43" x2="288" y2="62" stroke="currentColor" stroke-width="1"/>
+        <path d="M170,80 q10,-15 20,0 t20,0 t20,0 M165,110 q10,-15 20,0 t20,0 t20,0" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <text x="200" y="140" text-anchor="middle" font-size="10">chromosomes (DNA + protein)</text>
+        <circle cx="240" cy="60" r="14" class="soft" stroke="currentColor" stroke-width="1.5"/><text x="240" y="64" text-anchor="middle" font-size="8">nucleolus</text>
+        <line x1="230" y1="95" x2="330" y2="128" class="accs" stroke-width="2" marker-end="url(#ar15)"/><text x="345" y="140" font-size="10" style="fill:var(--accent)">RNA copy goes out</text>
+        <line x1="60" y1="40" x2="150" y2="80" stroke="currentColor" stroke-width="2" marker-end="url(#ar15)"/><rect x="40" y="26" width="26" height="16" rx="3" class="flgsoft" stroke="currentColor"/><text x="20" y="62" font-size="10">protein with an</text><text x="20" y="74" font-size="10">address tag comes in</text>
+        <text x="200" y="182" text-anchor="middle" font-size="10" style="fill:var(--muted)">double membrane = nuclear envelope; it is continuous with the ER</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> the archive with a security desk. Originals never leave; photocopies go out, and staff need a badge (the tag) to get in.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>The nucleus is bounded by the nuclear envelope, two membranes continuous with the ER, perforated by nuclear pore complexes that mediate regulated bidirectional transport. Chromosomes are linear DNA molecules complexed with histone proteins (chromatin). The nucleolus is the site of ribosomal RNA synthesis and ribosome subunit assembly. Nuclear import requires a nuclear localization signal (NLS), a short amino acid sequence recognised by importin proteins; Freeman describes the classic experiment that identified it. The nuclear lamina provides structural support.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Ribosome<span class="also">free vs bound</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>The machine that builds proteins. It's a two-piece molecular assembly, made of RNA and protein, that clamps onto a working copy of a gene (messenger RNA) and reads it three letters at a time, adding one amino acid per three letters until the chain is done. Ribosomes floating free in the cytosol make proteins that will stay in the cytosol. Ribosomes that dock onto the endoplasmic reticulum make proteins headed for a membrane or for export. They are not wrapped in a membrane, and bacteria have them too, which is one reason many antibiotics work: they jam bacterial ribosomes but not ours.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 140" role="img" aria-label="A ribosome as a large and a small subunit clamped on a messenger RNA strand; a growing protein chain emerges from the top; free ribosomes in the cytosol are contrasted with ribosomes bound to the ER">
+        <defs><marker id="ar16" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <line x1="20" y1="95" x2="260" y2="95" stroke="currentColor" stroke-width="2.5"/><text x="30" y="112" font-size="10">messenger RNA (the working copy)</text>
+        <ellipse cx="140" cy="70" rx="45" ry="26" class="soft" stroke="currentColor" stroke-width="2"/><text x="140" y="74" text-anchor="middle" font-size="10">large subunit</text>
+        <ellipse cx="140" cy="103" rx="34" ry="12" class="soft" stroke="currentColor" stroke-width="2"/><text x="140" y="107" text-anchor="middle" font-size="9">small subunit</text>
+        <line x1="140" y1="95" x2="200" y2="95" class="accs" stroke-width="2" marker-end="url(#ar16)"/><text x="230" y="80" font-size="9" style="fill:var(--accent)">reads 3 letters</text><text x="230" y="90" font-size="9" style="fill:var(--accent)">at a time →</text>
+        <polyline points="150,44 150,30 160,20 172,28 184,18 196,26" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <g class="flg"><circle cx="150" cy="30" r="4"/><circle cx="160" cy="20" r="4"/><circle cx="172" cy="28" r="4"/><circle cx="184" cy="18" r="4"/><circle cx="196" cy="26" r="4"/></g>
+        <text x="210" y="24" font-size="10">growing protein chain</text>
+        <g class="soft" stroke="currentColor" stroke-width="1.5"><circle cx="330" cy="40" r="6"/><circle cx="350" cy="60" r="6"/><circle cx="335" cy="80" r="6"/></g><text x="340" y="105" text-anchor="middle" font-size="10">free: proteins for the cytosol</text>
+        <path d="M410,20 v100 M425,20 v100" stroke="currentColor" stroke-width="2"/><g class="soft" stroke="currentColor" stroke-width="1.5"><circle cx="404" cy="40" r="6"/><circle cx="404" cy="65" r="6"/><circle cx="404" cy="90" r="6"/><circle cx="431" cy="52" r="6"/><circle cx="431" cy="78" r="6"/></g>
+        <text x="460" y="70" font-size="10">bound to the ER:</text><text x="460" y="82" font-size="10">proteins for export</text><text x="460" y="94" font-size="10">or membranes</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a 3-D printer that reads a paper tape. Free printers make parts for the shop floor; the ones bolted to the ER make parts for shipping.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Ribosomes are ribonucleoprotein complexes of a large and a small subunit, each composed of rRNA and proteins, assembled in the nucleolus. They catalyse translation of mRNA into polypeptide (Chapter 17); the peptidyl transferase activity resides in rRNA (a ribozyme). Free ribosomes synthesise cytosolic, nuclear, mitochondrial and chloroplast proteins; ribosomes that bind the ER after the nascent chain displays an ER signal sequence synthesise secreted, membrane, and lysosomal proteins. Prokaryotic (70S) and eukaryotic (80S) ribosomes differ, a basis for antibiotic selectivity.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Endoplasmic reticulum<span class="also">rough ER · smooth ER · lumen</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>A vast network of folded membrane sheets and tubes spreading out from the nucleus; the name means "network inside the cytoplasm." The part studded with ribosomes is the rough ER, and it's where proteins for export and for membranes are made and fed into the space inside the sheets (the lumen), where they fold and get their first sugars attached. The part without ribosomes is the smooth ER, which makes lipids, stores calcium, and, in liver cells, breaks down drugs and poisons. Think of the rough ER as the factory floor for shipped goods and the smooth ER as the chemical plant.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 150" role="img" aria-label="Rough ER as stacked membrane sheets dotted with ribosomes, a protein entering the internal space called the lumen; smooth ER as bare tubes; both connected to the nuclear envelope">
+        <path d="M20,40 c40,-10 80,-10 120,0 M20,55 c40,-10 80,-10 120,0 M20,80 c40,-10 80,-10 120,0 M20,95 c40,-10 80,-10 120,0 M20,120 c40,-10 80,-10 120,0 M20,135 c40,-10 80,-10 120,0" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <g class="acc"><circle cx="35" cy="35" r="3"/><circle cx="60" cy="31" r="3"/><circle cx="85" cy="30" r="3"/><circle cx="110" cy="32" r="3"/><circle cx="135" cy="37" r="3"/><circle cx="35" cy="75" r="3"/><circle cx="60" cy="71" r="3"/><circle cx="85" cy="70" r="3"/><circle cx="110" cy="72" r="3"/><circle cx="35" cy="115" r="3"/><circle cx="60" cy="111" r="3"/><circle cx="85" cy="110" r="3"/><circle cx="110" cy="112" r="3"/></g>
+        <text x="80" y="20" text-anchor="middle" font-weight="700">rough ER</text>
+        <text x="80" y="70" text-anchor="middle" font-size="8" style="fill:var(--muted)">lumen (inside the sheet)</text>
+        <text x="80" y="150" text-anchor="middle" font-size="10">proteins for export: made, folded, sugared</text>
+        <path d="M230,50 c30,-20 50,20 80,0 c30,-20 50,20 80,0 M230,80 c30,-20 50,20 80,0 c30,-20 50,20 80,0 M230,110 c30,-20 50,20 80,0 c30,-20 50,20 80,0" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M230,65 c30,-20 50,20 80,0 c30,-20 50,20 80,0 M230,95 c30,-20 50,20 80,0 c30,-20 50,20 80,0 M230,125 c30,-20 50,20 80,0 c30,-20 50,20 80,0" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <text x="310" y="20" text-anchor="middle" font-weight="700">smooth ER</text>
+        <text x="310" y="150" text-anchor="middle" font-size="10">lipids made; calcium stored; toxins broken down</text>
+        <text x="470" y="80" text-anchor="middle" font-size="10" style="fill:var(--muted)">no ribosomes</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> rough is for proteins (the dots are the ribosomes making them); smooth is for fats and detox. Rough with dots, smooth without.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>The endoplasmic reticulum is a continuous membrane system of cisternae and tubules enclosing the ER lumen, continuous with the outer nuclear membrane. Rough ER bears bound ribosomes; nascent polypeptides with an ER signal sequence are threaded into the lumen (or membrane) co-translationally, where they fold with chaperone assistance and receive N-linked glycosylation. Smooth ER lacks ribosomes and is the site of phospholipid and steroid synthesis, Ca²⁺ sequestration (sarcoplasmic reticulum in muscle), and detoxification by cytochrome P450 enzymes in hepatocytes.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Golgi apparatus and vesicles<span class="also">cis and trans faces · secretion · exocytosis</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>The finishing and sorting department. The Golgi is a stack of flattened membrane pancakes. Proteins arrive from the ER in little membrane bubbles called vesicles, which fuse into the near side of the stack (the cis face); as they pass through, the proteins get their sugars trimmed and finished and get sorted by destination; and at the far side (the trans face) they bud off in new vesicles addressed to the cell membrane, to a lysosome, or to be released outside. Releasing a vesicle's contents outside the cell, by fusing the vesicle with the cell membrane, is called exocytosis. A vesicle is just a tiny bubble of membrane; it's how the cell moves anything membrane-wrapped from room to room.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 170" role="img" aria-label="Vesicles arrive from the ER at the cis face of a Golgi stack of flattened sacs, pass through, and bud from the trans face as new vesicles headed to the cell membrane, to a lysosome, or outside the cell by exocytosis">
+        <defs><marker id="ar17" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <text x="40" y="30" font-size="10">from the ER</text>
+        <g class="sur" stroke="currentColor" stroke-width="1.5"><circle cx="60" cy="60" r="9"/><circle cx="85" cy="85" r="9"/></g>
+        <line x1="95" y1="92" x2="150" y2="92" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar17)"/>
+        <g fill="none" stroke="currentColor" stroke-width="2.5"><path d="M170,60 c40,-10 80,-10 120,0"/><path d="M165,78 c43,-10 87,-10 130,0"/><path d="M162,96 c45,-10 91,-10 136,0"/><path d="M165,114 c43,-10 87,-10 130,0"/><path d="M170,132 c40,-10 80,-10 120,0"/></g>
+        <text x="150" y="45" font-size="10" font-weight="700">cis face (in)</text>
+        <text x="320" y="152" text-anchor="end" font-size="10" font-weight="700">trans face (out)</text>
+        <text x="230" y="20" text-anchor="middle" font-size="11" font-weight="700">Golgi: stacked sacs</text>
+        <text x="230" y="97" text-anchor="middle" font-size="8" style="fill:var(--muted)">sugars finished, proteins sorted</text>
+        <g class="sur" stroke="currentColor" stroke-width="1.5"><circle cx="330" cy="120" r="9"/><circle cx="360" cy="90" r="9"/><circle cx="345" cy="150" r="9"/></g>
+        <line x1="370" y1="88" x2="420" y2="70" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar17)"/><text x="428" y="66" font-size="10">to the cell membrane</text>
+        <line x1="340" y1="118" x2="420" y2="112" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar17)"/><text x="428" y="116" font-size="10">to a lysosome</text>
+        <line x1="355" y1="152" x2="420" y2="152" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar17)"/><text x="428" y="156" font-size="10">outside (exocytosis)</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> the post office. Parcels come in one door from the ER, get stamped and sorted, and leave by the other door addressed to where they're going.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>The Golgi apparatus is a polarised stack of cisternae; the cis-Golgi network receives transport vesicles from the ER and the trans-Golgi network sorts cargo into vesicles for the plasma membrane, lysosomes, or secretory granules. Within the stack, glycoproteins are modified (glycan trimming and addition) and lysosomal enzymes are tagged with mannose-6-phosphate. Vesicle budding and fusion are mediated by coat proteins and SNAREs. Exocytosis fuses vesicles with the plasma membrane to release contents; endocytosis (phagocytosis, pinocytosis, receptor-mediated) internalises material into vesicles.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>The endomembrane system<span class="also">secretory pathway · signal sequence · the pulse-chase experiment</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>The nucleus, ER, Golgi, vesicles, lysosomes and the cell membrane are one connected shipping network, and the chapter's centrepiece is the route a protein takes through it. A protein meant for export starts on a ribosome with a short "ship me" tag at its front, the signal sequence. The tag gets the ribosome docked onto the ER and the protein threaded inside. From the ER it travels by vesicle to the Golgi, gets finished, and is shipped by vesicle to the membrane and out. Biologists worked this out by feeding cells radioactive amino acids for a moment (the pulse), then watching where the radioactivity showed up over the following minutes (the chase): first ER, then Golgi, then vesicles, then outside.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 120" role="img" aria-label="The secretory pathway as a left-to-right chain: ribosome with signal sequence, rough ER, transport vesicle, Golgi, secretory vesicle, plasma membrane, outside the cell; the pulse-chase timing runs underneath">
+        <defs><marker id="ar18" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <g font-size="10" text-anchor="middle">
+          <rect x="10" y="30" width="80" height="40" rx="6" class="sur" stroke="currentColor"/><text x="50" y="48">ribosome +</text><text x="50" y="62" style="fill:var(--flag)">signal tag</text>
+          <line x1="90" y1="50" x2="108" y2="50" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar18)"/>
+          <rect x="110" y="30" width="70" height="40" rx="6" class="soft" stroke="currentColor"/><text x="145" y="55">rough ER</text>
+          <line x1="180" y1="50" x2="198" y2="50" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar18)"/>
+          <circle cx="215" cy="50" r="14" class="sur" stroke="currentColor"/><text x="215" y="85">vesicle</text>
+          <line x1="229" y1="50" x2="247" y2="50" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar18)"/>
+          <rect x="250" y="30" width="60" height="40" rx="6" class="soft" stroke="currentColor"/><text x="280" y="55">Golgi</text>
+          <line x1="310" y1="50" x2="328" y2="50" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar18)"/>
+          <circle cx="345" cy="50" r="14" class="sur" stroke="currentColor"/><text x="345" y="85">vesicle</text>
+          <line x1="359" y1="50" x2="377" y2="50" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar18)"/>
+          <rect x="380" y="30" width="70" height="40" rx="6" class="soft" stroke="currentColor"/><text x="415" y="48">cell</text><text x="415" y="62">membrane</text>
+          <line x1="450" y1="50" x2="468" y2="50" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar18)"/>
+          <text x="495" y="54" font-weight="700">out</text>
+        </g>
+        <line x1="20" y1="105" x2="500" y2="105" stroke="currentColor" stroke-width="1" marker-end="url(#ar18)"/>
+        <text x="30" y="118" font-size="9" style="fill:var(--muted)">pulse: label appears here first</text><text x="440" y="118" text-anchor="end" font-size="9" style="fill:var(--muted)">chase: and ends up here, minutes later</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a conveyor belt with a tag at the start. No tag, the protein stays on the shop floor; tag, and it rides the belt all the way out the door.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>The endomembrane system comprises the nuclear envelope, ER, Golgi, lysosomes, vesicles and plasma membrane, connected by vesicular traffic. Secreted and membrane proteins carry an N-terminal ER signal sequence recognised by the signal recognition particle (SRP), which halts translation and docks the ribosome on the ER; the chain is threaded through a translocon into the lumen (signal hypothesis, Blobel). Palade's pulse-chase experiments with radiolabelled amino acids in pancreatic cells established the sequence rough ER → Golgi → secretory vesicles → exocytosis. Lysosomal proteins are diverted at the trans-Golgi by mannose-6-phosphate tags.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Lysosome and vacuole<span class="also">autophagy · phagocytosis · turgor</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>The lysosome is the recycling centre: a membrane bag full of acid and digestive enzymes that take apart worn-out organelles, swallowed bacteria, and anything else the cell wants to break down into reusable pieces. Keeping that acid in its own bag is why the cell doesn't digest itself. Plant cells have a different big bag, the vacuole, which is mostly water and dissolved stuff; when full it presses outward against the cell wall and keeps the plant stiff (turgor). A wilted plant is one whose vacuoles have lost water.</p>
+    <div class="lbl">Picture</div>
+    <div class="pic"><b>Hold this image:</b> the lysosome is a stomach in a bag. The vacuole is a water balloon that keeps a plant standing up; let the water out and the plant droops.</div>
+    <details class="tech"><summary>The technical version</summary><p>Lysosomes are acidic (pH ~5) organelles containing hydrolytic enzymes (acid hydrolases) that degrade macromolecules delivered by endocytosis, phagocytosis, or autophagy (the engulfment and recycling of the cell's own components). The proton pump in the lysosomal membrane maintains the low pH. Plant cell vacuoles store water, ions, pigments and defensive compounds and generate turgor pressure; they also perform lysosome-like digestion.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Mitochondrion<span class="also">cristae · matrix</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>The power plant. Mitochondria take the fuel from food (mostly glucose, broken down first in the cytosol) and oxygen, and turn them into ATP, the energy currency every other process spends. Each one has two membranes: a smooth outer one, and an inner one folded into deep pleats called cristae, because the machinery that makes ATP sits in that inner membrane and folding it multiplies the surface. The space inside the inner membrane is the matrix. Mitochondria have their own small DNA and their own ribosomes, a leftover from their origin as free-living bacteria that were swallowed by an ancestor of ours and stayed. Chapter 9 is entirely about what happens inside them.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 150" role="img" aria-label="A mitochondrion in cross-section: a smooth outer membrane, an inner membrane folded into cristae, the matrix inside; fuel and oxygen go in, ATP comes out">
+        <defs><marker id="ar19" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <ellipse cx="240" cy="78" rx="150" ry="55" class="soft" stroke="currentColor" stroke-width="3"/>
+        <path d="M105,78 c10,-40 30,-40 40,0 c10,40 30,40 40,0 c10,-40 30,-40 40,0 c10,40 30,40 40,0 c10,-40 30,-40 40,0 c10,40 30,40 40,0 c5,-20 15,-25 25,-20" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M100,70 c-5,-30 10,-45 25,-45 c60,-10 180,-10 240,0 c15,0 25,15 25,45" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M100,86 c-5,30 10,45 25,45 c60,10 180,10 240,0 c15,0 25,-15 25,-45" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <text x="240" y="20" text-anchor="middle" font-size="10">outer membrane (smooth)</text>
+        <text x="240" y="60" text-anchor="middle" font-size="10">inner membrane, folded into cristae</text>
+        <text x="240" y="112" text-anchor="middle" font-size="10">matrix (inside the folds; has its own DNA)</text>
+        <line x1="20" y1="60" x2="80" y2="72" stroke="currentColor" stroke-width="2" marker-end="url(#ar19)"/><text x="10" y="50" font-size="10">fuel + O₂ in</text>
+        <line x1="400" y1="72" x2="470" y2="60" class="accs" stroke-width="2.5" marker-end="url(#ar19)"/><text x="470" y="50" font-size="11" font-weight="700" style="fill:var(--accent)">ATP out</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a power station with a pleated inner wall, because the generators are bolted to the wall and pleats mean more wall.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Mitochondria are double-membrane organelles; the inner membrane is folded into cristae and houses the electron transport chain and ATP synthase, while the matrix contains the citric acid cycle enzymes, mitochondrial DNA (circular) and ribosomes. They are the site of aerobic respiration (Chapter 9), producing ATP by oxidative phosphorylation. Their circular genome, bacterial-type ribosomes, and division by fission support the endosymbiotic theory of origin from an α-proteobacterium. Numbers per cell scale with energy demand.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Chloroplast<span class="also">thylakoid · stroma · plastid</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>The solar panel, found in plant and algal cells only. Chloroplasts capture light and use it to build sugar from carbon dioxide and water. Like mitochondria they have two outer membranes, their own DNA, and a bacterial ancestor. Inside, instead of pleats, they have stacks of flat green discs (thylakoids) where the light is captured, floating in a fluid (the stroma) where the sugar is assembled. The green is chlorophyll, the pigment that absorbs the light. Chapter 10 is entirely about what happens in here.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 150" role="img" aria-label="A chloroplast in cross-section: double outer membrane, stacks of flat thylakoid discs inside the fluid stroma; light comes in, sugar goes out">
+        <defs><marker id="ar20" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <ellipse cx="250" cy="78" rx="150" ry="55" class="soft" stroke="currentColor" stroke-width="3"/>
+        <ellipse cx="250" cy="78" rx="142" ry="48" fill="none" stroke="currentColor" stroke-width="2"/>
+        <g class="acc" stroke="currentColor" stroke-width="1"><rect x="140" y="58" width="50" height="7" rx="3"/><rect x="140" y="68" width="50" height="7" rx="3"/><rect x="140" y="78" width="50" height="7" rx="3"/><rect x="140" y="88" width="50" height="7" rx="3"/><rect x="230" y="50" width="50" height="7" rx="3"/><rect x="230" y="60" width="50" height="7" rx="3"/><rect x="230" y="70" width="50" height="7" rx="3"/><rect x="230" y="80" width="50" height="7" rx="3"/><rect x="230" y="90" width="50" height="7" rx="3"/><rect x="320" y="66" width="50" height="7" rx="3"/><rect x="320" y="76" width="50" height="7" rx="3"/><rect x="320" y="86" width="50" height="7" rx="3"/></g>
+        <text x="255" y="118" text-anchor="middle" font-size="10">stroma: fluid where sugar is built</text>
+        <text x="255" y="38" text-anchor="middle" font-size="10">thylakoids: green discs in stacks, where light is caught</text>
+        <line x1="30" y1="50" x2="90" y2="68" stroke="currentColor" stroke-width="2" marker-end="url(#ar20)"/><text x="10" y="40" font-size="10">light, CO₂, H₂O in</text>
+        <line x1="410" y1="72" x2="475" y2="60" class="accs" stroke-width="2.5" marker-end="url(#ar20)"/><text x="470" y="50" font-size="11" font-weight="700" style="fill:var(--accent)">sugar out</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> stacks of green coins in a bag. The coins catch the light; the fluid around them turns that into sugar.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Chloroplasts are plastids bounded by a double envelope, containing a third membrane system of thylakoids (often stacked as grana) suspended in the stroma. The light-dependent reactions of photosynthesis occur in thylakoid membranes (chlorophyll, photosystems, ATP synthase); the Calvin cycle occurs in the stroma. Chloroplasts contain circular DNA and ribosomes, consistent with endosymbiotic origin from a cyanobacterium. Other plastids store starch (amyloplasts) or pigments (chromoplasts).</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Cytoskeleton<span class="also">actin filaments · intermediate filaments · microtubules · motor proteins · cilia and flagella</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>A cell isn't a bag of soup; it has an internal frame of protein fibres that gives it shape, holds organelles in place, and serves as a rail system. Three kinds, by thickness. Actin filaments are the thinnest and sit just under the membrane; they let the cell change shape, crawl, and pinch in two when it divides. Intermediate filaments are the ropes that give mechanical strength. Microtubules are the thickest, hollow tubes that radiate out from a hub near the nucleus; they are the rails along which motor proteins (kinesin, dynein) carry vesicles and organelles, walking step by step and burning ATP. Microtubules also form the core of cilia and flagella, the whips a cell beats to move itself or move fluid past it.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 170" role="img" aria-label="Three cytoskeletal fibres by thickness: thin actin filament, medium intermediate filament, thick hollow microtubule; a motor protein walking along the microtubule carrying a vesicle">
+        <defs><marker id="ar21" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <line x1="30" y1="40" x2="230" y2="40" stroke="currentColor" stroke-width="3"/><text x="250" y="44" font-size="11" font-weight="700">actin filament</text><text x="250" y="57" font-size="10">thinnest; shape, crawling, cell division</text>
+        <line x1="30" y1="85" x2="230" y2="85" stroke="currentColor" stroke-width="6"/><text x="250" y="89" font-size="11" font-weight="700">intermediate filament</text><text x="250" y="102" font-size="10">the rope; mechanical strength</text>
+        <rect x="30" y="122" width="200" height="16" rx="8" fill="none" stroke="currentColor" stroke-width="3"/><line x1="30" y1="130" x2="230" y2="130" stroke="currentColor" stroke-width="1" stroke-dasharray="2 3"/>
+        <text x="250" y="126" font-size="11" font-weight="700">microtubule</text><text x="250" y="139" font-size="10">thickest, hollow; the rails; cilia and flagella</text>
+        <circle cx="120" cy="105" r="10" class="sur" stroke="currentColor" stroke-width="1.5"/><path d="M115,114 l-4,8 M125,114 l4,8" stroke="currentColor" stroke-width="2"/>
+        <line x1="135" y1="100" x2="175" y2="100" class="accs" stroke-width="2" marker-end="url(#ar21)"/>
+        <text x="120" y="163" text-anchor="middle" font-size="9" style="fill:var(--muted)">motor protein walks the rail carrying a vesicle (uses ATP)</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> the three by thickness: thread, rope, pipe. Motor proteins are couriers that walk the pipes with a parcel on their back.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Actin filaments (microfilaments, ~7 nm): polymers of actin; cortex beneath the plasma membrane; cell shape, amoeboid movement, cytokinesis, muscle contraction with myosin. Intermediate filaments (~10 nm): diverse proteins (keratins, lamins); tensile strength. Microtubules (~25 nm): hollow tubes of α/β-tubulin dimers, nucleated at the microtubule-organising centre (centrosome); dynamic instability; tracks for kinesin (toward plus end) and dynein (toward minus end); form the mitotic spindle and the 9+2 axoneme of cilia and flagella. Motor proteins hydrolyse ATP to move.</p></details>
+  </article>
+
+  <article class="term">
+    <h3>Cell wall and extracellular matrix<span class="also">why cells are small (surface area to volume)</span></h3>
+    <div class="lbl">In plain words</div>
+    <p>Outside the membrane, plant cells, fungi and bacteria have a stiff wall (cellulose in plants, chitin in fungi, peptidoglycan in bacteria) that resists the pressure of the water inside and gives the cell its fixed shape. Animal cells have no wall; instead they sit in a mesh of protein fibres they secrete, the extracellular matrix, which holds tissues together. And a note on size: cells are tiny because everything they need comes in through the surface, but the demand comes from the whole volume. Double a cell's width and its surface goes up four times but its volume goes up eight; past a certain size the surface can't feed the inside. That is why big organisms are made of many small cells, not a few big ones.</p>
+    <div class="lbl">Picture</div>
+    <figure>
+      <svg viewBox="0 0 520 150" role="img" aria-label="A small cube and a cube twice as wide: the larger has four times the surface but eight times the volume, so surface per unit of volume halves; a bar shows the ratio dropping">
+        <g fill="none" stroke="currentColor" stroke-width="2"><rect x="40" y="70" width="40" height="40" class="soft"/><polygon points="40,70 55,55 95,55 80,70"/><polygon points="80,70 95,55 95,95 80,110"/></g>
+        <text x="67" y="130" text-anchor="middle" font-size="11" font-weight="700">width 1</text>
+        <text x="67" y="145" text-anchor="middle" font-size="10">surface 6, volume 1</text>
+        <g fill="none" stroke="currentColor" stroke-width="2"><rect x="180" y="50" width="80" height="80" class="soft"/><polygon points="180,50 210,20 290,20 260,50"/><polygon points="260,50 290,20 290,100 260,130"/></g>
+        <text x="235" y="145" text-anchor="middle" font-size="11" font-weight="700">width 2: surface 24, volume 8</text>
+        <text x="400" y="45" text-anchor="middle" font-size="11" font-weight="700">surface ÷ volume</text>
+        <rect x="350" y="60" width="100" height="16" rx="3" class="acc"/><text x="458" y="73" font-size="11">6 (small cell)</text>
+        <rect x="350" y="86" width="50" height="16" rx="3" class="acc"/><text x="408" y="99" font-size="11">3 (big cell)</text>
+        <text x="400" y="128" text-anchor="middle" font-size="10" style="fill:var(--muted)">less surface per unit of inside to feed</text>
+      </svg>
+      <figcaption><b>Remember it as:</b> a potato takes longer to cook than the same weight of fries. Small pieces have more surface for their size.</figcaption>
+    </figure>
+    <details class="tech"><summary>The technical version</summary><p>Cell walls: cellulose microfibrils in a matrix (plants, with a primary wall and often a lignified secondary wall); chitin (fungi); peptidoglycan (bacteria). The extracellular matrix of animal cells is a network of collagen and other fibrous proteins in a proteoglycan gel, linked to the cytoskeleton via integrins (Chapter 11). Surface-area-to-volume ratio scales as 1/r for a sphere, constraining cell size because exchange across the membrane must supply a metabolism that scales with volume; large cells compensate with elongation, folds, or internal membranes.</p></details>
+  </article>
+
+
+  <div class="foot">Built 13 September 2026 for Chapters 1–7 of Freeman, <i>Biological Science</i>, 8th ed. Plain-words explanations and pictures are simplifications on purpose; the technical versions are the wording the slides and exams use. If a term you need isn't here, that's a gap to report, not a sign it doesn't matter. <a href="index.html">Back to the plan</a>.</div>
 </div>
 </body>
 </html>
