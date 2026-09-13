@@ -67,6 +67,11 @@ details.tech summary::before{content:"+";display:inline-block;width:1rem;text-al
 details.tech[open] summary::before{content:"\2013"}
 details.tech summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 details.tech p{margin:.4rem 0 0}
+.ask{display:flex;flex-wrap:wrap;gap:.5rem .9rem;align-items:center;margin-top:1rem;font-family:var(--display);font-size:.85rem}
+.ask a,.ask button{font:inherit;font-weight:700;color:var(--accent);background:var(--accent-soft);border:1px solid transparent;border-radius:999px;padding:.35rem .85rem;text-decoration:none;cursor:pointer}
+.ask a:hover,.ask button:hover{border-color:var(--accent)}
+.ask button:focus-visible,.ask a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ask .copied{color:var(--muted);font-weight:500}
 @media (max-width:560px){figure{overflow-x:auto}figure svg{min-width:470px}}
 svg .acc{fill:var(--accent)}
 svg .accs{stroke:var(--accent)}
@@ -100,6 +105,7 @@ svg text{fill:currentColor}
       <li><b>Then the words.</b> For each term, read the plain version and look at the picture. The technical version is folded shut; leave it shut the first time through.</li>
       <li><b>Then the course material.</b> Now the Amoeba Sisters video, the slides, the textbook. When a word stops you, come back here and this time open the technical version too, because that is the wording the slides and the exam use.</li>
       <li><b>Ignore what you already know.</b> Some of these are things you half-know from everyday life. Skip those. This is a bridge, not a syllabus.</li>
+      <li><b>Stuck on a card? Take it to Claude.</b> Every card ends with a "Take this to Claude" link. It opens a new chat at claude.ai with that card's text already pasted in, so you only type your question. You need a free Claude account. This is for understanding a card, the way you'd ask a friend; it is not for anything you submit, which the course rules say must be your own work. If the link ever opens an empty chat, use "Copy the card text" and paste it yourself.</li>
     </ol>
   </div>
   <p>One more rung below the course, for reading: Khan Academy's older <a href="https://www.khanacademy.org/science/biology">Biology library</a> has short articles on <a href="https://www.khanacademy.org/science/biology/water-acids-and-bases">water, acids and bases</a> and <a href="https://www.khanacademy.org/science/biology/macromolecules">macromolecules</a> written more gently than the AP course. Khan labels it an archive, so it may not be there forever, but it is there now.</p>
@@ -2377,6 +2383,51 @@ svg text{fill:currentColor}
     <details class="tech"><summary>The technical version</summary><p>Incomplete dominance: intermediate heterozygote phenotype (1:2:1 phenotypic ratio). Codominance: both alleles expressed (ABO: Iᴬ and Iᴮ codominant, both dominant to i). Multiple alleles exist at the population level. Pleiotropy: one gene, many traits. Epistasis: one gene masks another. Polygenic (quantitative) traits: many loci plus environment produce continuous variation. Sex linkage: X-linked recessive traits (haemophilia, red-green colour blindness) appear mainly in hemizygous males and are transmitted by carrier females; Y-linked traits pass father to son. Pedigree analysis distinguishes autosomal dominant, autosomal recessive and X-linked patterns.</p></details>
   </article>
 
+
+  <script>
+(function(){
+  var FRAME = "I'm a first-year college student in an intro biology course (BIO 110, Freeman's Biological Science). I had almost no biology in high school, and I'm using a study page that explains each term in plain words, a picture, and the technical wording. I'm reading the card below. Please answer at the level of the plain-words explanation, keep it short, and end with one quick question to check that I've got it. This is for understanding only; don't write anything I would submit for the course.";
+  function chapterOf(el){
+    var n = el;
+    while (n && !(n.tagName === 'H2')) { n = n.previousElementSibling; }
+    return n ? n.textContent.replace(/\s+/g, ' ').trim() : '';
+  }
+  function txt(el){ return el ? el.textContent.replace(/\s+/g, ' ').trim() : ''; }
+  var cards = document.querySelectorAll('article.term');
+  Array.prototype.forEach.call(cards, function(card){
+    var h3 = card.querySelector('h3');
+    var termName = h3 ? txt(h3.firstChild) : '';
+    var also = h3 && h3.querySelector('.also') ? txt(h3.querySelector('.also')) : '';
+    var lbls = card.querySelectorAll('.lbl');
+    var plain = '';
+    Array.prototype.forEach.call(lbls, function(l){
+      if (/plain words/i.test(l.textContent)) { var p = l.nextElementSibling; if (p && p.tagName === 'P') plain = txt(p); }
+    });
+    var techEl = card.querySelector('details.tech p');
+    var tech = txt(techEl);
+    var cap = card.querySelector('figcaption, .pic');
+    var picture = txt(cap);
+    var body = 'Card: ' + termName + (also ? ' (' + also + ')' : '') + '\n' + chapterOf(card) + '\n\nPlain words: ' + plain + (picture ? '\n\nPicture, in words: ' + picture : '') + (tech ? '\n\nTechnical version: ' + tech : '');
+    var prompt = FRAME + '\n\n' + body + '\n\nMy question: ';
+    var row = document.createElement('div');
+    row.className = 'ask';
+    var a = document.createElement('a');
+    a.href = 'https://claude.ai/new?q=' + encodeURIComponent(prompt);
+    a.target = '_blank'; a.rel = 'noopener';
+    a.textContent = 'Take this to Claude';
+    var b = document.createElement('button');
+    b.type = 'button'; b.textContent = 'Copy the card text';
+    var s = document.createElement('span'); s.className = 'copied';
+    b.addEventListener('click', function(){
+      function done(ok){ s.textContent = ok ? 'Copied. Paste it into any chat.' : 'Copy failed; select the text and copy it by hand.'; setTimeout(function(){ s.textContent=''; }, 4000); }
+      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(prompt).then(function(){done(true)}, function(){done(false)}); }
+      else { done(false); }
+    });
+    row.appendChild(a); row.appendChild(b); row.appendChild(s);
+    card.appendChild(row);
+  });
+})();
+  </script>
 
   <div class="foot">Built 13–14 September 2026 for Chapters 1–7 and 9–14 of Freeman, <i>Biological Science</i>, 8th ed. Plain-words explanations and pictures are simplifications on purpose; the technical versions are the wording the slides and exams use. If a term you need isn't here, that's a gap to report, not a sign it doesn't matter. <a href="index.html">Back to the plan</a>.</div>
 </div>
