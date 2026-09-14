@@ -153,7 +153,10 @@ var DECK = {"1": {"title": "Biology: The Study of Life", "cards": [["What are th
   try{state=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){state={};}
   try{pick=JSON.parse(localStorage.getItem(PICK)||'null')||{};}catch(e){pick={};}
   var chapters=Object.keys(DECK);
+  var m=/ch=([0-9,]+)/.exec(location.hash||'');
+  if(m){pick={};m[1].split(',').forEach(function(c){if(DECK[c])pick[c]=true;});}
   if(!Object.keys(pick).length){pick[chapters[0]]=true;}
+  window.addEventListener('hashchange',function(){location.reload();});
   function save(){try{localStorage.setItem(KEY,JSON.stringify(state));localStorage.setItem(PICK,JSON.stringify(pick));}catch(e){}}
   var picker=document.getElementById('picker');
   chapters.forEach(function(c){
