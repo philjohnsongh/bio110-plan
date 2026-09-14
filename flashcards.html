@@ -85,6 +85,35 @@ svg .sur{fill:var(--surface)}
 svg text{fill:currentColor}
 .foot{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted);font-family:var(--display)}
 
+.picker{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0}
+.picker button{font:inherit;font-family:var(--display);font-size:.82rem;font-weight:700;padding:.35rem .7rem;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer}
+.picker button.on{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
+.picker button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.bar{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;font-family:var(--display);font-size:.85rem;color:var(--muted);margin:.5rem 0 1rem}
+.bar label{display:flex;align-items:center;gap:.3rem;cursor:pointer}
+.bar input{accent-color:var(--accent)}
+.stage{position:relative;min-height:16rem;perspective:1200px;margin:1rem 0}
+.card{position:relative;width:100%;min-height:16rem;border-radius:10px;border:1px solid var(--line);background:var(--surface);padding:1.6rem 1.6rem 3.2rem;cursor:pointer;transition:transform .35s;transform-style:preserve-3d;text-align:left;font:inherit;color:inherit;display:block}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.card .side{font-family:var(--display);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.6rem}
+.card .txt{font-size:1.15rem;line-height:1.5}
+.card .chap{position:absolute;left:1.6rem;bottom:1rem;font-family:var(--display);font-size:.78rem;color:var(--muted)}
+.card .hint{position:absolute;right:1.6rem;bottom:1rem;font-family:var(--display);font-size:.78rem;color:var(--muted)}
+.card.back{background:var(--accent-soft)}
+@media (prefers-reduced-motion: reduce){.card{transition:none}}
+.grade{display:flex;gap:.6rem;margin:.6rem 0 1rem}
+.grade button{flex:1;font:inherit;font-family:var(--display);font-weight:700;font-size:.95rem;padding:.7rem;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.grade button:disabled{opacity:.4;cursor:default}
+.grade .again{border-color:var(--flag);color:var(--flag)}
+.grade .got{border-color:var(--accent);color:var(--accent)}
+.grade button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.small{font-family:var(--display);font-size:.85rem;color:var(--muted)}
+.small a,.small button{font:inherit;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.done{background:var(--accent-soft);border-radius:10px;padding:1.4rem;font-family:var(--display)}
+.kbd{font-family:var(--mono);font-size:.78rem;border:1px solid var(--line);border-radius:4px;padding:0 .3rem}
+</style>
+</head>
+<body>
 <div class="wrap">
   <div class="eyebrow">General Biology I · 240 cards · Chapters 1–7 and 9–19</div>
   <h1>BIO 110 Flashcards</h1>
@@ -196,7 +225,5 @@ var DECK = {"1": {"title": "Biology: The Study of Life", "cards": [["What are th
   build();
 })();
 </script>
-</head>
-<body>
 </body>
 </html>
